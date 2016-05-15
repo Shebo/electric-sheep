@@ -50,6 +50,11 @@
 
 }
 
+$Maven_Pro_font: "Maven Pro", arial, sans-serif;
+.Maven-Pro {
+    font-family: $Maven_Pro_font;
+}
+
 @font-face {
   font-family: 'DIN';
   src: url('../fonts/DINComp.eot');
@@ -60,4 +65,9 @@
        url('../fonts/DINComp.svg#DINComp') format('svg');
   font-weight: normal;
   font-style: normal;
+}
+
+$DIN_font: "DIN", arial, sans-serif;
+.DIN {
+    font-family: $DIN_font;
 }
