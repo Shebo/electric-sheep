@@ -16,7 +16,7 @@
 		});
 
 		jQuery(".homepage-curtains[data-toggle='close'] .curtain-wrapper").on('click', function(e){
-			jQuery(this).parent().attr('data-toggle', 'close');
+			toggleCurtain(this);
 		});
 
 		jQuery(".view-videos").on('click', function(e){

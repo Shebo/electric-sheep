@@ -8213,6 +8213,14 @@ header.site-header {
 /*--------------------------------------------------------------
 ## Homepage
 --------------------------------------------------------------*/
+main#main {
+  height: 100%;
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Curtains
+--------------------------------------------------------------*/
 .homepage-curtains {
   display: table;
   width: 100%;
@@ -8395,6 +8403,13 @@ header.site-header {
 .homepage-curtains .pets-curtain-wrapper h3 span {
   background: url(../assets/fish-icon.png);
   width: 24px;
+}
+
+.categories-carousel {
+  height: calc(100% - 53px);
+  position: absolute;
+  width: 100%;
+  padding-top: 75px;
 }
 
 /*--------------------------------------------------------------
