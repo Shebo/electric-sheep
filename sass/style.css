@@ -1887,12 +1887,6 @@ h6 .small,
   color: #777777;
 }
 
-h1, .h1,
-h2, .h2,
-h3, .h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
 h1 small,
 h1 .small, .h1 small,
 .h1 .small,
@@ -8219,157 +8213,32 @@ header.site-header {
 /*--------------------------------------------------------------
 ## Homepage
 --------------------------------------------------------------*/
-.homepage-video-main-carousel {
-  height: calc(100% + 1px);
+.homepage-curtains {
   display: table;
   width: 100%;
+  -webkit-transition: height 0.5s ease-in-out;
+  -o-transition: height 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out;
 }
-
-.homepage-video-main-carousel .video-wrapper {
+.homepage-curtains[data-toggle="open"] {
+  height: calc(100% + 1px);
+}
+.homepage-curtains[data-toggle="close"] {
+  height: 53px;
+  -webkit-transition: height 0.5s 0.6s ease-in-out;
+  -o-transition: height 0.5s 0.6s ease-in-out;
+  transition: height 0.5s 0.6s ease-in-out;
+}
+.homepage-curtains .curtain-wrapper {
   height: 100%;
   overflow: hidden;
   width: 25%;
   display: table-cell;
-  -webkit-transition: width 0.5s ease-in-out;
-  -moz-transition: width 0.5s ease-in-out;
-  -o-transition: width 0.5s ease-in-out;
-  transition: width 0.5s ease-in-out;
+  -webkit-transition: width 0.5s 0.3s ease-in-out;
+  -o-transition: width 0.5s 0.3s ease-in-out;
+  transition: width 0.5s 0.3s ease-in-out;
 }
-
-.homepage-video-main-carousel:hover .video-wrapper:hover {
-  width: 50%;
-}
-
-.homepage-video-main-carousel:hover .video-wrapper:not(:hover) {
-  width: 16.66667%;
-}
-
-.homepage-video-main-carousel .video-wrapper .video-overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-
-.homepage-video-main-carousel .video-wrapper .video-overlay .shadow {
-  box-shadow: 0px 0 0px #4427e6;
-  height: 6px;
-  width: 150%;
-  background: #4427e6;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  -webkit-transition: height 0.5s ease-out, box-shadow 0.5s ease-out, opacity 0.5s 0.3s ease-out;
-  -moz-transition: height 0.5s ease-out, box-shadow 0.5s ease-out, opacity 0.5s 0.3s ease-out;
-  -o-transition: height 0.5s ease-out, box-shadow 0.5s ease-out, opacity 0.5s 0.3s ease-out;
-  transition: height 0.5s ease-out, box-shadow 0.5s ease-out, opacity 0.5s 0.3s ease-out;
-}
-
-.homepage-video-main-carousel:hover .video-wrapper:hover .video-overlay .shadow {
-  height: 20%;
-  opacity: 0.6;
-  box-shadow: 0px -30px 200px 150px #4427e6;
-  -webkit-transition: height 0.5s ease-out, box-shadow 0.5s ease-out, opacity 0.5s ease-out;
-  -moz-transition: height 0.5s ease-out, box-shadow 0.5s ease-out, opacity 0.5s ease-out;
-  -o-transition: height 0.5s ease-out, box-shadow 0.5s ease-out, opacity 0.5s ease-out;
-  transition: height 0.5s ease-out, box-shadow 0.5s ease-out, opacity 0.5s ease-out;
-}
-
-/* .homepage-video-main-carousel:hover .video-wrapper:hover .video-overlay .shadow {
-	// height: 100%;
-	// opacity: 0.6;
-	// background: linear-gradient(360deg, rgba(0,0,140,1) 20%, rgba(0,0,140,0) 40%);
-	// box-shadow: 0px -80px 200px 60px blue;
-
-	-webkit-animation: myanimationIn 5s 1 ease-out;
-	-moz-animation:  myanimationIn 5s 1 ease-out;
-	-o-animation: myanimationIn 5s 1 ease-out;
-	animation: myanimationIn 5s 1 ease-out;
-	animation-fill-mode:forwards;
-}
-
-
-.homepage-video-main-carousel .video-wrapper .video-overlay .shadow {
-	-webkit-animation: myanimationOut 5s 1 ease-out;
-	-moz-animation:  myanimationOut 5s 1 ease-out;
-	-o-animation: myanimationOut 5s 1 ease-out;
-	animation: myanimationOut 5s 1 ease-out;
-	animation-fill-mode:forwards;
-}
-
-@keyframes myanimationIn {
-
-	0% {
-      background: linear-gradient(360deg, rgba(0,0,140,1) 6px, rgba(0,0,140,0) 6px);
-      height: 6px;
-      opacity: 1;
-   }
-
-   1% {
-      background: linear-gradient(360deg, rgba(0,0,140,1) 20%, rgba(0,0,140,0) 40%);
-   }
-
-   66% {
-
-   }
-
-   100% {
-	height: 100%;
-	opacity: 0.6;
-	background: linear-gradient(360deg, rgba(0,0,140,1) 20%, rgba(0,0,140,0) 40%);
-   }
-
-}
-
-@keyframes myanimationOut {
-
-	0% {
-		height: 100%;
-		opacity: 0.6;
-		// background: linear-gradient(360deg, rgba(0,0,140,1) 20%, rgba(0,0,140,0) 40%);
-   }
-
-   1% {
-
-   }
-
-   66% {
-
-   }
-
-   99% {
-   	background: linear-gradient(360deg, rgba(0,0,140,1) 6px, rgba(0,0,140,0) 6px);
-   }
-
-   100% {
-		background: linear-gradient(360deg, rgba(0,0,140,1) 6px, rgba(0,0,140,0) 6px);
-		height: 6px;
-		opacity: 1;
-   }
-
-} */
-/* .homepage-video-main-carousel .video-wrapper .video-overlay .shadow {
-	height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: 11;
-    bottom: 0;
-	background-image: url(../assets/bgtest.png);
-	background-repeat: no-repeat;
-	background-position: 0 170%;
-    background-size: 100%;
-    box-shadow: 0px -6px 0px #4427e6 inset;
-
-	-webkit-transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
-    -o-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out;
-}
-
-.homepage-video-main-carousel:hover .video-wrapper:hover .video-overlay .shadow {
-	background-position: 0 100%;
-	box-shadow: 0px 0 0px transparent inset;
-} */
-video {
+.homepage-curtains .curtain-wrapper video {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -8381,6 +8250,151 @@ video {
   height: auto;
   z-index: -1000;
   overflow: hidden;
+}
+.homepage-curtains .curtain-wrapper .curtain-overlay {
+  width: 100%;
+  height: 100%;
+}
+.homepage-curtains .curtain-wrapper .curtain-overlay .shadow {
+  box-shadow: 0px 0 0px;
+  height: 6px;
+  width: 150%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: height 0.5s 0.3s ease-in-out, box-shadow 0.5s 0.3s ease-in-out, opacity 0.5s 0.6s ease-in-out;
+  -o-transition: height 0.5s 0.3s ease-in-out, box-shadow 0.5s 0.3s ease-in-out, opacity 0.5s 0.6s ease-in-out;
+  transition: height 0.5s 0.3s ease-in-out, box-shadow 0.5s 0.3s ease-in-out, opacity 0.5s 0.6s ease-in-out;
+}
+.homepage-curtains .curtain-wrapper .curtain-overlay .content {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+.homepage-curtains .curtain-wrapper .curtain-overlay .content h3 {
+  font-size: 2em;
+  color: white;
+  position: absolute;
+  display: table;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  -webkit-transition: left 0.4s 0.4s ease-in-out, transform 0.4s 0.4s ease-in-out, bottom 0.5s ease-in-out;
+  -o-transition: left 0.4s 0.4s ease-in-out, transform 0.4s 0.4s ease-in-out, bottom 0.5s ease-in-out;
+  transition: left 0.4s 0.4s ease-in-out, transform 0.4s 0.4s ease-in-out, bottom 0.5s ease-in-out;
+}
+.homepage-curtains .curtain-wrapper .curtain-overlay .content h3 span {
+  height: 18px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.homepage-curtains .curtain-wrapper .curtain-overlay .content .view-videos {
+  font-size: 1.6em;
+  color: white;
+  text-decoration: none;
+  border: 1px solid #d0d6de;
+  padding: 5px 10px;
+  position: absolute;
+  bottom: 14px;
+  left: 30px;
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate3d(0, 50%, 0);
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.homepage-curtains[data-toggle="open"]:hover .curtain-wrapper:hover {
+  width: 50%;
+  -webkit-transition: width 0.5s ease-in-out;
+  -o-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+}
+.homepage-curtains[data-toggle="open"]:hover .curtain-wrapper:hover .curtain-overlay .shadow {
+  height: 20%;
+  opacity: 0.6;
+  box-shadow: 0px -30px 200px 150px;
+  -webkit-transition: height 0.5s ease-in-out, box-shadow 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  -o-transition: height 0.5s ease-in-out, box-shadow 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out, box-shadow 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.homepage-curtains[data-toggle="open"]:hover .curtain-wrapper:hover .curtain-overlay .content h3 {
+  left: 30px;
+  bottom: 60px;
+  transform: translateX(0%);
+  -webkit-transition: left 0.3s ease-in-out, transform 0.3s ease-in-out, bottom 0.5s 0.3s ease-in-out;
+  -o-transition: left 0.3s ease-in-out, transform 0.3s ease-in-out, bottom 0.5s 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out, transform 0.3s ease-in-out, bottom 0.5s 0.3s ease-in-out;
+}
+.homepage-curtains[data-toggle="open"]:hover .curtain-wrapper:hover .curtain-overlay .content .view-videos {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+  -webkit-transition: all 0.5s 0.4s ease-in-out;
+  -o-transition: all 0.5s 0.4s ease-in-out;
+  transition: all 0.5s 0.4s ease-in-out;
+}
+.homepage-curtains[data-toggle="open"]:hover .curtain-wrapper:not(:hover) {
+  width: 16.66667%;
+  -webkit-transition: width 0.5s ease-in-out;
+  -o-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+}
+.homepage-curtains[data-toggle="close"] .curtain-wrapper {
+  cursor: pointer;
+}
+.homepage-curtains[data-toggle="close"] .curtain-wrapper .curtain-overlay .shadow {
+  height: 3px;
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.homepage-curtains[data-toggle="close"] .curtain-wrapper.active .curtain-overlay .shadow {
+  height: 53px;
+  opacity: 0.7;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.homepage-curtains .sports-curtain-wrapper .shadow {
+  background: #2d6fa3;
+  color: #2d6fa3;
+}
+.homepage-curtains .sports-curtain-wrapper h3 span {
+  background: url(../assets/trophy-icon.png);
+  width: 19px;
+}
+
+.homepage-curtains .fashion-curtain-wrapper .shadow {
+  background: #64488c;
+  color: #64488c;
+}
+.homepage-curtains .fashion-curtain-wrapper h3 span {
+  background: url(../assets/hanger-icon.png);
+  width: 29px;
+}
+
+.homepage-curtains .travel-curtain-wrapper .shadow {
+  background: #007f8d;
+  color: #007f8d;
+}
+.homepage-curtains .travel-curtain-wrapper h3 span {
+  background: url(../assets/marker-icon.png);
+  width: 15px;
+}
+
+.homepage-curtains .pets-curtain-wrapper .shadow {
+  background: #158a51;
+  color: #158a51;
+}
+.homepage-curtains .pets-curtain-wrapper h3 span {
+  background: url(../assets/fish-icon.png);
+  width: 24px;
 }
 
 /*--------------------------------------------------------------

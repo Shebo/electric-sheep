@@ -15,45 +15,57 @@
 get_header(); ?>
 
 	<div class="content-area">
-		<main id="main" class="site-main homepage-video-main-carousel" role="main">
+		<main id="main" class="site-main homepage-curtains" data-toggle="open" role="main">
 
-			<div class="video-wrapper">
-				<div class="video-overlay">
+			<div class="sports-curtain-wrapper curtain-wrapper">
+				<div class="curtain-overlay">
 					<div class="shadow"></div>
-					<h3><span></span>Sport</h3>
+					<div class="content">
+						<h3 class="DIN text-uppercase"><span></span>Sport</h3>
+						<a href="#" class="Maven-Pro view-videos">View All Sport Videos</a>
+					</div>
 
 				</div>
-				<video controls autoplay loop muted>
+				<video autoplay loop muted>
 				  <source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/SampleVideo.mp4" type="video/mp4">
 				</video>
 			</div>
-			<div class="video-wrapper">
-				<div class="video-overlay">
+			<div class="fashion-curtain-wrapper curtain-wrapper">
+				<div class="curtain-overlay">
 					<div class="shadow"></div>
-					<h3><span></span>Sport</h3>
+					<div class="content">
+						<h3 class="DIN text-uppercase"><span></span>Fashion</h3>
+						<a href="#" class="Maven-Pro view-videos">View All Fashion Videos</a>
+					</div>
 
 				</div>
-				<video controls autoplay loop muted>
+				<video autoplay loop muted>
 				  <source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/SampleVideo.mp4" type="video/mp4">
 				</video>
 			</div>
-			<div class="video-wrapper">
-				<div class="video-overlay">
+			<div class="travel-curtain-wrapper curtain-wrapper">
+				<div class="curtain-overlay">
 					<div class="shadow"></div>
-					<h3><span></span>Sport</h3>
+					<div class="content">
+						<h3 class="DIN text-uppercase"><span></span>Travel</h3>
+						<a href="#" class="Maven-Pro view-videos">View All Travel Videos</a>
+					</div>
 
 				</div>
-				<video controls autoplay loop muted>
+				<video autoplay loop muted>
 				  <source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/SampleVideo.mp4" type="video/mp4">
 				</video>
 			</div>
-			<div class="video-wrapper">
-				<div class="video-overlay">
+			<div class="pets-curtain-wrapper curtain-wrapper">
+				<div class="curtain-overlay">
 					<div class="shadow"></div>
-					<h3><span></span>Sport</h3>
+					<div class="content">
+						<h3 class="DIN text-uppercase"><span></span>Pets</h3>
+						<a href="#" class="Maven-Pro view-videos">View All Pets Videos</a>
+					</div>
 
 				</div>
-				<video controls autoplay loop muted>
+				<video autoplay loop muted>
 				  <source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/SampleVideo.mp4" type="video/mp4">
 				</video>
 			</div>
@@ -62,4 +74,4 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-//get_footer();
+get_footer();

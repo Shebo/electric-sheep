@@ -10,9 +10,28 @@
 		bodyScrollClass();
 		jQuery(window).scroll(bodyScrollClass);
 
+		jQuery(".homepage-curtains[data-toggle='open'] .curtain-wrapper").on('click', function(e){
+			toggleCurtain(this);
+			jQuery(this).parent().attr('data-toggle', 'close');
+		});
+
+		jQuery(".homepage-curtains[data-toggle='close'] .curtain-wrapper").on('click', function(e){
+			jQuery(this).parent().attr('data-toggle', 'close');
+		});
+
+		jQuery(".view-videos").on('click', function(e){
+			e.stopPropagation();
+			e.preventDefault();
+		});
+
 	});
 
 })(jQuery, this);
+
+function toggleCurtain(el){
+	jQuery('.curtain-wrapper').removeClass('active');
+	jQuery(el).addClass('active');
+}
 
 
 function bodySizeClass() {
