@@ -1,7 +1,7 @@
 .homepage-curtains {
-
   display: table;
   width: 100%;
+  z-index: 2;
 
   @include transition(height 0.5s ease-in-out);
 
@@ -11,7 +11,7 @@
   }
 
   &[data-toggle="close"] {
-    height: 53px;
+    height: $height__curtains_closed;
     @include transition(height 0.5s 0.6s ease-in-out);
   }
 
@@ -71,10 +71,10 @@
           bottom: 14px;
           transform: translateX(-50%);
 
-          @include transition(
+          transition:
             left 0.4s 0.4s ease-in-out,
             transform 0.4s 0.4s ease-in-out,
-            bottom 0.5s ease-in-out);
+            bottom 0.5s ease-in-out;
 
           span {
             height: 18px;
@@ -92,10 +92,6 @@
           position: absolute;
           bottom: 14px;
           left: 30px;
-
-
-          // display: none;
-          // opacity: 0;
 
           animation-delay: 0.5s;
           animation-duration: 1s;
@@ -140,10 +136,10 @@
             bottom: 60px;
             transform: translateX(0%);
 
-            @include transition(
+            transition:
               left 0.3s ease-in-out,
               transform 0.3s ease-in-out,
-              bottom 0.5s 0.3s ease-in-out);
+              bottom 0.5s 0.3s ease-in-out;
           }
 
           .view-videos {
@@ -201,7 +197,7 @@
       &.active {
         .curtain-overlay {
           .shadow {
-            height: 53px;
+            height: $height__curtains_closed;
             opacity: 0.7;
 
             @include transition(all 0.5s ease-in-out);
@@ -212,7 +208,7 @@
   }
 }
 
-.homepage-curtains .sports-curtain-wrapper {
+.homepage-curtains .curtain-wrapper[data-category="sports"] {
   .shadow {
     background: $color__sports;
     color: $color__sports;
@@ -223,7 +219,7 @@
     width: 19px;
   }
 }
-.homepage-curtains .fashion-curtain-wrapper {
+.homepage-curtains .curtain-wrapper[data-category="fashion"] {
   .shadow {
     background: $color__fashion;
     color: $color__fashion;
@@ -234,7 +230,7 @@
     width: 29px;
   }
 }
-.homepage-curtains .travel-curtain-wrapper {
+.homepage-curtains .curtain-wrapper[data-category="travel"] {
   .shadow {
     background: $color__travel;
     color: $color__travel;
@@ -245,7 +241,7 @@
     width: 15px;
   }
 }
-.homepage-curtains .pets-curtain-wrapper {
+.homepage-curtains .curtain-wrapper[data-category="pets"] {
   .shadow {
     background: $color__pets;
     color: $color__pets;

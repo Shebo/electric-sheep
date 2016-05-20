@@ -1,0 +1,60 @@
+.vjs-poster {
+	height: calc(100% + 1px);
+}
+
+.vjs-sublime-skin .vjs-big-play-button {
+	-webkit-backface-visibility: hidden;
+	z-index: 3;
+	background: url(http://85.64.41.81:8000/hiro/esheep2016/wp-content/themes/electric-sheep/assets/play.png) no-repeat;
+	right: 38px;
+	bottom: 43px;
+	top: initial;
+	left: initial;
+	width: 89px;
+	height: 88px;
+
+	&:before {
+		content:"";
+	}
+}
+
+.vjs-icon-play:before, .video-js .vjs-big-play-button:before, .video-js .vjs-play-control:before {
+	-webkit-backface-visibility: hidden;
+}
+
+.vjs-poster:before {
+	-webkit-backface-visibility: hidden;
+	width: 100%;
+	height: 100%;
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	-webkit-backface-visibility: hidden;
+    z-index: 2;
+    background-color: rgba(15, 19, 24, 0.2);
+}
+.vjs-poster:after {
+	-webkit-backface-visibility: hidden;
+	content: "";
+	width: 100%;
+	height: 10% !important;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	-webkit-backface-visibility: hidden;
+    z-index: 2;
+
+    background: red;
+    opacity: 0.4;
+
+    box-shadow: 0px 61px 100px 150px;
+    // box-shadow: 0px -74px 0px 44px;
+    color: red;
+}
+
+// prevent play video when clicking on it's poster
+.video-js:not(.vjs-has-started) .vjs-tech,
+.video-js .vjs-poster {
+  pointer-events: none;
+}

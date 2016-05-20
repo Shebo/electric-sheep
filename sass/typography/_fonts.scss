@@ -1,3 +1,10 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+$Open_Sans_font: "Open Sans", arial, sans-serif;
+.Open-Sans {
+    font-family: $Open_Sans_font;
+}
+
 @font-face {
     font-family: 'Maven Pro';
     src: url('../fonts/mavenpro-black-webfont.eot');

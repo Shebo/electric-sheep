@@ -1,5 +1,5 @@
-<div class="site-main homepage-curtains" data-toggle="open">
-	<div class="sports-curtain-wrapper curtain-wrapper active">
+<div class="site-main homepage-curtains" data-toggle="close">
+	<div class="curtain-wrapper active" data-category="sports">
 		<div class="curtain-overlay">
 			<div class="shadow"></div>
 			<div class="content">
@@ -11,7 +11,7 @@
 		  <source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/SampleVideo.mp4" type="video/mp4">
 		</video>
 	</div>
-	<div class="fashion-curtain-wrapper curtain-wrapper">
+	<div class="curtain-wrapper" data-category="fashion">
 		<div class="curtain-overlay">
 			<div class="shadow"></div>
 			<div class="content">
@@ -23,7 +23,7 @@
 		  <source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/SampleVideo.mp4" type="video/mp4">
 		</video>
 	</div>
-	<div class="travel-curtain-wrapper curtain-wrapper">
+	<div class="curtain-wrapper" data-category="travel">
 		<div class="curtain-overlay">
 			<div class="shadow"></div>
 			<div class="content">
@@ -35,7 +35,7 @@
 		  <source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/SampleVideo.mp4" type="video/mp4">
 		</video>
 	</div>
-	<div class="pets-curtain-wrapper curtain-wrapper">
+	<div class="curtain-wrapper" data-category="pets">
 		<div class="curtain-overlay">
 			<div class="shadow"></div>
 			<div class="content">
