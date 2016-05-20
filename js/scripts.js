@@ -73,6 +73,12 @@
 						{
 							breakpoint: 1900,
 							settings: {
+								centerPadding: '22.5%',
+							}
+						},
+						{
+							breakpoint: 1700,
+							settings: {
 								centerPadding: '20%',
 							}
 						},

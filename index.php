@@ -23,6 +23,10 @@ get_header(); ?>
 						<div class="category-video">
 							<div class="category-video-inner">
 								<div class="overlay"></div>
+								<span class="banner top-engaged DIN text-uppercase">
+									<i></i>
+									Top Engaged By Users
+								</span>
 								<div class="metadata text-left">
 									<h3 class="Maven-Pro text-uppercase">Punk Rock Is A Thing</h3>
 									<span class="Open-Sans">Time: 04:24</span>
@@ -36,6 +40,10 @@ get_header(); ?>
 						<div class="category-video">
 							<div class="category-video-inner">
 								<div class="overlay"></div>
+								<span class="banner top-engaged DIN text-uppercase">
+									<i></i>
+									Top Engaged By Users
+								</span>
 								<div class="metadata text-left">
 									<h3 class="Maven-Pro text-uppercase">Punk Rock Is A Thing</h3>
 									<span class="Open-Sans">Time: 04:24</span>
@@ -49,6 +57,10 @@ get_header(); ?>
 						<div class="category-video">
 							<div class="category-video-inner">
 								<div class="overlay"></div>
+								<span class="banner top-engaged DIN text-uppercase">
+									<i></i>
+									Top Engaged By Users
+								</span>
 								<div class="metadata text-left">
 									<h3 class="Maven-Pro text-uppercase">Punk Rock Is A Thing</h3>
 									<span class="Open-Sans">Time: 04:24</span>
@@ -68,6 +80,10 @@ get_header(); ?>
 						<div class="category-video">
 							<div class="category-video-inner">
 								<div class="overlay"></div>
+								<span class="banner top-engaged DIN text-uppercase">
+									<i></i>
+									Top Engaged By Users
+								</span>
 								<div class="metadata text-left">
 									<h3 class="Maven-Pro text-uppercase">Punk Rock Is A Thing</h3>
 									<span class="Open-Sans">Time: 04:24</span>
@@ -81,6 +97,10 @@ get_header(); ?>
 						<div class="category-video">
 							<div class="category-video-inner">
 								<div class="overlay"></div>
+								<span class="banner top-engaged DIN text-uppercase">
+									<i></i>
+									Top Engaged By Users
+								</span>
 								<div class="metadata text-left">
 									<h3 class="Maven-Pro text-uppercase">Punk Rock Is A Thing</h3>
 									<span class="Open-Sans">Time: 04:24</span>
@@ -94,6 +114,10 @@ get_header(); ?>
 						<div class="category-video">
 							<div class="category-video-inner">
 								<div class="overlay"></div>
+								<span class="banner top-engaged DIN text-uppercase">
+									<i></i>
+									Top Engaged By Users
+								</span>
 								<div class="metadata text-left">
 									<h3 class="Maven-Pro text-uppercase">Punk Rock Is A Thing</h3>
 									<span class="Open-Sans">Time: 04:24</span>
@@ -113,6 +137,10 @@ get_header(); ?>
 						<div class="category-video">
 							<div class="category-video-inner">
 								<div class="overlay"></div>
+								<span class="banner top-engaged DIN text-uppercase">
+									<i></i>
+									Top Engaged By Users
+								</span>
 								<div class="metadata text-left">
 									<h3 class="Maven-Pro text-uppercase">Punk Rock Is A Thing</h3>
 									<span class="Open-Sans">Time: 04:24</span>
@@ -126,6 +154,10 @@ get_header(); ?>
 						<div class="category-video">
 							<div class="category-video-inner">
 								<div class="overlay"></div>
+								<span class="banner top-engaged DIN text-uppercase">
+									<i></i>
+									Top Engaged By Users
+								</span>
 								<div class="metadata text-left">
 									<h3 class="Maven-Pro text-uppercase">Punk Rock Is A Thing</h3>
 									<span class="Open-Sans">Time: 04:24</span>
@@ -139,6 +171,10 @@ get_header(); ?>
 						<div class="category-video">
 							<div class="category-video-inner">
 								<div class="overlay"></div>
+								<span class="banner top-engaged DIN text-uppercase">
+									<i></i>
+									Top Engaged By Users
+								</span>
 								<div class="metadata text-left">
 									<h3 class="Maven-Pro text-uppercase">Punk Rock Is A Thing</h3>
 									<span class="Open-Sans">Time: 04:24</span>
@@ -158,6 +194,10 @@ get_header(); ?>
 						<div class="category-video">
 							<div class="category-video-inner">
 								<div class="overlay"></div>
+								<span class="banner top-engaged DIN text-uppercase">
+									<i></i>
+									Top Engaged By Users
+								</span>
 								<div class="metadata text-left">
 									<h3 class="Maven-Pro text-uppercase">Punk Rock Is A Thing</h3>
 									<span class="Open-Sans">Time: 04:24</span>
@@ -171,6 +211,10 @@ get_header(); ?>
 						<div class="category-video">
 							<div class="category-video-inner">
 								<div class="overlay"></div>
+								<span class="banner top-engaged DIN text-uppercase">
+									<i></i>
+									Top Engaged By Users
+								</span>
 								<div class="metadata text-left">
 									<h3 class="Maven-Pro text-uppercase">Punk Rock Is A Thing</h3>
 									<span class="Open-Sans">Time: 04:24</span>
@@ -184,6 +228,10 @@ get_header(); ?>
 						<div class="category-video">
 							<div class="category-video-inner">
 								<div class="overlay"></div>
+								<span class="banner top-engaged DIN text-uppercase">
+									<i></i>
+									Top Engaged By Users
+								</span>
 								<div class="metadata text-left">
 									<h3 class="Maven-Pro text-uppercase">Punk Rock Is A Thing</h3>
 									<span class="Open-Sans">Time: 04:24</span>

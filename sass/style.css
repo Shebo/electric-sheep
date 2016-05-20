@@ -9512,6 +9512,43 @@ main#main {
   display: block;
 }
 
+.category-video .banner {
+  -webkit-backface-visibility: hidden;
+  height: auto !important;
+  width: auto !important;
+  bottom: initial;
+  right: initial;
+  background: #644491;
+  top: 23px;
+  left: 0;
+  z-index: 3;
+  color: white;
+  font-size: 1.7em;
+  padding: 7px 20px;
+}
+
+.category-video .banner i {
+  width: 20px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 15px;
+  margin-right: 15px;
+  margin-top: -1px;
+}
+
+.category-video .banner.top-liked i {
+  background-image: url(../assets/top-liked-icon.png);
+}
+
+.category-video .banner.top-engaged i {
+  background-image: url(../assets/top-engaged-icon.png);
+}
+
+.category-video .banner.top-recommandations i {
+  background-image: url(../assets/top-recommandations-icon.png);
+}
+
 .category-video .category-video-inner {
   width: 100%;
 }
@@ -9790,7 +9827,7 @@ main#main {
           animation-timing-function: ease-in;
 }
 
-.slick-slider .metadata {
+.slick-slider .metadata, .slick-slider .banner {
   -moz-user-select: text;
   cursor: auto !important;
   -webkit-user-select: auto !important;

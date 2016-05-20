@@ -66,3 +66,4 @@ Temporary Items
 # sftp configuration file
 sftp-config.json
 *.sublime-workspace
+prepros.cfg
