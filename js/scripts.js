@@ -21,11 +21,22 @@
 		bodyScrollClass();
 		jQuery(window).scroll(bodyScrollClass);
 
+		// prevent poster link to play video
+		jQuery('.menu-burger').on('click', function(e){
+			var menu = jQuery('.main-navigation');
+
+			if(menu.attr('data-menu-toggle') == 'open'){
+				menu.attr('data-menu-toggle', 'close');
+			}else{
+				menu.attr('data-menu-toggle', 'open');
+			}
+		});
+
 		// toggle categories on curtain click
 		jQuery(".homepage-curtains .curtain-wrapper").on('click', function(e){
 			toggleCategory(this);
-			if(jQuery(this).parent().attr('data-toggle') == 'open'){
-				jQuery(this).parent().attr('data-toggle', 'close');
+			if(jQuery(this).parent().parent().attr('data-toggle') == 'open'){
+				jQuery(this).parent().parent().attr('data-toggle', 'close');
 			}
 		});
 
@@ -46,8 +57,6 @@
 			jQuery(e.currentTarget).parent().siblings('.banner, .metadata').hide();
 		});
 
-
-		//
 		jQuery('.category-carousel')
 			.on('init', function(event, slick, direction){
 				// set next/prev slide's class on carousel init
@@ -114,6 +123,9 @@ function toggleCategory(el){
 	// get categories
 	var oldCategory = jQuery('.curtain-wrapper.active').attr('data-category');
 	var category = jQuery(el).attr('data-category');
+
+	if(category == oldCategory)
+		return false;
 
 	// toggle curtains
 	jQuery('.curtain-wrapper').removeClass('active');

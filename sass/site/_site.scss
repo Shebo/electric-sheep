@@ -8,8 +8,9 @@ html, body {
 }
 
 header.site-header {
-	height: 15%;
+	height: 60px;
 	overflow: hidden;
+    padding: 0 28px;
 }
 
 #page, .content-area {
@@ -17,8 +18,13 @@ header.site-header {
 }
 
 #content {
-	height: 85%;
+	height: calc(100% - 60px);
 }
+
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+@import "primary/header";
 
 /*--------------------------------------------------------------
 ## Homepage
