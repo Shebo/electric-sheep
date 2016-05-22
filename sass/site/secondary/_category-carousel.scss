@@ -1,0 +1,366 @@
+.category-carousel-wrapper {
+
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 75px);
+  top: 75px;
+  left: 0;
+  right: 0;
+  text-align: center;
+
+  opacity: 0;
+
+  @include transition(opacity 0.6s ease-in-out);
+
+  .slick-track {
+    animation-fill-mode: both;
+    opacity: 0 !important;
+  }
+
+  .slick-list {
+
+  }
+
+  &.active {
+    z-index: 10;
+    opacity: 1;
+
+    .slick-track {
+      opacity: 1 !important;
+    }
+  }
+
+  .category-carousel {
+    width: 100%;
+    // height: calc(100% - 130px);
+
+    .category-video {
+
+      margin: 0 20px;
+      overflow: hidden;
+      -webkit-backface-visibility: hidden;
+
+      .overlay {
+        -webkit-backface-visibility: hidden;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        left: 0;
+        z-index: 3;
+        cursor: pointer;
+        background-color: rgba(15, 19, 24, 0.3);
+
+        opacity: 0;
+        visibility: hidden;
+
+        @include transition(
+          opacity 0.6s ease-in-out,
+          background-color 0.6s ease-in-out,
+          visibility 0.6s ease-in-out);
+      }
+
+      .metadata {
+        @extend %user-select;
+
+        -webkit-backface-visibility: hidden;
+        z-index: 3;
+        display: inline-block;
+        width: auto !important;
+        height: auto !important;
+        top: initial;
+        right: initial;
+        bottom: 35px;
+        left: 35px;
+        color: white;
+
+
+        h3 {
+          font-size: 2.4em;
+          margin-bottom: 10px;
+
+          &:after {
+            content: "";
+            height: 2px;
+            background: rgba(174, 170, 177, 0.4);
+            width: 230px;
+            margin-top: 15px;
+            display: block;
+          }
+        }
+
+        span {
+          font-size: 1.3em;
+          display: block;
+        }
+      }
+
+      .banner {
+        @extend %user-select;
+
+        -webkit-backface-visibility: hidden;
+        height: auto !important;
+        width: auto !important;
+        bottom: initial;
+        right: initial;
+        top: 23px;
+        left: 0;
+        z-index: 3;
+        color: white;
+        font-size: 1.7em;
+        padding: 7px 20px;
+
+        i {
+          width: 20px;
+          height: 22px;
+          display: inline-block;
+          vertical-align: top;
+          line-height: 15px;
+          margin-right: 15px;
+          margin-top: -1px;
+        }
+
+        &.top-liked i {
+          background-image: url(../assets/top-liked-icon.png);
+        }
+
+        &.top-engaged i {
+          background-image: url(../assets/top-engaged-icon.png);
+        }
+
+        &.top-recommandations i {
+          background-image: url(../assets/top-recommandations-icon.png);
+        }
+      }
+
+      .category-video-inner {
+        @extend %ratio-16-9;
+
+        width: 100%;
+
+        > * {
+          width: 100%;
+          height: calc(100% + 1px);
+          overflow: hidden;
+        }
+
+        video {
+          width: 100%    !important;
+          height: auto   !important;
+        }
+      }
+
+      &.slick-current{
+        .overlay {
+
+        }
+      }
+      &.next-slide{
+        .overlay {
+
+          background-image: url(../assets/arrow.png);
+          background-repeat: no-repeat;
+          background-size: 13px 22px;
+
+          opacity: 1;
+          visibility: visible;
+          background-position: 35px center;
+        }
+      }
+      &.prev-slide{
+        .overlay {
+          background-image: url(../assets/arrow.png);
+          background-repeat: no-repeat;
+          background-size: 13px 22px;
+
+          opacity: 1;
+          visibility: visible;
+          transform: rotate(180deg);
+          background-position: 35px center;
+        }
+      }
+    }
+  }
+
+  .slick-arrow {
+    display: none !important;
+
+    /* position: absolute;
+    z-index: 2;
+    width: calc(10% - 20px);
+    height: 100%;
+    top: 0;
+    opacity: 1;
+
+    background: rgba(15, 19, 24, 0.5);
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    @include transition(opacity 0.3s ease-in-out);
+
+    &:hover, &:focus, &:active {
+      box-shadow: none;
+      outline: none;
+    }
+
+    &.slick-prev {
+      left: 0;
+    }
+
+    &.slick-next {
+      right: 0;
+    }
+
+    &.slick-disabled {
+      opacity: 0;
+    } */
+  }
+
+  .view-videos {
+    display: inline-block;
+    font-size: 2.2em;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #d0d6de;
+    padding: 10px 20px;
+    margin-top: 35px;
+  }
+}
+
+@keyframes fadeCarouselInRight {
+  from {
+    opacity: 0;
+    left: -100%;
+  }
+
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+.fadeCarouselInRight {
+  animation-name: fadeCarouselInRight;
+  animation-duration: 0.6s;
+  animation-delay: 0.8s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes fadeCarouselInLeft {
+  from {
+    opacity: 0;
+    left: 100%;
+  }
+
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+.fadeCarouselInLeft {
+  animation-name: fadeCarouselInLeft;
+  animation-duration: 0.6s;
+  animation-delay: 0.8s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes fadeCarouselOutRight {
+  from {
+    opacity: 1;
+    left: 0;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.fadeCarouselOutRight {
+  animation-name: fadeCarouselOutRight;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes fadeCarouselOutLeft {
+  from {
+    opacity: 1;
+    left: 0;
+  }
+
+  to {
+    opacity: 0;
+    left: -100%;
+  }
+}
+
+.fadeCarouselOutLeft {
+  animation-name: fadeCarouselOutLeft;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in;
+}
+
+
+.category-carousel-wrapper[data-category="sports"] {
+  .view-videos {
+    border-color: $color__sports;
+    // color: $color__sports;
+  }
+
+  .banner {
+    background-color: $color__sports;
+  }
+
+  .vjs-poster:after {
+    background-color: $color__sports;
+    color: $color__sports;
+  }
+}
+.category-carousel-wrapper[data-category="fashion"] {
+  .view-videos {
+    border-color: $color__fashion;
+    // color: $color__fashion;
+  }
+
+  .banner {
+    background-color: $color__fashion;
+  }
+
+  .vjs-poster:after {
+    background-color: $color__fashion;
+    color: $color__fashion;
+  }
+}
+.category-carousel-wrapper[data-category="travel"] {
+  .view-videos {
+    border-color: $color__travel;
+    // color: $color__travel;
+  }
+
+  .banner {
+    background-color: $color__travel;
+  }
+
+  .vjs-poster:after {
+    background-color: $color__travel;
+    color: $color__travel;
+  }
+}
+.category-carousel-wrapper[data-category="pets"] {
+  .view-videos {
+    border-color: $color__pets;
+    // color: $color__pets;
+  }
+
+  .banner {
+    background-color: $color__pets;
+  }
+
+  .vjs-poster:after {
+    background-color: $color__pets;
+    color: $color__pets;
+  }
+}

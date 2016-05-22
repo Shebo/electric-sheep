@@ -9516,7 +9516,6 @@ main#main {
   width: auto !important;
   bottom: initial;
   right: initial;
-  background: #644491;
   top: 23px;
   left: 0;
   z-index: 3;
@@ -9755,54 +9754,54 @@ main#main {
           animation-timing-function: ease-in;
 }
 
-.categories-carousel .category-carousel-wrapper[data-category="sports"] .view-videos {
+.category-carousel-wrapper[data-category="sports"] .view-videos {
   border-color: #2d6fa3;
 }
 
-.categories-carousel .category-carousel-wrapper[data-category="sports"] .banner {
+.category-carousel-wrapper[data-category="sports"] .banner {
   background-color: #2d6fa3;
 }
 
-.categories-carousel .category-carousel-wrapper[data-category="sports"] .vjs-poster:after {
+.category-carousel-wrapper[data-category="sports"] .vjs-poster:after {
   background-color: #2d6fa3;
   color: #2d6fa3;
 }
 
-.categories-carousel .category-carousel-wrapper[data-category="fashion"] .view-videos {
+.category-carousel-wrapper[data-category="fashion"] .view-videos {
   border-color: #64488c;
 }
 
-.categories-carousel .category-carousel-wrapper[data-category="fashion"] .banner {
+.category-carousel-wrapper[data-category="fashion"] .banner {
   background-color: #64488c;
 }
 
-.categories-carousel .category-carousel-wrapper[data-category="fashion"] .vjs-poster:after {
+.category-carousel-wrapper[data-category="fashion"] .vjs-poster:after {
   background-color: #64488c;
   color: #64488c;
 }
 
-.categories-carousel .category-carousel-wrapper[data-category="travel"] .view-videos {
+.category-carousel-wrapper[data-category="travel"] .view-videos {
   border-color: #007f8d;
 }
 
-.categories-carousel .category-carousel-wrapper[data-category="travel"] .banner {
+.category-carousel-wrapper[data-category="travel"] .banner {
   background-color: #007f8d;
 }
 
-.categories-carousel .category-carousel-wrapper[data-category="travel"] .vjs-poster:after {
+.category-carousel-wrapper[data-category="travel"] .vjs-poster:after {
   background-color: #007f8d;
   color: #007f8d;
 }
 
-.categories-carousel .category-carousel-wrapper[data-category="pets"] .view-videos {
+.category-carousel-wrapper[data-category="pets"] .view-videos {
   border-color: #158a51;
 }
 
-.categories-carousel .category-carousel-wrapper[data-category="pets"] .banner {
+.category-carousel-wrapper[data-category="pets"] .banner {
   background-color: #158a51;
 }
 
-.categories-carousel .category-carousel-wrapper[data-category="pets"] .vjs-poster:after {
+.category-carousel-wrapper[data-category="pets"] .vjs-poster:after {
   background-color: #158a51;
   color: #158a51;
 }
