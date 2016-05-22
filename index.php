@@ -14,6 +14,7 @@
 
 get_header(); ?>
 
+
 	<div class="content-area">
 		<main id="main" class="site-main homepage-video-main-carousel" role="main">
 
@@ -60,6 +61,73 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+    
+    
+<?php if( have_rows('members', 'option') ): ?>
+
+    <ul>
+
+    <?php while( have_rows('members', 'option') ): the_row(); ?>
+
+        <li>
+        
+        <?php the_sub_field('member_name'); ?>
+        <?php the_sub_field('member_title'); ?>
+        <?php the_sub_field('member_image'); ?>
+        <?php the_sub_field('member_text'); ?>
+        
+        
+        
+        </li>
+
+    <?php endwhile; ?>
+
+    </ul>
+
+<?php endif; ?>
+
+
+
+
+<?php
+
+
+$tops = return_tops_array('acf-options-sports');
+
+
+foreach ( $tops as $top) 
+{
+
+    
+    $thegroup = acf_get_fields($top->post_name);
+    
+    
+    
+    foreach ( $thegroup as $group ) 
+    {
+    echo '<br /><br />';
+    echo $group['ID'];
+    echo '||';
+    echo $group['key'];
+    echo '||';
+    
+    //the_field($field_name, $post_id);
+    //the_field('options_top_1_most_like_sports', $group['ID']);
+    
+    
+    
+    echo get_option( 'options_'.$group['name'] );
+
+    
+    echo '<br /><br />';
+    
+         
+    }
+
+}
+?>
+<?php //$field = get_field($field_name, $post_id, $format_value); ?>
+
 
 <?php
 //get_footer();

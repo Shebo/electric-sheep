@@ -152,3 +152,78 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 require get_template_directory() . '/boaz-functions.php';
+
+/**
+ * Add Redux Framework & extras
+ */
+//require get_template_directory() . '/admin/admin-init.php';
+
+// Check whether the Titan Framework plugin is activated, and notify if it isn't
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Sports Settings',
+		'menu_title'	=> 'Sports',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Fashion Settings',
+		'menu_title'	=> 'Fashion',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+	
+    
+   	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Travel Settings',
+		'menu_title'	=> 'Travel',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+    
+   	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Pets Settings',
+		'menu_title'	=> 'Pets',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+    
+
+   	acf_add_options_page(array(
+		'page_title' 	=> 'About us Settings',
+		'menu_title'	=> 'About us Settings',
+		'menu_slug' 	=> 'about-us-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+    
+    	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Partners Settings',
+		'menu_title'	=> 'Partners',
+		'parent_slug'	=> 'about-us-settings',
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Members Settings',
+		'menu_title'	=> 'Members',
+		'parent_slug'	=> 'about-us-settings',
+	));
+	
+}
+
+
+function return_tops_array($which_tops){
+    global $post,$wpdb;
+
+    $tops = $wpdb->get_results("SELECT post_name FROM $wpdb->posts WHERE CONVERT(`post_content` USING utf8) LIKE '%$which_tops%' order by menu_order");
+                                
+    return $tops;
+
+    
+}
