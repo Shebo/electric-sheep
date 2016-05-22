@@ -50,3 +50,10 @@
 		left: 0;
 	}
 }
+
+%user-select {
+	-moz-user-select: text;
+	cursor: auto !important;
+	-webkit-user-select: auto !important;
+	-moz-user-select: auto !important;
+}

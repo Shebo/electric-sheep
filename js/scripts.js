@@ -21,39 +21,40 @@
 		bodyScrollClass();
 		jQuery(window).scroll(bodyScrollClass);
 
-		jQuery(".homepage-curtains[data-toggle='open'] .curtain-wrapper").on('click', function(e){
-			toggleCurtain(this);
-			jQuery(this).parent().attr('data-toggle', 'close');
+		// toggle categories on curtain click
+		jQuery(".homepage-curtains .curtain-wrapper").on('click', function(e){
+			toggleCategory(this);
+			if(jQuery(this).parent().attr('data-toggle') == 'open'){
+				jQuery(this).parent().attr('data-toggle', 'close');
+			}
 		});
 
-		jQuery(".homepage-curtains[data-toggle='close'] .curtain-wrapper").on('click', function(e){
-			toggleCurtain(this);
-		});
-
-		// dont let category link act as a curtain click
+		// prevent category link to act as a curtain click
 		jQuery(".view-videos").on('click', function(e){
 			e.stopPropagation();
 			e.preventDefault();
 		});
 
-
+		// prevent poster link to play video
 		jQuery('.categories-carousel .vjs-poster').on('click', function(e){
 			e.stopPropagation();
 			e.preventDefault();
 		});
 
-		// hide metadata once video is played
+		// hide overlay data once video is played
 		jQuery('.categories-carousel video').on('play', function(e){
-			jQuery(e.currentTarget).parent().prev('.metadata').hide();
+			jQuery(e.currentTarget).parent().siblings('.banner, .metadata').hide();
 		});
 
 
+		//
 		jQuery('.category-carousel')
 			.on('init', function(event, slick, direction){
-
+				// set next/prev slide's class on carousel init
 				setNextPrevSlideClasses(slick.$slides, slick.currentSlide);
-			}).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
 
+			}).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+				// set next/prev slide's class on before slide change
 				setNextPrevSlideClasses(slick.$slides, nextSlide);
 			}).slick({
 				centerMode: true,
@@ -83,50 +84,32 @@
 							}
 						},
 						{
+							breakpoint: 1600,
+							settings: {
+								centerPadding: '15%',
+							}
+						},
+						{
+							breakpoint: 1400,
+							settings: {
+								centerPadding: '12.5%',
+							}
+						},
+						{
 							breakpoint: 1200,
 							settings: {
-								centerPadding: '10%',
+								centerPadding: '12%',
 							}
 						}
 					]
 			});
-
-		// jQuery('.categories-carousel').owlCarousel({
-		//   slidesToShow: 1,
-		//   arrows: false,
-		//   draggable: false,
-		//   touchMove: false,
-		//   swipe: false,
-		//   // infinite: false,
-
-
-		// 	center: true,
-		// 	loop: false,
-		// 	mouseDrag: false,
-		// 	touchDrag: false,
-		// 	pullDrag: false,
-		// 	freeDrag: false,
-		// 	items: 1,
-		// 	smartSpeed: 3000,
-		// });
-
-		// jQuery('.category-carousel').owlCarousel({
-		// 	center: true,
-		// 	loop: false,
-		// 	items: 1,
-		// 	margin:50,
-		// 	stagePadding: 200,
-		// });
-
-
-
 	});
 
 })(jQuery, this);
 
-function toggleCurtain(el){
+function toggleCategory(el){
 
-	var fadeClasses = 'fadeOutLeft fadeInLeft fadeOutRight fadeInRight';
+	var fadeClasses = 'fadeCarouselOutLeft fadeCarouselInLeft fadeCarouselOutRight fadeCarouselInRight';
 
 	// get categories
 	var oldCategory = jQuery('.curtain-wrapper.active').attr('data-category');
@@ -141,31 +124,15 @@ function toggleCurtain(el){
 	var active = jQuery('.category-carousel-wrapper:not(.slick-cloned)[data-category="'+category+'"]');
 
 	if(jQuery('.category-carousel-wrapper:not(.slick-cloned)[data-category="'+category+'"]').isAfter('.category-carousel-wrapper:not(.slick-cloned)[data-category="'+oldCategory+'"]')){
-		console.log(category+' is after');
-		oldActive.find('.slick-track').removeClass(fadeClasses).addClass('fadeOutLeft');
-		active.find('.slick-track').removeClass(fadeClasses).addClass('fadeInLeft');
+		oldActive.find('.slick-track').removeClass(fadeClasses).addClass('fadeCarouselOutLeft');
+		active.find('.slick-track').removeClass(fadeClasses).addClass('fadeCarouselInLeft');
 	}else{
-		console.log(category+' is before');
-		oldActive.find('.slick-track').removeClass(fadeClasses).addClass('fadeOutRight');
-		active.find('.slick-track').removeClass(fadeClasses).addClass('fadeInRight');
+		oldActive.find('.slick-track').removeClass(fadeClasses).addClass('fadeCarouselOutRight');
+		active.find('.slick-track').removeClass(fadeClasses).addClass('fadeCarouselInRight');
 	}
 
 	oldActive.removeClass('active');
 	active.addClass('active');
-
-	console.log(oldActive.find('.slick-track'));
-	console.log(active.find('.slick-track'));
-
-
-
-
-	// var catCarousel = jQuery('.category-carousel-wrapper:not(.slick-cloned)[data-category="'+category+'"]');
-	// var catCarousels = jQuery('.category-carousel-wrapper:not(.slick-cloned)[data-category="'+category+'"]').index();
-	// console.log(catCarousel);
-	// console.log(catCarousels);
-	// jQuery('.categories-carousel').slick('slickGoTo', parseInt(catCarousels)-1);
-
-	// jQuery('.categories-carousel').trigger('to.owl.carousel', [parseInt(catCarousels)-1, 300]);
 }
 
 

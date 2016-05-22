@@ -73,7 +73,7 @@ get_header(); ?>
 							</div>
 						</div>
 					</div>
-					<a href="#" class="Maven-Pro view-videos">View All Sports Videos</a>
+					<a href="#" class="view-videos Maven-Pro text-lowercase">View All Sports Videos</a>
 				</div>
 
 				<div class="category-carousel-wrapper" data-category="fashion">
@@ -130,7 +130,7 @@ get_header(); ?>
 							</div>
 						</div>
 					</div>
-					<a href="#" class="Maven-Pro view-videos">View All Fashion Videos</a>
+					<a href="#" class="view-videos Maven-Pro text-lowercase">View All Fashion Videos</a>
 				</div>
 
 				<div class="category-carousel-wrapper" data-category="travel">
@@ -187,7 +187,7 @@ get_header(); ?>
 							</div>
 						</div>
 					</div>
-					<a href="#" class="Maven-Pro view-videos">View All Travel Videos</a>
+					<a href="#" class="view-videos Maven-Pro text-lowercase">View All Travel Videos</a>
 				</div>
 
 				<div class="category-carousel-wrapper" data-category="pets">
@@ -244,35 +244,35 @@ get_header(); ?>
 							</div>
 						</div>
 					</div>
-					<a href="#" class="Maven-Pro view-videos">View All Pets Videos</a>
+					<a href="#" class="view-videos Maven-Pro text-lowercase">View All Pets Videos</a>
 				</div>
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
-    
-    
-<?php if( have_rows('members', 'option') ): ?>
 
-    <ul>
+<!--
+<?php// if( have_rows('members', 'option') ): ?>
 
-    <?php while( have_rows('members', 'option') ): the_row(); ?>
+<ul>
 
-        <li>
-        
-        <?php the_sub_field('member_name'); ?>
-        <?php the_sub_field('member_title'); ?>
-        <?php the_sub_field('member_image'); ?>
-        <?php the_sub_field('member_text'); ?>
-        
-        
-        
-        </li>
+<?php// while( have_rows('members', 'option') ): the_row(); ?>
 
-    <?php endwhile; ?>
+    <li>
 
-    </ul>
+    <?php// the_sub_field('member_name'); ?>
+    <?php// the_sub_field('member_title'); ?>
+    <?php// the_sub_field('member_image'); ?>
+    <?php// the_sub_field('member_text'); ?>
 
-<?php endif; ?>
+
+
+    </li>
+
+<?php// endwhile; ?>
+
+</ul>
+
+<?php// endif; ?> -->
 
 
 
@@ -280,39 +280,39 @@ get_header(); ?>
 <?php
 
 
-$tops = return_tops_array('acf-options-sports');
+/*$tops = return_tops_array('acf-options-sports');
 
 
-foreach ( $tops as $top) 
+foreach ( $tops as $top)
 {
 
-    
+
     $thegroup = acf_get_fields($top->post_name);
-    
-    
-    
-    foreach ( $thegroup as $group ) 
+
+
+
+    foreach ( $thegroup as $group )
     {
     echo '<br /><br />';
     echo $group['ID'];
     echo '||';
     echo $group['key'];
     echo '||';
-    
+
     //the_field($field_name, $post_id);
     //the_field('options_top_1_most_like_sports', $group['ID']);
-    
-    
-    
+
+
+
     echo get_option( 'options_'.$group['name'] );
 
-    
+
     echo '<br /><br />';
-    
-         
+
+
     }
 
-}
+}*/
 ?>
 <?php //$field = get_field($field_name, $post_id, $format_value); ?>
 
