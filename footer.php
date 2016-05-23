@@ -12,14 +12,41 @@
 ?>
 
 	</div><!-- #content -->
-
-	<!-- <footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php //echo esc_url( __( 'https://wordpress.org/', 'electric-sheep' ) ); ?>"><?php //printf( esc_html__( 'Proudly powered by %s', 'electric-sheep' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php //printf( esc_html__( 'Theme: %1$s by %2$s.', 'electric-sheep' ), 'electric-sheep', '<a href="http://underscores.me/" rel="designer">Boaz Shebo Berger</a>' ); ?> -->
-		<!-- </div> --><!-- .site-info -->
-	<!-- </footer> --><!-- #colophon -->
+	<?php if(is_category()):?>
+	<footer id="colophon" class="site-footer container-fluid" role="contentinfo">
+		<div class="row">
+			<div class="footer-menu Open-Sans col-md-2 col-md-push-1">
+				<h5>About</h5>
+				<ul>
+					<li><a href="">About E-Sheep</a></li>
+					<li><a href="">Cookie Monster</a></li>
+					<li><a href="">TOS</a></li>
+				</ul>
+			</div>
+			<div class="footer-menu Open-Sans col-md-2 col-md-push-1">
+				<h5>About</h5>
+				<ul>
+					<li><a href="">About E-Sheep</a></li>
+					<li><a href="">Cookie Monster</a></li>
+					<li><a href="">TOS</a></li>
+				</ul>
+			</div>
+			<div class="footer-menu Open-Sans col-md-2 col-md-push-1">
+				<h5>About</h5>
+				<ul>
+					<li><a href="">About E-Sheep</a></li>
+					<li><a href="">Cookie Monster</a></li>
+					<li><a href="">TOS</a></li>
+				</ul>
+			</div>
+			<div class=" col-md-2 col-md-push-4">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logo-footer.png" title="<?php bloginfo( 'name' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
+				</a>
+			</div>
+		</div>
+	</footer><!-- #colophon -->
+	<?php endif;?>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

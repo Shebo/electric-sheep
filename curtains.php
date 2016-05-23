@@ -12,7 +12,7 @@
 					<a href="#" class="Maven-Pro view-videos">View All Sport Videos</a>
 				</div>
 			</div>
-			<video autoplay loop muted>
+			<video autoplay loop muted poster="https://i.ytimg.com/vi/Q8AZ16uBhr8/maxresdefault.jpg">
 			  <source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/SampleVideo.mp4" type="video/mp4">
 			</video>
 		</div>
@@ -24,7 +24,7 @@
 					<a href="#" class="Maven-Pro view-videos">View All Fashion Videos</a>
 				</div>
 			</div>
-			<video autoplay loop muted>
+			<video autoplay loop muted poster="https://i.ytimg.com/vi/Q8AZ16uBhr8/maxresdefault.jpg">
 			  <source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/SampleVideo.mp4" type="video/mp4">
 			</video>
 		</div>
@@ -36,7 +36,7 @@
 					<a href="#" class="Maven-Pro view-videos">View All Travel Videos</a>
 				</div>
 			</div>
-			<video autoplay loop muted>
+			<video autoplay loop muted poster="https://i.ytimg.com/vi/Q8AZ16uBhr8/maxresdefault.jpg">
 			  <source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/SampleVideo.mp4" type="video/mp4">
 			</video>
 		</div>
@@ -48,7 +48,7 @@
 					<a href="#" class="Maven-Pro view-videos">View All Pets Videos</a>
 				</div>
 			</div>
-			<video autoplay loop muted>
+			<video autoplay loop muted poster="https://i.ytimg.com/vi/Q8AZ16uBhr8/maxresdefault.jpg">
 			  <source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/SampleVideo.mp4" type="video/mp4">
 			</video>
 		</div>

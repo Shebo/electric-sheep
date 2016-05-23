@@ -30,7 +30,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<nav id="site-navigation" class="main-navigation pull-left" role="navigation" data-menu-toggle="close">
-			<button class="menu-burger" data-menu-toggle="close">
+			<button class="menu-burger" data-menu-toggle="close" title="Menu" alt="menu">
 				<span></span>
 				<span></span>
 				<span></span>
@@ -51,16 +51,16 @@
 					<div class="social-icons">
 						<ul class="clearfix">
 							<li class="google-plus">
-								<a href="#"></a>
+								<a href="#" title="Google Plus" alt="Google Plus"></a>
 							</li>
 							<li class="facebook">
-								<a href="#"></a>
+								<a href="#" title="Facebook" alt="Facebook"></a>
 							</li>
 							<li class="twitter">
-								<a href="#"></a>
+								<a href="#" title="Twitter" alt="Twitter"></a>
 							</li>
 							<li class="linkedin">
-								<a href="#"></a>
+								<a href="#" title="Linkedin" alt="Linkedin"></a>
 							</li>
 						</ul>
 					</div>
@@ -84,16 +84,16 @@
 		<div class="social-icons pull-right">
 			<ul class="clearfix">
 				<li class="google-plus">
-					<a href="#"></a>
+					<a href="#" title="Google Plus" alt="Google Plus"></a>
 				</li>
 				<li class="facebook">
-					<a href="#"></a>
+					<a href="#" title="Facebook" alt="Facebook"></a>
 				</li>
 				<li class="twitter">
-					<a href="#"></a>
+					<a href="#" title="Twitter" alt="Twitter"></a>
 				</li>
 				<li class="linkedin">
-					<a href="#"></a>
+					<a href="#" title="Linkedin" alt="Linkedin"></a>
 				</li>
 			</ul>
 		</div>

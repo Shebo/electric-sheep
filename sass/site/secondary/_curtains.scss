@@ -238,7 +238,7 @@
   }
 
   h3 span {
-    background: url(../assets/trophy-icon.png);
+    background: $icon__sports;
     width: 19px;
   }
 }
@@ -249,7 +249,7 @@
   }
 
   h3 span {
-    background: url(../assets/hanger-icon.png);
+    background: $icon__fashion;
     width: 29px;
   }
 }
@@ -260,7 +260,7 @@
   }
 
   h3 span {
-    background: url(../assets/marker-icon.png);
+    background: $icon__travel;
     width: 15px;
   }
 }
@@ -271,7 +271,7 @@
   }
 
   h3 span {
-    background: url(../assets/fish-icon.png);
+    background: $icon__pets;
     width: 24px;
   }
 }

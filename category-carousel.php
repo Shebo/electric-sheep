@@ -61,6 +61,10 @@ if(is_front_page() || is_home()){
 				</div>
 			</div>
 		</div>
-		<a href="#" class="view-videos Maven-Pro text-lowercase">View All <?php echo $cat_name; ?> Videos</a>
+		<?php if(is_category()):?>
+		<a href="#" class="scroll-for-more Maven-Pro text-lowercase">Scroll For More</a>
+		<?php else:?>
+		<a href="#?from=hp" class="view-videos Maven-Pro text-lowercase">View All <?php echo $cat_name; ?> Videos</a>
+		<?php endif; ?>
 	</div>
 <?php endforeach;?>

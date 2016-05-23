@@ -53,7 +53,7 @@
 		});
 
 		// hide overlay data once video is played
-		jQuery('.categories-carousel video').on('play', function(e){
+		jQuery('.category-carousel video, .category-top video').on('play', function(e){
 			jQuery(e.currentTarget).parent().siblings('.banner, .metadata').hide();
 		});
 
@@ -61,6 +61,10 @@
 			.on('init', function(event, slick, direction){
 				// set next/prev slide's class on carousel init
 				setNextPrevSlideClasses(slick.$slides, slick.currentSlide);
+
+				if(getQueryVariable('from') == 'hp'){
+					setTimeout(scrollToTops, 500);
+		        }
 
 			}).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
 				// set next/prev slide's class on before slide change
@@ -112,6 +116,14 @@
 						}
 					]
 			});
+
+		// handle scroll-for-more
+		jQuery('.scroll-for-more').on('click', function(e){
+			e.stopPropagation();
+			e.preventDefault();
+			scrollToTops();
+		});
+
 	});
 
 })(jQuery, this);
@@ -174,4 +186,20 @@ function setNextPrevSlideClasses(slides, current){
 
 	jQuery(slides[current-1]).addClass('prev-slide');
     jQuery(slides[current+1]).addClass('next-slide');
+}
+
+function scrollToTops(){
+	jQuery('html, body').animate({
+		scrollTop: jQuery('.category-tops').offset().top
+	}, 500);
+}
+
+function getQueryVariable(variable){
+   var query = window.location.search.substring(1);
+   var vars = query.split("&");
+   for (var i=0;i<vars.length;i++) {
+       var pair = vars[i].split("=");
+       if(pair[0] == variable){return pair[1];}
+   }
+   return(false);
 }
