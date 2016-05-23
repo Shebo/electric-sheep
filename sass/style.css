@@ -9378,6 +9378,47 @@ header.site-header .main-navigation[data-menu-toggle="open"] .inner-navigation {
 ## Curtains
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+footer.site-footer {
+  margin: 0 55px;
+  margin-top: 50px;
+  padding-top: 55px;
+  margin-bottom: 85px;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+footer.site-footer .footer-menu {
+  font-size: 14px;
+}
+
+footer.site-footer .footer-menu h5 {
+  margin: 0;
+  color: #999999;
+  line-height: 1.6;
+}
+
+footer.site-footer .footer-menu ul {
+  list-style: none;
+  margin: 0;
+}
+
+footer.site-footer .footer-menu ul li {
+  color: #cccccc;
+  line-height: 1.6;
+}
+
+footer.site-footer .footer-menu ul li a {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+footer.site-footer .footer-menu ul li a:hover, footer.site-footer .footer-menu ul li a:focus, footer.site-footer .footer-menu ul li a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*--------------------------------------------------------------
 ## Homepage
 --------------------------------------------------------------*/
 main#main {
@@ -9621,6 +9662,12 @@ body.home main#main {
   z-index: 4;
 }
 
+/*--------------------------------------------------------------
+## Inner
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Category Carousels
+--------------------------------------------------------------*/
 body.home .category-carousel-wrapper {
   position: absolute;
   height: calc(100% - 75px);
@@ -10081,6 +10128,9 @@ body.category .category-carousel-wrapper {
   color: #158a51;
 }
 
+/*--------------------------------------------------------------
+## Categories Navigation
+--------------------------------------------------------------*/
 .categories-nav {
   width: 100%;
   height: 53px;
@@ -10196,6 +10246,9 @@ body.category .category-carousel-wrapper {
   background-color: rgba(21, 138, 81, 0.7);
 }
 
+/*--------------------------------------------------------------
+## Categories Tops
+--------------------------------------------------------------*/
 .category-tops {
   padding: 0 55px;
 }
@@ -10281,44 +10334,6 @@ body.category .category-carousel-wrapper {
   bottom: 0;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.5);
-}
-
-footer.site-footer {
-  margin: 0 55px;
-  margin-top: 50px;
-  padding-top: 55px;
-  margin-bottom: 85px;
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
-}
-
-footer.site-footer .footer-menu {
-  font-size: 14px;
-}
-
-footer.site-footer .footer-menu h5 {
-  margin: 0;
-  color: #999999;
-  line-height: 1.6;
-}
-
-footer.site-footer .footer-menu ul {
-  list-style: none;
-  margin: 0;
-}
-
-footer.site-footer .footer-menu ul li {
-  color: #cccccc;
-  line-height: 1.6;
-}
-
-footer.site-footer .footer-menu ul li a {
-  font-size: inherit;
-  line-height: inherit;
-}
-
-footer.site-footer .footer-menu ul li a:hover, footer.site-footer .footer-menu ul li a:focus, footer.site-footer .footer-menu ul li a:visited {
-  text-decoration: none;
-  color: inherit;
 }
 
 /*--------------------------------------------------------------
