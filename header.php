@@ -29,26 +29,75 @@
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'electric-sheep' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
+		<nav id="site-navigation" class="main-navigation pull-left" role="navigation" data-menu-toggle="close">
+			<button class="menu-burger" data-menu-toggle="close" title="Menu" alt="menu">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<div class="inner-navigation">
+				<div>
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logo-alt.png" title="<?php bloginfo( 'name' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
+					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'Maven-Pro' ) ); ?>
+					<ul class="secondary-menu Maven-Pro">
+						<li>
+							<a href="#">About Us</a>
+						</li>
+						<li>
+							<a href="#">Contact</a>
+						</li>
+					</ul>
+					<div class="social-icons">
+						<ul class="clearfix">
+							<li class="google-plus">
+								<a href="#" title="Google Plus" alt="Google Plus"></a>
+							</li>
+							<li class="facebook">
+								<a href="#" title="Facebook" alt="Facebook"></a>
+							</li>
+							<li class="twitter">
+								<a href="#" title="Twitter" alt="Twitter"></a>
+							</li>
+							<li class="linkedin">
+								<a href="#" title="Linkedin" alt="Linkedin"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav><!-- #site-navigation -->
+
+		<div class="site-branding pull-left">
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logo.png" title="<?php bloginfo( 'name' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
+				</a></h1>
 			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logo.png" title="<?php bloginfo( 'name' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
+				</a></p>
+			<?php endif;?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'electric-sheep' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+		<div class="social-icons pull-right">
+			<ul class="clearfix">
+				<li class="google-plus">
+					<a href="#" title="Google Plus" alt="Google Plus"></a>
+				</li>
+				<li class="facebook">
+					<a href="#" title="Facebook" alt="Facebook"></a>
+				</li>
+				<li class="twitter">
+					<a href="#" title="Twitter" alt="Twitter"></a>
+				</li>
+				<li class="linkedin">
+					<a href="#" title="Linkedin" alt="Linkedin"></a>
+				</li>
+			</ul>
+		</div>
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

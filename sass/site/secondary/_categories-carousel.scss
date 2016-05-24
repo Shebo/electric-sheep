@@ -1,9 +1,10 @@
 .categories-carousel {
-  background: #161b23;
+  // background: #161b23;
   width: 100%;
   height: calc(100% - #{$height__curtains_closed});
   overflow-x: hidden;
   position: absolute;
   top: $height__curtains_closed;
   padding-top: 75px;
+  z-index: 4;
 }

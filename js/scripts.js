@@ -21,11 +21,22 @@
 		bodyScrollClass();
 		jQuery(window).scroll(bodyScrollClass);
 
+		// prevent poster link to play video
+		jQuery('.menu-burger').on('click', function(e){
+			var menu = jQuery('.main-navigation');
+
+			if(menu.attr('data-menu-toggle') == 'open'){
+				menu.attr('data-menu-toggle', 'close');
+			}else{
+				menu.attr('data-menu-toggle', 'open');
+			}
+		});
+
 		// toggle categories on curtain click
 		jQuery(".homepage-curtains .curtain-wrapper").on('click', function(e){
 			toggleCategory(this);
-			if(jQuery(this).parent().attr('data-toggle') == 'open'){
-				jQuery(this).parent().attr('data-toggle', 'close');
+			if(jQuery(this).parent().parent().attr('data-toggle') == 'open'){
+				jQuery(this).parent().parent().attr('data-toggle', 'close');
 			}
 		});
 
@@ -42,16 +53,18 @@
 		});
 
 		// hide overlay data once video is played
-		jQuery('.categories-carousel video').on('play', function(e){
+		jQuery('.category-carousel video, .category-top video').on('play', function(e){
 			jQuery(e.currentTarget).parent().siblings('.banner, .metadata').hide();
 		});
 
-
-		//
 		jQuery('.category-carousel')
 			.on('init', function(event, slick, direction){
 				// set next/prev slide's class on carousel init
 				setNextPrevSlideClasses(slick.$slides, slick.currentSlide);
+
+				if(getQueryVariable('from') == 'hp'){
+					setTimeout(scrollToTops, 500);
+		        }
 
 			}).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
 				// set next/prev slide's class on before slide change
@@ -103,6 +116,14 @@
 						}
 					]
 			});
+
+		// handle scroll-for-more
+		jQuery('.scroll-for-more').on('click', function(e){
+			e.stopPropagation();
+			e.preventDefault();
+			scrollToTops();
+		});
+
 	});
 
 })(jQuery, this);
@@ -114,6 +135,9 @@ function toggleCategory(el){
 	// get categories
 	var oldCategory = jQuery('.curtain-wrapper.active').attr('data-category');
 	var category = jQuery(el).attr('data-category');
+
+	if(category == oldCategory)
+		return false;
 
 	// toggle curtains
 	jQuery('.curtain-wrapper').removeClass('active');
@@ -162,4 +186,20 @@ function setNextPrevSlideClasses(slides, current){
 
 	jQuery(slides[current-1]).addClass('prev-slide');
     jQuery(slides[current+1]).addClass('next-slide');
+}
+
+function scrollToTops(){
+	jQuery('html, body').animate({
+		scrollTop: jQuery('.category-tops').offset().top
+	}, 500);
+}
+
+function getQueryVariable(variable){
+   var query = window.location.search.substring(1);
+   var vars = query.split("&");
+   for (var i=0;i<vars.length;i++) {
+       var pair = vars[i].split("=");
+       if(pair[0] == variable){return pair[1];}
+   }
+   return(false);
 }

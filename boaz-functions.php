@@ -27,3 +27,12 @@ add_action( 'wp_enqueue_scripts', 'enqueue_scripts', 9 );
 
 add_filter('show_admin_bar', '__return_false');
 
+function wpa_category_nav_class( $classes, $item ){
+    if( 'category' == $item->object ){
+        $category = get_category( $item->object_id );
+        $classes[] = 'menu-category-' . $category->slug;
+    }
+    return $classes;
+}
+add_filter( 'nav_menu_css_class', 'wpa_category_nav_class', 10, 2 );
+

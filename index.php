@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-
+<?php echo get_category_link( $category_id ); ?>
 	<div class="content-area">
 		<main id="main" role="main">
 			<?php get_template_part('curtains'); ?>
