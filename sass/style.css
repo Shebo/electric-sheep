@@ -9522,9 +9522,9 @@ body.home main#main {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
-  transition: left 0.4s 0.4s ease-in-out, bottom 0.5s ease-in-out, -webkit-transform 0.4s 0.4s ease-in-out;
-  transition: left 0.4s 0.4s ease-in-out, transform 0.4s 0.4s ease-in-out, bottom 0.5s ease-in-out;
-  transition: left 0.4s 0.4s ease-in-out, transform 0.4s 0.4s ease-in-out, bottom 0.5s ease-in-out, -webkit-transform 0.4s 0.4s ease-in-out;
+  transition: left 0.4s 0.4s ease-in-out, bottom 0.5s ease-in-out, -webkit-transform 0.4s 0.4s ease-in-out;
+  transition: left 0.4s 0.4s ease-in-out, transform 0.4s 0.4s ease-in-out, bottom 0.5s ease-in-out;
+  transition: left 0.4s 0.4s ease-in-out, transform 0.4s 0.4s ease-in-out, bottom 0.5s ease-in-out, -webkit-transform 0.4s 0.4s ease-in-out;
 }
 
 .homepage-curtains-wrapper .homepage-curtains .curtain-wrapper .curtain-overlay .content h3 span {
@@ -9573,9 +9573,9 @@ body.home main#main {
   -webkit-transform: translateX(0%);
       -ms-transform: translateX(0%);
           transform: translateX(0%);
-  transition: left 0.3s ease-in-out, bottom 0.5s 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: left 0.3s ease-in-out, transform 0.3s ease-in-out, bottom 0.5s 0.3s ease-in-out;
-  transition: left 0.3s ease-in-out, transform 0.3s ease-in-out, bottom 0.5s 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out, bottom 0.5s 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out, transform 0.3s ease-in-out, bottom 0.5s 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out, transform 0.3s ease-in-out, bottom 0.5s 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .homepage-curtains-wrapper[data-toggle="open"]:hover .curtain-wrapper:hover .curtain-overlay .content .view-videos {
