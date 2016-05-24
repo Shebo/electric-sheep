@@ -10,19 +10,19 @@
 get_header(); ?>
 
 <style type="text/css">
-	.categories-nav li.menu-category-sports {
+	.categories-nav li.menu-category-sports:after {
 		background-image: url(<?php echo 'https://i.ytimg.com/vi/Q8AZ16uBhr8/maxresdefault.jpg';?>);
 	}
 
-	.categories-nav li.menu-category-fashion {
+	.categories-nav li.menu-category-fashion:after {
 		background-image: url(<?php echo 'https://i.ytimg.com/vi/Q8AZ16uBhr8/maxresdefault.jpg';?>);
 	}
 
-	.categories-nav li.menu-category-travel {
+	.categories-nav li.menu-category-travel:after {
 		background-image: url(<?php echo 'https://i.ytimg.com/vi/Q8AZ16uBhr8/maxresdefault.jpg';?>);
 	}
 
-	.categories-nav li.menu-category-pets {
+	.categories-nav li.menu-category-pets:after {
 		background-image: url(<?php echo 'https://i.ytimg.com/vi/Q8AZ16uBhr8/maxresdefault.jpg';?>);
 	}
 </style>
