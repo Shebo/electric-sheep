@@ -10357,6 +10357,9 @@ body.category .category-carousel-wrapper {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+/*--------------------------------------------------------------
+## Contact Us Page
+--------------------------------------------------------------*/
 body.page-template-page-contact {
   background: linear-gradient(110deg, #666666 0%, black 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -10481,6 +10484,236 @@ body.page-template-page-contact main#main .contact-us-wrapper .footer .mini-menu
 
 body.page-template-page-contact main#main .contact-us-wrapper .footer .mini-menu ul li a, body.page-template-page-contact main#main .contact-us-wrapper .footer .mini-menu ul li a:visited {
   color: inherit;
+}
+
+/*--------------------------------------------------------------
+## About Us Page
+--------------------------------------------------------------*/
+body.page-template-page-about .about-us-wrapper .image-header {
+  margin: 0 auto;
+  background-size: cover;
+  padding: 90px 0 75px;
+  z-index: 1;
+}
+
+body.page-template-page-about .about-us-wrapper .image-header:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+body.page-template-page-about .about-us-wrapper .image-header h1 {
+  margin: 0 auto;
+  font-size: 4em;
+  color: white;
+  max-width: 660px;
+  z-index: 1;
+}
+
+body.page-template-page-about .about-us-wrapper .image-header p {
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 1.8em;
+  color: white;
+  max-width: 660px;
+  z-index: 1;
+}
+
+body.page-template-page-about .about-us-wrapper .image-header a {
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 7px 25px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  font-size: 1.4em;
+  color: white;
+  z-index: 1;
+}
+
+body.page-template-page-about .about-us-wrapper .partners h2 {
+  margin: 0 auto;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  font-size: 4em;
+  color: #161b23;
+}
+
+body.page-template-page-about .about-us-wrapper .partners h3 {
+  margin: 0 auto;
+  margin-bottom: 60px;
+  font-size: 2em;
+  color: #161b23;
+}
+
+body.page-template-page-about .about-us-wrapper .partners .content-contributors {
+  width: calc(100% - 100px);
+}
+
+body.page-template-page-about .about-us-wrapper .partners .demand-partners {
+  width: calc(100% - 100px);
+}
+
+body.page-template-page-about .about-us-wrapper .partners .demand-partners .slick-arrow {
+  background-image: url(../assets/arrow-black.png);
+  width: 13px;
+  height: 22px;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 50%;
+  margin-top: -21px;
+}
+
+body.page-template-page-about .about-us-wrapper .partners .demand-partners .slick-arrow.slick-prev {
+  left: -50px;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+body.page-template-page-about .about-us-wrapper .partners .demand-partners .slick-arrow.slick-next {
+  right: -50px;
+}
+
+body.page-template-page-about .about-us-wrapper .partners .partner, body.page-template-page-about .about-us-wrapper .partners .contributor {
+  height: auto;
+  width: 50%;
+  margin-bottom: 12.5px;
+  margin-top: 12.5px;
+}
+
+body.page-template-page-about .about-us-wrapper .partners .partner img, body.page-template-page-about .about-us-wrapper .partners .contributor img {
+  width: 80%;
+}
+
+body.page-template-page-about .about-us-wrapper .members {
+  margin-top: 65px;
+  max-height: 850px;
+}
+
+body.page-template-page-about .about-us-wrapper .members .member .inner-member {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+body.page-template-page-about .about-us-wrapper .members .member .inner-member:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 1;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, transparent 80%);
+}
+
+body.page-template-page-about .about-us-wrapper .members .member .inner-member .member-content {
+  position: absolute;
+  padding: 40px 60px;
+  bottom: 0;
+  left: 0;
+}
+
+body.page-template-page-about .about-us-wrapper .members .member .inner-member .member-content h4 {
+  font-size: 2.7em;
+  color: white;
+  margin: 0;
+}
+
+body.page-template-page-about .about-us-wrapper .members .member .inner-member .member-content span {
+  font-size: 1.6em;
+  color: white;
+}
+
+body.page-template-page-about .about-us-wrapper .members .member .inner-member .member-content p {
+  font-size: 1.6em;
+  color: white;
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+body.page-template-page-about .about-us-wrapper .members .big-member {
+  position: relative;
+  padding-bottom: 191.44%;
+  height: 0;
+}
+
+body.page-template-page-about .about-us-wrapper .members .big-member .inner-member:before {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+body.page-template-page-about .about-us-wrapper .members .small-member {
+  position: relative;
+  padding-bottom: 95.72%;
+  height: 0;
+}
+
+body.page-template-page-about .about-us-wrapper .news {
+  padding: 0 8.33333%;
+  margin-bottom: 50px;
+}
+
+body.page-template-page-about .about-us-wrapper .news > div {
+  padding: 0 5%;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  margin-left: -1px;
+}
+
+body.page-template-page-about .about-us-wrapper .news > div:first-of-type {
+  border-left: none;
+  margin-left: 2px;
+}
+
+body.page-template-page-about .about-us-wrapper .news > div:last-of-type {
+  border-right: none;
+}
+
+body.page-template-page-about .about-us-wrapper .news h2 {
+  margin: 0 auto;
+  margin-top: 105px;
+  margin-bottom: 70px;
+  font-size: 4em;
+  color: #161b23;
+}
+
+body.page-template-page-about .about-us-wrapper .news h4 {
+  margin: 0 auto;
+  font-size: 2.4em;
+  color: #161b23;
+}
+
+body.page-template-page-about .about-us-wrapper .news p {
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 1.75em;
+  color: #161b23;
+}
+
+body.page-template-page-about .about-us-wrapper .news a {
+  color: white;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 25px;
+  padding: 7px 30px;
+  border: 1px solid rgba(22, 27, 35, 0.3);
+  font-size: 1.4em;
+  background: #161b23;
 }
 
 /*--------------------------------------------------------------

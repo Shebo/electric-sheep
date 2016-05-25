@@ -12,7 +12,7 @@
 ?>
 
 	</div><!-- #content -->
-	<?php if(is_category()):?>
+	<?php if(is_category() || is_page() && !is_page_template('page-contact.php')):?>
 	<footer id="colophon" class="site-footer container-fluid" role="contentinfo">
 		<div class="row">
 			<div class="footer-menu Open-Sans col-md-2 col-md-push-1">

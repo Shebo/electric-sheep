@@ -57,6 +57,12 @@
 			jQuery(e.currentTarget).parent().siblings('.banner, .metadata').hide();
 		});
 
+		jQuery('.partners-carousel').slick({
+			slidesToShow: 1,
+			prevArrow: '<button type="button" class="slick-prev"></button>',
+			nextArrow: '<button type="button" class="slick-next"></button>'
+		});
+
 		jQuery('.category-carousel')
 			.on('init', function(event, slick, direction){
 				// set next/prev slide's class on carousel init
