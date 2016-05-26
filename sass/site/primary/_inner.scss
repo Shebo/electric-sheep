@@ -22,3 +22,34 @@
 ## About Us Page
 --------------------------------------------------------------*/
 @import "../secondary/about-us";
+
+
+
+@media screen and ( max-height: 720px ){
+	.category-carousel-wrapper {
+
+	  .slick-track {
+	    height: 100%;
+	  }
+
+	  .slick-list {
+	    height: 100%;
+	  }
+
+	  .category-carousel {
+	    height: calc(100% - 130px);
+
+	    .category-video {
+
+	      .category-video-inner {
+	        height: 100%;
+
+	        video {
+	          top: 50%;
+	          transform: translateY(-50%);
+	        }
+	      }
+	    }
+	  }
+	}
+}
