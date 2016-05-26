@@ -280,3 +280,22 @@
     width: 24px;
   }
 }
+
+
+@media (max-width: $screen-sm) {
+  .homepage-curtains-wrapper {
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+
+    .homepage-curtains {
+      display: block;
+
+      .curtain-wrapper {
+        width: 100%;
+        height: 200px;
+        display: block;
+      }
+    }
+  }
+}

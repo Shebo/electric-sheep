@@ -30,7 +30,6 @@ The detachable concept means that we don’t work for our destination sites traf
 					</div>
 					<div class="partners clearfix">
 						<h2 class="col-md-12 Maven-Pro text-uppercase text-center">Our Partners</h2>
-
 						<div class="col-md-5 col-md-push-1">
 							<div class="content-contributors">
 								<h3 class="Maven-Pro text-uppercase text-center">content contributors</h3>
