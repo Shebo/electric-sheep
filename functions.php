@@ -227,3 +227,57 @@ function return_tops_array($which_tops){
 
     
 }
+
+
+/* add news post type */
+add_action('init', 'news_register');
+
+function news_register() {
+  $labels = array(
+    'name' => _x('News', 'post type general name'),
+    'singular_name' => _x('News', 'post type singular name'),
+    'add_new' => _x('Add News', ''),
+    'add_new_item' => __('Add News'),
+    'edit_item' => __('Edit News'),
+    'new_item' => __('New News'),
+    'view_item' => __('View News'),
+    'search_items' => __('Search News'),
+    'not_found' =>  __('No News'),
+    'not_found_in_trash' => __('no trash'), 
+    'parent_item_colon' => ''
+  );
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'singular_label' => 'News',
+    'show_ui' => true, 
+    'query_var' => true,
+    'rewrite' => array('slug'=>'news'),
+    'capability_type' => 'post',
+    'hierarchical' => false,
+    'menu_icon' => '',
+    'menu_position' => 4,
+    'menu_position' => null,
+    'supports' => array('title','thumbnail','editor')
+    
+    
+							
+							
+  ); 
+  register_post_type('news',$args);
+}
+
+function add_menu_icons_styles(){
+?>
+ 
+<style>
+#adminmenu .menu-icon-news div.wp-menu-image:before {
+  content: "\f319";
+}
+
+</style>
+ 
+<?php
+}
+add_action( 'admin_head', 'add_menu_icons_styles' );

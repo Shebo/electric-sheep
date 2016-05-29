@@ -42,10 +42,10 @@
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'Maven-Pro' ) ); ?>
 					<ul class="secondary-menu Maven-Pro">
 						<li>
-							<a href="#">About Us</a>
+							<a href="<?php echo bloginfo('url'); ?>/about-us">About Us</a>
 						</li>
 						<li>
-							<a href="#">Contact</a>
+							<a href="<?php echo bloginfo('url'); ?>/cotact">Contact</a>
 						</li>
 					</ul>
 					<div class="social-icons">

@@ -2,69 +2,70 @@
 if(is_front_page() || is_home()){
 	$categories = array('sports', 'fashion', 'travel', 'pets');
 }else{
-	$categories = array('sports');
+
+	$categories = array(single_cat_title('',false));
 }
 ?>
 
-<?php foreach ($categories as $cat_name) : ?>
+<?php foreach ($categories as $cat_name) : 
+
+$options_group = 'acf-options-'.$cat_name;
+$tops = return_tops_array($options_group);
+$thegroup = acf_get_fields($tops[0]->post_name);
+
+
+
+?>
 	<div class="category-carousel-wrapper <?php if($categories[0] == $cat_name){echo 'active';} ?>" data-category="<?php echo $cat_name; ?>">
 		<div class="category-carousel">
+
+
+
+<?php
+			foreach ( $thegroup as $group ) {
+			$postID = get_option( 'options_'.$group['name'] );
+
+			$video_title = get_the_title($postID);
+			$video_img = wp_get_attachment_image_src( get_post_thumbnail_id($postID), 'full');
+			$video_url = get_post_meta($postID,'video_url',true);
+
+			$category_id = get_cat_ID( $cat_name ) ;
+			?>
+
+
+
 			<div class="category-video">
 				<div class="category-video-inner">
 					<div class="overlay"></div>
 					<span class="banner top-engaged DIN text-uppercase">
 						<i></i>
-						Top Engaged By Users
+						<?php echo get_the_title($group['parent']);?>
 					</span>
 					<div class="metadata text-left">
-						<h3 class="Maven-Pro text-uppercase">Punk Rock Is A Thing</h3>
-						<span class="Open-Sans">Time: 04:24</span>
-						<span class="Open-Sans">by: Alex Furman</span>
+						<h3 class="Maven-Pro text-uppercase"><?php echo $video_title; ?></h3>
+						<!--<span class="Open-Sans">Time: 04:24</span>
+						<span class="Open-Sans">by: Alex Furman</span>-->
 					</div>
-					<video class="video-js vjs-sublime-skin" controls data-setup='{"poster":"https://i.ytimg.com/vi/Q8AZ16uBhr8/maxresdefault.jpg", "preload": false}'>
-					  <source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/SampleVideo.mp4" type="video/mp4">
+					<video class="video-js vjs-sublime-skin" controls data-setup='{"poster":"<?php echo $video_img[0]; ?>", "preload": false}'>
+					  <source src="<?php echo $video_url; ?>" type="video/mp4">
 					</video>
 				</div>
 			</div>
-			<div class="category-video">
-				<div class="category-video-inner">
-					<div class="overlay"></div>
-					<span class="banner top-engaged DIN text-uppercase">
-						<i></i>
-						Top Engaged By Users
-					</span>
-					<div class="metadata text-left">
-						<h3 class="Maven-Pro text-uppercase">Punk Rock Is A Thing</h3>
-						<span class="Open-Sans">Time: 04:24</span>
-						<span class="Open-Sans">by: Alex Furman</span>
-					</div>
-					<video class="video-js vjs-sublime-skin" controls data-setup='{"poster":"https://i.ytimg.com/vi/Q8AZ16uBhr8/maxresdefault.jpg", "preload": false}'>
-					  <source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/SampleVideo.mp4" type="video/mp4">
-					</video>
-				</div>
-			</div>
-			<div class="category-video">
-				<div class="category-video-inner">
-					<div class="overlay"></div>
-					<span class="banner top-engaged DIN text-uppercase">
-						<i></i>
-						Top Engaged By Users
-					</span>
-					<div class="metadata text-left">
-						<h3 class="Maven-Pro text-uppercase">Punk Rock Is A Thing</h3>
-						<span class="Open-Sans">Time: 04:24</span>
-						<span class="Open-Sans">by: Alex Furman</span>
-					</div>
-					<video class="video-js vjs-sublime-skin" controls data-setup='{"poster":"https://i.ytimg.com/vi/Q8AZ16uBhr8/maxresdefault.jpg", "preload": false}'>
-					  <source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/SampleVideo.mp4" type="video/mp4">
-					</video>
-				</div>
-			</div>
+			
+
+<?php } ?>
+
+
 		</div>
 		<?php if(is_category()):?>
 		<a href="#" class="scroll-for-more Maven-Pro text-lowercase">Scroll For More</a>
 		<?php else:?>
-		<a href="#?from=hp" class="view-videos Maven-Pro text-lowercase">View All <?php echo $cat_name; ?> Videos</a>
+		<?php 
+
+
+
+		$cat_link = get_category_link( $category_id ); ?> 
+		<a href="<?php echo $cat_link; ?>?from=hp" class="view-videos Maven-Pro text-lowercase">View All <?php echo $cat_name; ?> Videos</a>
 		<?php endif; ?>
 	</div>
 <?php endforeach;?>

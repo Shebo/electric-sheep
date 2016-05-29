@@ -25,16 +25,16 @@ get_header(); ?>
 				<div class="social-icons">
 					<ul class="clearfix">
 						<li class="google-plus">
-							<a href="#" title="Google Plus" alt="Google Plus"></a>
+							<a href="<?php the_field('facebook_url', 'option'); ?>" title="Google Plus" alt="Google Plus"></a>
 						</li>
 						<li class="facebook">
-							<a href="#" title="Facebook" alt="Facebook"></a>
+							<a href="<?php the_field('google_url', 'option'); ?>" title="Facebook" alt="Facebook"></a>
 						</li>
 						<li class="twitter">
-							<a href="#" title="Twitter" alt="Twitter"></a>
+							<a href="<?php the_field('twitter_url', 'option'); ?>" title="Twitter" alt="Twitter"></a>
 						</li>
 						<li class="linkedin">
-							<a href="#" title="Linkedin" alt="Linkedin"></a>
+							<a href="<?php the_field('linkedin_url', 'option'); ?>" title="Linkedin" alt="Linkedin"></a>
 						</li>
 					</ul>
 				</div>

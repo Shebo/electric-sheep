@@ -23,9 +23,7 @@ get_header(); ?>
 				<div class="row">
 					<div class="image-header text-center col-md-12" style="background-image: url(http://www.abstract-living.com/wp-content/uploads/2015/05/meeting-strangers.jpg);">
 						<h1 class="Maven-Pro text-uppercase text-center">About Us</h1>
-						<p class="Maven-Pro text-center">esheep is a unique DDP - Detachable Digital Publisher.
-We are a Publishing House - an expert in content Curation and Syndication.
-The detachable concept means that we don’t work for our destination sites traffic. By combining a creative approach towards advertising, a deep understanding of content, brand safety tools and massive reach, we carry video advertisements capsulated with unique segmented content - to the right users.</p>
+						<p class="Maven-Pro text-center"><?php the_field('about_us_text', 'option'); ?></p>
 						<a class="Maven-Pro text-uppercase text-center" href="">Learn More</a>
 					</div>
 					<div class="partners clearfix">
@@ -33,18 +31,21 @@ The detachable concept means that we don’t work for our destination sites traf
 						<div class="col-md-5 col-md-push-1">
 							<div class="content-contributors">
 								<h3 class="Maven-Pro text-uppercase text-center">content contributors</h3>
-								<div class="contributor pull-left">
-									<img src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
-								</div>
-								<div class="contributor pull-right">
-									<img src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
-								</div>
-								<div class="contributor pull-left">
-									<img src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
-								</div>
-								<div class="contributor pull-right">
-									<img src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
-								</div>
+
+
+								<?php if( have_rows('content_contributors', 'option') ): ?>
+
+								    <?php while( have_rows('content_contributors', 'option') ): the_row(); ?>
+
+								        <div class="contributor pull-left">
+											<a href="<?php the_sub_field('partner_logo_url'); ?>" target="_blank"><img src="<?php the_sub_field('partner_logo'); ?>?format=300w"></a>
+										</div>
+
+								    <?php endwhile; ?>
+
+								<?php endif; ?>
+
+
 							</div>
 						</div>
 						<div class="col-md-5 col-md-push-1">
@@ -112,58 +113,58 @@ The detachable concept means that we don’t work for our destination sites traf
 						</div>
 					</div>
 					<div class="members no-gutter clearfix">
-						<div class="col-md-4">
-							<div class="member big-member">
-								<div class="inner-member" style="background-image: url(http://cache1.asset-cache.net/gc/57503057-actor-ron-perlman-of-the-film-local-color-gettyimages.jpg?v=1&c=IWSAsset&k=2&d=OCUJ5gVf7YdJQI2Xhkc2QNafpMhaNz3k1l32wnCqLSj6F%2B%2FvdJDu8Xq9ns8p%2BXrK43e4nWXlqpPzEfF5zyWsEw%3D%3D);">
-									<div class="member-content">
-										<h4 class="Maven-Pro text-uppercase">Avi Dagan</h4>
-										<span class="role Maven-Pro text-uppercase">AD Operation Manager</span>
-										<p class="Maven-Pro">David’s extensive experience and track record in online video and e-commerce have laid a solid foundation for Electric Sheep. Throughout his career, David has excelled in a number of pivotal roles in the online video content world: At Endemol International Group, the world's largest independent production company.</p>
+					<?php if( have_rows('members', 'option') ): 
+					$member_cnt = 1;
+					?>
+
+						    
+
+						    <?php while( have_rows('members', 'option') ): the_row(); 
+
+
+						    if($member_cnt==1){ ?>
+						    	<div class="col-md-4">
+									<div class="member big-member">
+										<div class="inner-member" style="background-image: url(<?php the_sub_field('member_image'); ?>);">
+											<div class="member-content">
+												<h4 class="Maven-Pro text-uppercase"><?php the_sub_field('member_name'); ?></h4>
+												<span class="role Maven-Pro text-uppercase"><?php the_sub_field('member_title'); ?></span>
+												<p class="Maven-Pro"><?php the_sub_field('member_text'); ?></p>
+											</div>
+										</div>
 									</div>
 								</div>
-							</div>
-						</div>
-						<div class="col-md-8 no-gutter">
-							<div class="col-md-6">
+								<div class="col-md-8 no-gutter">
+
+
+
+
+
+						    <?php }else{ ?>
+
+						    	<div class="col-md-6">
 								<div class="member small-member">
-									<div class="inner-member" style="background-image: url(http://cache1.asset-cache.net/gc/454945966-actor-al-pacino-is-photographed-for-a-gettyimages.jpg?v=1&c=IWSAsset&k=2&d=GkZZ8bf5zL1ZiijUmxa7QQtAkZf1yy3bcoh0HuAscQs4%2FP2cgC5WYTOw5opS8Vg7del46NC8xp3jOeRAW6QLGlvUqy%2BrNPzESzcl%2Fy4U%2Fg4%3D);">
+									<div class="inner-member" style="background-image: url(<?php the_sub_field('member_image'); ?>);">
 										<div class="member-content">
-											<h4 class="Maven-Pro text-uppercase">Avi Dagan</h4>
-											<span class="role Maven-Pro text-uppercase">AD Operation Manager</span>
+											<h4 class="Maven-Pro text-uppercase"><?php the_sub_field('member_name'); ?></h4>
+											<span class="role Maven-Pro text-uppercase"><?php the_sub_field('member_title'); ?></span>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-6">
-								<div class="member small-member">
-									<div class="inner-member" style="background-image: url(http://cache1.asset-cache.net/gc/454945966-actor-al-pacino-is-photographed-for-a-gettyimages.jpg?v=1&c=IWSAsset&k=2&d=GkZZ8bf5zL1ZiijUmxa7QQtAkZf1yy3bcoh0HuAscQs4%2FP2cgC5WYTOw5opS8Vg7del46NC8xp3jOeRAW6QLGlvUqy%2BrNPzESzcl%2Fy4U%2Fg4%3D);">
-										<div class="member-content">
-											<h4 class="Maven-Pro text-uppercase">Avi Dagan</h4>
-											<span class="role Maven-Pro text-uppercase">AD Operation Manager</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="member small-member">
-									<div class="inner-member" style="background-image: url(http://cache1.asset-cache.net/gc/454945966-actor-al-pacino-is-photographed-for-a-gettyimages.jpg?v=1&c=IWSAsset&k=2&d=GkZZ8bf5zL1ZiijUmxa7QQtAkZf1yy3bcoh0HuAscQs4%2FP2cgC5WYTOw5opS8Vg7del46NC8xp3jOeRAW6QLGlvUqy%2BrNPzESzcl%2Fy4U%2Fg4%3D);">
-										<div class="member-content">
-											<h4 class="Maven-Pro text-uppercase">Avi Dagan</h4>
-											<span class="role Maven-Pro text-uppercase">AD Operation Manager</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="member small-member">
-									<div class="inner-member" style="background-image: url(http://cache1.asset-cache.net/gc/454945966-actor-al-pacino-is-photographed-for-a-gettyimages.jpg?v=1&c=IWSAsset&k=2&d=GkZZ8bf5zL1ZiijUmxa7QQtAkZf1yy3bcoh0HuAscQs4%2FP2cgC5WYTOw5opS8Vg7del46NC8xp3jOeRAW6QLGlvUqy%2BrNPzESzcl%2Fy4U%2Fg4%3D);">
-										<div class="member-content">
-											<h4 class="Maven-Pro text-uppercase">Avi Dagan</h4>
-											<span class="role Maven-Pro text-uppercase">AD Operation Manager</span>
-										</div>
-									</div>
-								</div>
-							</div>
+
+
+						    <?php	} ?>
+
+						       
+						    <?php 
+							$member_cnt++;
+						    endwhile; ?>
+
+						<?php endif; ?>
+
+						
+						
 						</div>
 					</div>
 					<div class="news no-gutter clearfix">
