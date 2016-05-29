@@ -10732,7 +10732,7 @@ body.page-template-page-about .about-us-wrapper .news a {
   background: #161b23;
 }
 
-@media screen and (max-height: 720px) {
+@media screen and (max-height: 750px) {
   .category-carousel-wrapper .slick-track {
     height: 100%;
   }
