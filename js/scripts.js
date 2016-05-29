@@ -43,7 +43,7 @@
 		// prevent category link to act as a curtain click
 		jQuery(".view-videos").on('click', function(e){
 			e.stopPropagation();
-			e.preventDefault();
+			// e.preventDefault();
 		});
 
 		// prevent poster link to play video
