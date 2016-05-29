@@ -10505,6 +10505,10 @@ body.page-template-page-contact main#main .contact-us-wrapper .footer .mini-menu
 /*--------------------------------------------------------------
 ## About Us Page
 --------------------------------------------------------------*/
+body.page-template-page-about .about-us-wrapper {
+  background: white;
+}
+
 body.page-template-page-about .about-us-wrapper .image-header {
   margin: 0 auto;
   background-size: cover;
