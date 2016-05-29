@@ -13,9 +13,9 @@
 
 	</div><!-- #content -->
 	<?php if(is_category() || is_page() && !is_page_template('page-contact.php')):?>
-	<footer id="colophon" class="site-footer container-fluid" role="contentinfo">
+	<footer id="colophon" class="site-footer container-fluid hidden-xs" role="contentinfo">
 		<div class="row">
-			<div class="footer-menu Open-Sans col-md-2 col-md-push-1">
+			<div class="footer-menu Open-Sans col-sm-2 col-sm-push-1">
 				<h5>About</h5>
 				<ul>
 					<li><a href="">About E-Sheep</a></li>
@@ -23,7 +23,7 @@
 					<li><a href="">TOS</a></li>
 				</ul>
 			</div>
-			<div class="footer-menu Open-Sans col-md-2 col-md-push-1">
+			<div class="footer-menu Open-Sans col-sm-2 col-sm-push-1">
 				<h5>About</h5>
 				<ul>
 					<li><a href="">About E-Sheep</a></li>
@@ -31,7 +31,7 @@
 					<li><a href="">TOS</a></li>
 				</ul>
 			</div>
-			<div class="footer-menu Open-Sans col-md-2 col-md-push-1">
+			<div class="footer-menu Open-Sans col-sm-2 col-sm-push-1">
 				<h5>About</h5>
 				<ul>
 					<li><a href="">About E-Sheep</a></li>
@@ -39,7 +39,7 @@
 					<li><a href="">TOS</a></li>
 				</ul>
 			</div>
-			<div class=" col-md-2 col-md-push-4">
+			<div class=" col-sm-2 col-sm-push-4">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logo-footer.png" title="<?php bloginfo( 'name' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
 				</a>

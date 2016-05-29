@@ -66,13 +66,12 @@ body.page-template-page-about {
 				color: #161b23;
 			}
 
-			.content-contributors {
-				width: calc(100% - 100px);
-			}
+			.content-contributors, .demand-partners {
+				width: 100%;
 
-			.demand-partners {
-				width: calc(100% - 100px);
-
+				@media (min-width: $screen-sm-min) {
+					width: calc(100% - 100px);
+				}
 
 
 				.slick-arrow {
@@ -113,6 +112,8 @@ body.page-template-page-about {
 		.members {
 			margin-top: 65px;
 			max-height: 850px;
+			width: 100%;
+			overflow-x: hidden;
 
 			.member {
 				.inner-member {

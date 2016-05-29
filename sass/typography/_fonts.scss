@@ -78,3 +78,7 @@ $DIN_font: "DIN", arial, sans-serif;
 .DIN {
     font-family: $DIN_font;
 }
+
+%DIN {
+    font-family: $DIN_font;
+}

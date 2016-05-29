@@ -7,7 +7,7 @@ if(is_front_page() || is_home()){
 }
 ?>
 
-<?php foreach ($categories as $cat_name) : 
+<?php foreach ($categories as $cat_name) :
 
 $options_group = 'acf-options-'.$cat_name;
 $tops = return_tops_array($options_group);
@@ -16,7 +16,8 @@ $thegroup = acf_get_fields($tops[0]->post_name);
 
 
 ?>
-	<div class="category-carousel-wrapper <?php if($categories[0] == $cat_name){echo 'active';} ?>" data-category="<?php echo $cat_name; ?>">
+	<div class="category-carousel-wrapper <?php if($categories[0] == $cat_name){echo 'active';} ?>" data-category="<?php echo strtolower($cat_name); ?>">
+		<h1 class="DIN text-uppercase visible-xs"><?php echo $cat_name; ?></h1>
 		<div class="category-carousel">
 
 
@@ -37,7 +38,7 @@ $thegroup = acf_get_fields($tops[0]->post_name);
 			<div class="category-video">
 				<div class="category-video-inner">
 					<div class="overlay"></div>
-					<span class="banner top-engaged DIN text-uppercase">
+					<span class="banner top-engaged DIN text-uppercase hidden-xs">
 						<i></i>
 						<?php echo get_the_title($group['parent']);?>
 					</span>
@@ -51,20 +52,20 @@ $thegroup = acf_get_fields($tops[0]->post_name);
 					</video>
 				</div>
 			</div>
-			
+
 
 <?php } ?>
 
 
 		</div>
 		<?php if(is_category()):?>
-		<a href="#" class="scroll-for-more Maven-Pro text-lowercase">Scroll For More</a>
+		<a href="#" class="scroll-for-more Maven-Pro text-lowercase hidden-xs">Scroll For More</a>
 		<?php else:?>
-		<?php 
+		<?php
 
 
 
-		$cat_link = get_category_link( $category_id ); ?> 
+		$cat_link = get_category_link( $category_id ); ?>
 		<a href="<?php echo $cat_link; ?>?from=hp" class="view-videos Maven-Pro text-lowercase">View All <?php echo $cat_name; ?> Videos</a>
 		<?php endif; ?>
 	</div>

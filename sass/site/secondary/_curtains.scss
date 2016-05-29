@@ -36,6 +36,10 @@
     height: 100%;
     width: 100%;
 
+    @media (max-width: $screen-xs-max) {
+      display: block;
+    }
+
     .curtain-wrapper {
       height: 100%;
       overflow: hidden;
@@ -43,6 +47,12 @@
       display: table-cell;
 
       @include transition(width 0.5s 0.3s ease-in-out);
+
+      @media (max-width: $screen-xs-max) {
+        height: 263px;
+        width: 100%;
+        display: block;
+      }
 
       video {
         position: absolute;
@@ -83,6 +93,12 @@
           width: 100%;
           bottom: 0;
 
+          @media (max-width: $screen-xs-max) {
+            height: 263px;
+            width: 100%;
+            bottom: inherit;
+          }
+
           h3 {
             font-size: 2em;
             color: white;
@@ -98,10 +114,21 @@
               transform 0.4s 0.4s ease-in-out,
               bottom 0.5s ease-in-out;
 
+            @media (max-width: $screen-xs-max) {
+              font-size: 3.4em;
+              bottom: inherit;
+              top: 50%;
+              transform: translate(-50%, -50%);
+            }
+
             span {
               height: 18px;
               display: inline-block;
               margin-right: 10px;
+
+              @media (max-width: $screen-xs-max) {
+                height: 40px;
+              }
             }
           }
 
@@ -109,20 +136,33 @@
             font-size: 1.6em;
             color: white;
             text-decoration: none;
-            border: 1px solid #d0d6de;
             padding: 5px 10px;
             position: absolute;
             bottom: 14px;
             left: 30px;
 
-            animation-delay: 0.5s;
-            animation-duration: 1s;
-            animation-fill-mode: both;
-            opacity: 0;
-            visibility: hidden;
-            transform: translate3d(0, 50%, 0);
+            @media (min-width: $screen-sm-min) {
+              border: 1px solid #d0d6de;
 
-            @include transition(all 0.3s ease-in-out);
+              animation-delay: 0.5s;
+              animation-duration: 1s;
+              animation-fill-mode: both;
+              opacity: 0;
+              visibility: hidden;
+              transform: translate3d(0, 50%, 0);
+
+              @include transition(all 0.3s ease-in-out);
+            }
+
+            @media (max-width: $screen-xs-max) {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              overflow: hidden;
+              text-indent: -9999px;
+            }
 
           }
         }
@@ -130,65 +170,67 @@
     }
   }
 
-  &[data-toggle="open"]:hover {
-    .curtain-wrapper:hover {
-      width: 50%;
+  @media (min-width: $screen-sm-min) {
+    &[data-toggle="open"]:hover {
+      .curtain-wrapper:hover {
+        width: 50%;
 
-      @include transition(width 0.5s ease-in-out);
+        @include transition(width 0.5s ease-in-out);
 
-      .curtain-overlay {
+        .curtain-overlay {
 
-        .shadow {
-          height: 20%;
-          opacity: 0.6;
-          box-shadow: 0px -30px 200px 150px;
+          .shadow {
+            height: 20%;
+            opacity: 0.6;
+            box-shadow: 0px -30px 200px 150px;
 
-          @include transition(
-            height 0.5s ease-in-out,
-            box-shadow 0.5s ease-in-out,
-            opacity 0.5s ease-in-out);
-        }
-
-         .content {
-
-
-          // transform: translateX(0%);
-
-          h3 {
-            left: 30px;
-            bottom: 60px;
-            transform: translateX(0%);
-
-            transition:
-              left 0.3s ease-in-out,
-              transform 0.3s ease-in-out,
-              bottom 0.5s 0.3s ease-in-out;
+            @include transition(
+              height 0.5s ease-in-out,
+              box-shadow 0.5s ease-in-out,
+              opacity 0.5s ease-in-out);
           }
 
-          .view-videos {
-            opacity: 1;
-            transform: none;
-            visibility: visible;
+           .content {
 
-            @include transition(all 0.5s 0.4s ease-in-out);
+
+            // transform: translateX(0%);
+
+            h3 {
+              left: 30px;
+              bottom: 60px;
+              transform: translateX(0%);
+
+              transition:
+                left 0.3s ease-in-out,
+                transform 0.3s ease-in-out,
+                bottom 0.5s 0.3s ease-in-out;
+            }
+
+            .view-videos {
+              opacity: 1;
+              transform: none;
+              visibility: visible;
+
+              @include transition(all 0.5s 0.4s ease-in-out);
+            }
           }
         }
       }
-    }
 
-    .curtain-wrapper .curtain-overlay .content {
+      .curtain-wrapper .curtain-overlay .content {
 
 
-      // -webkit-transition: all 0.5s ease-in-out;
-      // -moz-transition: all 0.5s ease-in-out;
-      // -o-transition: all 0.5s ease-in-out;
-      // transition: all 0.5s ease-in-out;
-    }
+        // -webkit-transition: all 0.5s ease-in-out;
+        // -moz-transition: all 0.5s ease-in-out;
+        // -o-transition: all 0.5s ease-in-out;
+        // transition: all 0.5s ease-in-out;
+      }
 
-    .curtain-wrapper:not(:hover) {
-      width: 16.66667%;
+      .curtain-wrapper:not(:hover) {
+        width: 16.66667%;
 
-      @include transition(width 0.5s ease-in-out);
+        @include transition(width 0.5s ease-in-out);
+      }
     }
   }
 
@@ -245,6 +287,10 @@
   h3 span {
     background: $icon__sports;
     width: 19px;
+    @media (max-width: $screen-xs-max) {
+      background: $icon_big__sports;
+      width: 35px;
+    }
   }
 }
 .homepage-curtains .curtain-wrapper[data-category="fashion"] {
@@ -256,6 +302,10 @@
   h3 span {
     background: $icon__fashion;
     width: 29px;
+    @media (max-width: $screen-xs-max) {
+      background: $icon_big__fashion;
+      width: 51px;
+    }
   }
 }
 .homepage-curtains .curtain-wrapper[data-category="travel"] {
@@ -267,6 +317,10 @@
   h3 span {
     background: $icon__travel;
     width: 15px;
+    @media (max-width: $screen-xs-max) {
+      background: $icon_big__travel;
+      width: 27px;
+    }
   }
 }
 .homepage-curtains .curtain-wrapper[data-category="pets"] {
@@ -278,11 +332,15 @@
   h3 span {
     background: $icon__pets;
     width: 24px;
+    @media (max-width: $screen-xs-max) {
+      background: $icon_big__pets;
+      width: 40px;
+    }
   }
 }
 
 
-@media (max-width: $screen-sm) {
+/* @media (max-width: $screen-sm) {
   .homepage-curtains-wrapper {
     width: 100%;
     height: 100%;
@@ -299,3 +357,4 @@
     }
   }
 }
+ */

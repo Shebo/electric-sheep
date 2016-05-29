@@ -1,6 +1,6 @@
 <div class="site-main homepage-curtains-wrapper" data-toggle="open">
-	<div class="homepage-center">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/big-logo.png">
+	<div class="homepage-center hidden-xs">
+		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logo-big.png">
 		<p class="Maven-Pro text-center"><?php the_field('hp_text', 'option'); ?></p>
 	</div>
 	<div class="homepage-curtains">

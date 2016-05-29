@@ -2,6 +2,10 @@
   width: 100%;
   height: 53px;
 
+  @media (max-width: $screen-xs-max) {
+    height: 85px;
+  }
+
   > div {
     width: 100%;
     height: 100%;
@@ -29,26 +33,23 @@
           bottom: 0;
           position: absolute;
           z-index: 2;
+
+          @media (max-width: $screen-xs-max) {
+            height: 100%;
+          }
         }
 
         &:after {
-          // width: 100%;
-          // height: 3px;
-          // content: "";
-          // display: block;
-          // bottom: 0;
-          // position: absolute;
-
           content: "";
-		  opacity: 0.5;
-		  top: 0;
-		  left: 0;
-		  bottom: 0;
-		  right: 0;
-		  position: absolute;
-		  z-index: 1;
-	      background-size: cover;
-		  background-position: center;
+          opacity: 0.5;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          position: absolute;
+          z-index: 1;
+          background-size: cover;
+          background-position: center;
         }
 
         a {
@@ -60,22 +61,38 @@
           text-align: center;
           z-index: 3;
 
-          &:before {
+          background-position: 0 center;
+          background-repeat: no-repeat;
+          padding-top: 6px;
+          padding-left: 35px;
+
+          /* &:before {
             content: "";
             display: inline-block;
             vertical-align: top;
             margin-top: 3px;
             margin-right: 14px;
-          }
+          } */
 
           &:hover, &:focus {
             text-decoration: none;
           }
+
+          @media (max-width: $screen-xs-max) {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-indent: -9999px;
+            padding: 0;
+            background-position: center;
+          }
         }
 
         &.current-menu-item:before {
-          background-color: transparent;
-          height: 100%;
+          @media (min-width: $screen-sm-min) {
+            background-color: transparent;
+            height: 100%;
+          }
         }
       }
     }
@@ -84,68 +101,108 @@
 
 .categories-nav li.menu-category-sports {
 
-   a:before {
-    background-image: $icon__sports;
+   a {
+      background-image: $icon__sports;
+
+      @media (max-width: $screen-xs-max) {
+        background-image: $icon_big__sports;
+      }
+   }
+
+   /* a:before {
+
     width: $icon_width__sports;
     height: $icon_height__sports;
-   }
+   } */
 
    &:before {
     background-color: rgba($color__sports, 1);
   }
 
   &.current-menu-item:before {
-    background-color: rgba($color__sports, 0.7);
+    @media (min-width: $screen-sm-min) {
+      background-color: rgba($color__sports, 0.7);
+    }
   }
 }
 
 .categories-nav li.menu-category-fashion {
 
-   a:before {
-    background-image: $icon__fashion;
+   a {
+      background-image: $icon__fashion;
+
+      @media (max-width: $screen-xs-max) {
+        background-image: $icon_big__fashion;
+      }
+   }
+
+   /* a:before {
+
     width: $icon_width__fashion;
     height: $icon_height__fashion;
-   }
+   } */
 
    &:before {
     background-color: rgba($color__fashion, 1);
   }
 
   &.current-menu-item:before {
-    background-color: rgba($color__fashion, 0.7);
+    @media (min-width: $screen-sm-min) {
+      background-color: rgba($color__fashion, 0.7);
+    }
   }
 }
 
 .categories-nav li.menu-category-travel {
 
-   a:before {
-    background-image: $icon__travel;
+   a {
+      background-image: $icon__travel;
+
+      @media (max-width: $screen-xs-max) {
+        background-image: $icon_big__travel;
+      }
+   }
+
+   /* a:before {
+
     width: $icon_width__travel;
     height: $icon_height__travel;
-   }
+   } */
 
    &:before {
     background-color: rgba($color__travel, 1);
   }
 
   &.current-menu-item:before {
-    background-color: rgba($color__travel, 0.7);
+    @media (min-width: $screen-sm-min) {
+      background-color: rgba($color__travel, 0.7);
+    }
   }
 }
 
 .categories-nav li.menu-category-pets {
 
-   a:before {
-    background-image: $icon__pets;
+   a {
+      background-image: $icon__pets;
+
+      @media (max-width: $screen-xs-max) {
+        background-image: $icon_big__pets;
+      }
+   }
+
+   /* a:before {
+
     width: $icon_width__pets;
     height: $icon_height__pets;
-   }
+   } */
 
    &:before {
     background-color: rgba($color__pets, 1);
   }
 
   &.current-menu-item:before {
-    background-color: rgba($color__pets, 0.7);
+    @media (min-width: $screen-sm-min) {
+      background-color: rgba($color__pets, 0.7);
+    }
   }
 }

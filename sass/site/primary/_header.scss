@@ -8,7 +8,9 @@ header.site-header {
 	}
 
 	.site-branding {
-		margin-left: 20px;
+		@media (min-width: $screen-sm-min) {
+			margin-left: 20px;
+		}
 
 		.site-title {
 			@extend %center-vertical;
@@ -71,6 +73,11 @@ header.site-header {
 
 	.main-navigation {
 		z-index: 11;
+		float: left;
+
+		@media (max-width: $screen-xs-max) {
+			float: right;
+		}
 
 		button.menu-burger {
 		    @extend %center-vertical;
@@ -85,6 +92,10 @@ header.site-header {
 			position: relative;
 			transition: 0.5s ease-in-out;
 			cursor: pointer;
+
+			@media (max-width: $screen-xs-max) {
+				width: 40px;
+			}
 
 			&:focus, &:active {
 				outline: 0;
@@ -109,10 +120,18 @@ header.site-header {
 				&:nth-child(2),
 				&:nth-child(3) {
 					top: 6px;
+
+					@media (max-width: $screen-xs-max) {
+						top: 10px;
+					}
 				}
 
 				&:nth-child(4) {
 					top: 12px;
+
+					@media (max-width: $screen-xs-max) {
+						top: 20px;
+					}
 				}
 			}
 		}
@@ -121,6 +140,7 @@ header.site-header {
 			@extend %center-alt;
 
 			position: fixed;
+		    overflow-y: auto;
 			width: 100%;
 			height: 100%;
 			left: 0;
@@ -131,44 +151,123 @@ header.site-header {
 			opacity: 0;
 			transition: visibility 0s 0.5s, opacity 0.5s ease-in-out;
 
+			@media (max-width: $screen-xs-max) {
+				display: block;
+			}
+
+			> div {
+				height: 100%;
+			    overflow-y: auto;
+
+			    @media (max-width: $screen-xs-max) {
+					display: block;
+					padding: 0 10%;
+				}
+			}
+
 			img {
-				margin-bottom: 110px;
+
+				@media (min-width: $screen-sm-min) {
+					margin-bottom: 110px;
+					max-width: 130px;
+				}
+
+				@media (max-width: $screen-xs-max) {
+					margin-top: 100px;
+					margin-bottom: 35px;
+				}
 			}
 
 			ul#primary-menu {
 				margin: 0;
 
-				li {
+				@media (max-width: $screen-xs-max) {
+					width: 100%;
+				}
 
-					float: left;
-					margin-right: 75px;
+				li {
 					font-size: 2em;
 					color: white;
-					padding-bottom: 7px;
-					border-bottom: 2px solid black;
 
-					&:last-child {
-						margin-right: 0;
+					@media (min-width: $screen-sm-min) {
+						float: left;
+						margin-right: 75px;
+						border-bottom: 2px solid black;
+						padding-bottom: 7px;
+
+						&:last-child {
+							margin-right: 0;
+						}
+
+						&.menu-category-sports {
+							border-color: $color__sports;
+						}
+
+						&.menu-category-fashion {
+							border-color: $color__fashion;
+						}
+
+						&.menu-category-travel {
+							border-color: $color__travel;
+						}
+
+						&.menu-category-pets {
+							border-color: $color__pets;
+						}
 					}
 
-					&.menu-category-sports {
-						border-color: $color__sports;
-					}
+					@media (max-width: $screen-xs-max) {
+						@extend .DIN;
+						@extend .text-uppercase;
+						width: 90%;
+				    	margin: 20px auto;
+				    	padding: 15px 0 10px;
+				    	font-size: 3em;
 
-					&.menu-category-fashion {
-						border-color: $color__fashion;
-					}
+				    	&:before {
+							height: 30px;
+							display: inline-block;
+							background-size: auto 30px;
+							background-repeat: no-repeat;
+				    	}
 
-					&.menu-category-travel {
-						border-color: $color__travel;
-					}
-
-					&.menu-category-pets {
-						border-color: $color__pets;
+				    	&.menu-category-sports {
+							background-color: $color__sports;
+							&:before{
+								content: "";
+								background-image: $icon_big__sports;
+								width: 35px;
+							}
+						}
+						&.menu-category-fashion {
+							background-color: $color__fashion;
+							&:before{
+								content: "";
+								background-image: $icon_big__fashion;
+								width: 51px;
+							}
+						}
+						&.menu-category-travel {
+							background-color: $color__travel;
+							&:before{
+								content: "";
+								background-image: $icon_big__travel;
+								width: 27px;
+							}
+						}
+						&.menu-category-pets {
+							background-color: $color__pets;
+							&:before{
+								content: "";
+								background-image: $icon_big__pets;
+								width: 40px;
+							}
+						}
 					}
 
 					a {
 						color: inherit;
+
 
 						&:hover {
 							text-decoration: none;
@@ -182,11 +281,15 @@ header.site-header {
 
 				li {
 					color: white;
-					font-size: 14px;
+					font-size: 1.4em;
 					margin-right: 22px;
 					padding-right: 22px;
 				    float: left;
 					border-right: 1px solid #808080;
+
+					@media (max-width: $screen-xs-max) {
+						font-size: 2.6em;
+					}
 
 					&:last-child {
 						margin-right: 0;
@@ -281,7 +384,8 @@ header.site-header {
 		}
 	}
 }
-/*--------------------------------------------------------------
-## Curtains
---------------------------------------------------------------*/
 
+
+@media (max-width: $screen-xs-max) {
+
+}

@@ -29,7 +29,7 @@
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'electric-sheep' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<nav id="site-navigation" class="main-navigation pull-left" role="navigation" data-menu-toggle="close">
+		<nav id="site-navigation" class="main-navigation" role="navigation" data-menu-toggle="close">
 			<button class="menu-burger" data-menu-toggle="close" title="Menu" alt="menu">
 				<span></span>
 				<span></span>
@@ -38,7 +38,7 @@
 			</button>
 			<div class="inner-navigation">
 				<div>
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logo-alt.png" title="<?php bloginfo( 'name' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logo-big.png" title="<?php bloginfo( 'name' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'Maven-Pro' ) ); ?>
 					<ul class="secondary-menu Maven-Pro">
 						<li>
@@ -81,7 +81,7 @@
 			<?php endif;?>
 		</div><!-- .site-branding -->
 
-		<div class="social-icons pull-right">
+		<div class="social-icons pull-right hidden-xs">
 			<ul class="clearfix">
 				<li class="google-plus">
 					<a href="#" title="Google Plus" alt="Google Plus"></a>
