@@ -1,18 +1,36 @@
 body.page-template-page-contact {
 	background: linear-gradient(110deg, #666666 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
-	main#main {
+	@media (max-width: $screen-xs-max) {
+		height: auto;
+	}
 
-		max-width: 750px;
+	main#main {
 		margin: 0 auto;
-		margin-top: 85px;
+
+
+		@media (min-width: $screen-sm-min) {
+			max-width: 750px;
+			margin-top: 85px;
+		}
+
+		@media (max-width: $screen-xs-max) {
+			margin-top: 60px;
+		}
 
 		.contact-us-wrapper {
-			border: 5px solid white;
-			padding-top: 55px;
-			padding-left: 55px;
-			padding-right: 55px;
-			padding-bottom: 55px;
+
+			@media (min-width: $screen-sm-min) {
+				border: 5px solid white;
+				padding-top: 55px;
+				padding-left: 55px;
+				padding-right: 55px;
+				padding-bottom: 55px;
+			}
+
+			@media (max-width: $screen-xs-max) {
+				text-align: center;
+			}
 
 			p {
 				margin: 0;
@@ -23,10 +41,19 @@ body.page-template-page-contact {
 				margin-top: 15px;
 				font-size: 2.3em;
 				color: white;
+
+				@media (max-width: $screen-xs-max) {
+					font-size: 3.4em;
+					margin-top: 95px;
+				}
 			}
 
 			.social-icons {
 				margin-top: 35px;
+
+				@media (max-width: $screen-xs-max) {
+					margin-top: 100px;
+				}
 
 				ul{
 					margin: 0;
@@ -37,6 +64,10 @@ body.page-template-page-contact {
 						float: left;
 						margin-right: 18px;
 
+						@media (max-width: $screen-xs-max) {
+							margin-right: 60px;
+						}
+
 						&:last-child {
 							margin-right: 0;
 						}
@@ -45,30 +76,57 @@ body.page-template-page-contact {
 							background-image: url(../assets/social-icons-alt.png);
 							background-repeat: no-repeat;
 					    	display: block;
+
+					    	@media (max-width: $screen-xs-max) {
+								background-image: url(../assets/social-icons-alt-big.png);
+							}
 						}
 
 						&.google-plus a {
 						    background-position: 0 0;
 						    width: 14px;
 				    		height: 14px;
+
+				    		@media (max-width: $screen-xs-max) {
+								width: 40px;
+				    			height: 41px;
+				    		}
 						}
 
 						&.facebook a {
 						    background-position: -33px 0;
 						    width: 7px;
 				    		height: 14px;
-						}
 
-						&.linkedin a {
-						    background-position: -93px 0;
-						    width: 14px;
-				    		height: 14px;
+				    		@media (max-width: $screen-xs-max) {
+				    			background-position: -101px 0;
+				    			width: 20px;
+				    			height: 41px;
+				    		}
 						}
 
 						&.twitter a {
 						    background-position: -60px 0;
 						    width: 13px;
 				    		height: 14px;
+
+				    		@media (max-width: $screen-xs-max) {
+				    			background-position: -185px 0;
+				    			width: 37px;
+				    			height: 41px;
+				    		}
+						}
+
+						&.linkedin a {
+						    background-position: -93px 0;
+						    width: 14px;
+				    		height: 14px;
+
+				    		@media (max-width: $screen-xs-max) {
+				    			background-position: -285px 0;
+				    			width: 40px;
+				    			height: 41px;
+				    		}
 						}
 					}
 				}
@@ -78,23 +136,56 @@ body.page-template-page-contact {
 				margin-top: 55px;
 				color: white;
 				font-size: 1.3em;
+
+				@media (max-width: $screen-xs-max) {
+					margin-top: 45px;
+					font-size: 2.2em;
+					color: rgba(255,255,255,0.5);
+				}
 			}
 
 			.address {
 				margin-top: 15px;
 				color: white;
 				font-size: 1.3em;
+
+				@media (max-width: $screen-xs-max) {
+					margin-top: 35px;
+					font-size: 2.2em;
+					color: rgba(255,255,255,0.5);
+				}
 			}
 
 			.footer {
 				margin-top: 70px;
 
+				@media (max-width: $screen-xs-max) {
+					margin-top: 130px;
+				}
+
 				.email {
+					@media (min-width: $screen-sm-min) {
+						float: left;
+					}
+
 					a {
-						font-size: 1.3em;
-						color: white;
-						background: url(../assets/envelope-icon.png) no-repeat center left;
-						padding: 4px 0 4px 40px;
+						background-repeat: no-repeat;
+
+						@media (min-width: $screen-sm-min) {
+							font-size: 1.3em;
+							color: white;
+							background: url(../assets/envelope-icon.png) no-repeat center left;
+							padding: 4px 0 4px 40px;
+						}
+
+						@media (max-width: $screen-xs-max) {
+							font-size: 3em;
+							color: rgba(255,255,255,0.5);
+							display: block;
+							background: url(../assets/envelope-icon-big.png) no-repeat center left;
+							padding-top: 100px;
+							background-position: top center;
+						}
 
 						&:visited {
 							color: inherit;
@@ -103,6 +194,15 @@ body.page-template-page-contact {
 				}
 
 				.mini-menu {
+					@media (min-width: $screen-sm-min) {
+						float: right;
+					}
+
+					@media (max-width: $screen-xs-max) {
+						margin-top: 55px;
+						margin-bottom: 30px;
+					}
+
 					ul {
 						margin: 0;
 						list-style: none;
@@ -112,6 +212,10 @@ body.page-template-page-contact {
 							margin-right: 20px;
 							color: white;
 							font-size: 1.3em;
+
+							@media (max-width: $screen-xs-max) {
+								font-size: 2em;
+							}
 
 							&:last-child {
 								margin-right: 0;

@@ -23,7 +23,9 @@ get_header(); ?>
 				<div class="row">
 					<div class="image-header text-center col-sm-12" style="background-image: url(http://www.abstract-living.com/wp-content/uploads/2015/05/meeting-strangers.jpg);">
 						<h1 class="Maven-Pro text-uppercase text-center">About Us</h1>
-						<p class="Maven-Pro text-center"><?php the_field('about_us_text', 'option'); ?></p>
+						<div class="Maven-Pro text-center">
+							<p><?php the_field('about_us_text', 'option'); ?></p>
+						</div>
 						<a class="Maven-Pro text-uppercase text-center" href="">Learn More</a>
 					</div>
 					<div class="partners clearfix">
@@ -45,61 +47,53 @@ get_header(); ?>
 
 								<?php //endif; ?>
 								<div class="contributors-carousel">
-									<div class="contributors-slide">
-										<div class="contributor pull-left">
-											<img src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
-										</div>
-										<div class="contributor pull-right">
-											<img class="pull-right" src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
-										</div>
-										<div class="contributor pull-left">
-											<img src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
-										</div>
-										<div class="contributor pull-right">
-											<img class="pull-right" src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
-										</div>
+									<div class="contributor">
+										<img src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
 									</div>
-									<div class="contributors-slide">
-										<div class="contributor pull-left">
-											<img src="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/images/logo-design-principles/timeless-logos.jpg">
-										</div>
-										<div class="contributor pull-right">
-											<img class="pull-right" src="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/images/logo-design-principles/timeless-logos.jpg">
-										</div>
-										<div class="contributor pull-left">
-											<img src="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/images/logo-design-principles/timeless-logos.jpg">
-										</div>
-										<div class="contributor pull-right">
-											<img class="pull-right" src="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/images/logo-design-principles/timeless-logos.jpg">
-										</div>
+									<div class="contributor">
+										<img class="" src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
 									</div>
-									<div class="contributors-slide">
-										<div class="contributor pull-left">
-											<img src="http://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333">
-										</div>
-										<div class="contributor pull-right">
-											<img class="pull-right" src="http://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333">
-										</div>
-										<div class="contributor pull-left">
-											<img src="http://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333">
-										</div>
-										<div class="contributor pull-right">
-											<img class="pull-right" src="http://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333">
-										</div>
+									<div class="contributor">
+										<img src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
 									</div>
-									<div class="contributors-slide">
-										<div class="contributor pull-left">
-											<img src="http://www.reviewstl.com/wp-content/uploads/2014/07/Marvel-Logo-Small.jpg">
-										</div>
-										<div class="contributor pull-right">
-											<img class="pull-right" src="http://www.reviewstl.com/wp-content/uploads/2014/07/Marvel-Logo-Small.jpg">
-										</div>
-										<div class="contributor pull-left">
-											<img src="http://www.reviewstl.com/wp-content/uploads/2014/07/Marvel-Logo-Small.jpg">
-										</div>
-										<div class="contributor pull-right">
-											<img class="pull-right" src="http://www.reviewstl.com/wp-content/uploads/2014/07/Marvel-Logo-Small.jpg">
-										</div>
+									<div class="contributor">
+										<img class="" src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
+									</div>
+									<div class="contributor">
+										<img src="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/images/logo-design-principles/timeless-logos.jpg">
+									</div>
+									<div class="contributor">
+										<img class="" src="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/images/logo-design-principles/timeless-logos.jpg">
+									</div>
+									<div class="contributor">
+										<img src="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/images/logo-design-principles/timeless-logos.jpg">
+									</div>
+									<div class="contributor">
+										<img class="" src="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/images/logo-design-principles/timeless-logos.jpg">
+									</div>
+									<div class="contributor">
+										<img src="http://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333">
+									</div>
+									<div class="contributor">
+										<img class="" src="http://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333">
+									</div>
+									<div class="contributor">
+										<img src="http://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333">
+									</div>
+									<div class="contributor">
+										<img class="" src="http://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333">
+									</div>
+									<div class="contributor">
+										<img src="http://www.reviewstl.com/wp-content/uploads/2014/07/Marvel-Logo-Small.jpg">
+									</div>
+									<div class="contributor">
+										<img class="" src="http://www.reviewstl.com/wp-content/uploads/2014/07/Marvel-Logo-Small.jpg">
+									</div>
+									<div class="contributor">
+										<img src="http://www.reviewstl.com/wp-content/uploads/2014/07/Marvel-Logo-Small.jpg">
+									</div>
+									<div class="contributor">
+										<img class="" src="http://www.reviewstl.com/wp-content/uploads/2014/07/Marvel-Logo-Small.jpg">
 									</div>
 								</div>
 
@@ -109,70 +103,62 @@ get_header(); ?>
 							<div class="demand-partners pull-right">
 								<h3 class="Maven-Pro text-uppercase text-center">demand partners</h3>
 								<div class="partners-carousel">
-									<div class="partners-slide">
-										<div class="partner pull-left">
-											<img src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
-										</div>
-										<div class="partner pull-right">
-											<img class="pull-right" src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
-										</div>
-										<div class="partner pull-left">
-											<img src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
-										</div>
-										<div class="partner pull-right">
-											<img class="pull-right" src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
-										</div>
+									<div class="partner">
+										<img src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
 									</div>
-									<div class="partners-slide">
-										<div class="partner pull-left">
-											<img src="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/images/logo-design-principles/timeless-logos.jpg">
-										</div>
-										<div class="partner pull-right">
-											<img class="pull-right" src="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/images/logo-design-principles/timeless-logos.jpg">
-										</div>
-										<div class="partner pull-left">
-											<img src="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/images/logo-design-principles/timeless-logos.jpg">
-										</div>
-										<div class="partner pull-right">
-											<img class="pull-right" src="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/images/logo-design-principles/timeless-logos.jpg">
-										</div>
+									<div class="partner">
+										<img class="" src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
 									</div>
-									<div class="partners-slide">
-										<div class="partner pull-left">
-											<img src="http://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333">
-										</div>
-										<div class="partner pull-right">
-											<img class="pull-right" src="http://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333">
-										</div>
-										<div class="partner pull-left">
-											<img src="http://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333">
-										</div>
-										<div class="partner pull-right">
-											<img class="pull-right" src="http://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333">
-										</div>
+									<div class="partner">
+										<img src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
 									</div>
-									<div class="partners-slide">
-										<div class="partner pull-left">
-											<img src="http://www.reviewstl.com/wp-content/uploads/2014/07/Marvel-Logo-Small.jpg">
-										</div>
-										<div class="partner pull-right">
-											<img class="pull-right" src="http://www.reviewstl.com/wp-content/uploads/2014/07/Marvel-Logo-Small.jpg">
-										</div>
-										<div class="partner pull-left">
-											<img src="http://www.reviewstl.com/wp-content/uploads/2014/07/Marvel-Logo-Small.jpg">
-										</div>
-										<div class="partner pull-right">
-											<img class="pull-right" src="http://www.reviewstl.com/wp-content/uploads/2014/07/Marvel-Logo-Small.jpg">
-										</div>
+									<div class="partner">
+										<img class="" src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
+									</div>
+									<div class="partner">
+										<img src="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/images/logo-design-principles/timeless-logos.jpg">
+									</div>
+									<div class="partner">
+										<img class="" src="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/images/logo-design-principles/timeless-logos.jpg">
+									</div>
+									<div class="partner">
+										<img src="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/images/logo-design-principles/timeless-logos.jpg">
+									</div>
+									<div class="partner">
+										<img class="" src="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/images/logo-design-principles/timeless-logos.jpg">
+									</div>
+									<div class="partner">
+										<img src="http://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333">
+									</div>
+									<div class="partner">
+										<img class="" src="http://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333">
+									</div>
+									<div class="partner">
+										<img src="http://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333">
+									</div>
+									<div class="partner">
+										<img class="" src="http://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333">
+									</div>
+									<div class="partner">
+										<img src="http://www.reviewstl.com/wp-content/uploads/2014/07/Marvel-Logo-Small.jpg">
+									</div>
+									<div class="partner">
+										<img class="" src="http://www.reviewstl.com/wp-content/uploads/2014/07/Marvel-Logo-Small.jpg">
+									</div>
+									<div class="partner">
+										<img src="http://www.reviewstl.com/wp-content/uploads/2014/07/Marvel-Logo-Small.jpg">
+									</div>
+									<div class="partner">
+										<img class="" src="http://www.reviewstl.com/wp-content/uploads/2014/07/Marvel-Logo-Small.jpg">
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="members no-gutter clearfix">
-					<?php if( have_rows('members', 'option') ):
-					$member_cnt = 1;
-					?>
+						<?php if( have_rows('members', 'option') ):
+						$member_cnt = 1;
+						?>
 
 
 
@@ -226,20 +212,22 @@ get_header(); ?>
 					</div>
 					<div class="news no-gutter clearfix">
 						<h2 class="col-sm-12 Maven-Pro text-uppercase text-center">News & Press</h2>
-						<div class="text-center col-sm-4">
-							<h4 class="Maven-Pro text-uppercase text-center">our team won!</h4>
-							<p class="Maven-Pro text-center">We’re discovering, curating, promoting, and distributing a diverse selection of programming.</p>
-							<a class="Maven-Pro text-uppercase text-center" href="">Learn More</a>
-						</div>
-						<div class="text-center col-sm-4">
-							<h4 class="Maven-Pro text-uppercase text-center">our team won!</h4>
-							<p class="Maven-Pro text-center">We’re discovering, curating, promoting, and distributing a diverse selection of programming.</p>
-							<a class="Maven-Pro text-uppercase text-center" href="">Learn More</a>
-						</div>
-						<div class="text-center col-sm-4">
-							<h4 class="Maven-Pro text-uppercase text-center">our team won!</h4>
-							<p class="Maven-Pro text-center">We’re discovering, curating, promoting, and distributing a diverse selection of programming.</p>
-							<a class="Maven-Pro text-uppercase text-center" href="">Learn More</a>
+						<div class="news-inner">
+							<div class="news-singular text-center col-sm-4">
+								<h4 class="Maven-Pro text-uppercase text-center">our team won!</h4>
+								<p class="Maven-Pro text-center">We’re discovering, curating, promoting, and distributing a diverse selection of programming.</p>
+								<a class="Maven-Pro text-uppercase text-center" href="">Learn More</a>
+							</div>
+							<div class="news-singular text-center col-sm-4">
+								<h4 class="Maven-Pro text-uppercase text-center">our team won!</h4>
+								<p class="Maven-Pro text-center">We’re discovering, curating, promoting, and distributing a diverse selection of programming.</p>
+								<a class="Maven-Pro text-uppercase text-center" href="">Learn More</a>
+							</div>
+							<div class="news-singular text-center col-sm-4">
+								<h4 class="Maven-Pro text-uppercase text-center">our team won!</h4>
+								<p class="Maven-Pro text-center">We’re discovering, curating, promoting, and distributing a diverse selection of programming.</p>
+								<a class="Maven-Pro text-uppercase text-center" href="">Learn More</a>
+							</div>
 						</div>
 					</div>
 				</div>

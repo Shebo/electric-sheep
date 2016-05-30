@@ -22,7 +22,7 @@ get_header(); ?>
 			<div class="contact-us-wrapper">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/white-logo.png">
 				<h1 class="DIN text-uppercase">Contact Us</h1>
-				<div class="social-icons">
+				<div class="social-icons hidden-xs">
 					<ul class="clearfix">
 						<li class="google-plus">
 							<a href="<?php the_field('facebook_url', 'option'); ?>" title="Google Plus" alt="Google Plus"></a>
@@ -46,10 +46,26 @@ get_header(); ?>
 					<p>Tel: 1-844-842-0383</p>
 				</div>
 				<div class="footer clearfix">
-					<div class="email pull-left">
+					<div class="email">
 						<a class="DIN text-uppercase" href="mailto:esheep@gmail.com">esheep@gmail.com</a>
 					</div>
-					<div class="mini-menu pull-right">
+					<div class="social-icons visible-xs">
+						<ul class="clearfix">
+							<li class="google-plus">
+								<a href="<?php the_field('facebook_url', 'option'); ?>" title="Google Plus" alt="Google Plus"></a>
+							</li>
+							<li class="facebook">
+								<a href="<?php the_field('google_url', 'option'); ?>" title="Facebook" alt="Facebook"></a>
+							</li>
+							<li class="twitter">
+								<a href="<?php the_field('twitter_url', 'option'); ?>" title="Twitter" alt="Twitter"></a>
+							</li>
+							<li class="linkedin">
+								<a href="<?php the_field('linkedin_url', 'option'); ?>" title="Linkedin" alt="Linkedin"></a>
+							</li>
+						</ul>
+					</div>
+					<div class="mini-menu">
 						<ul>
 							<li><a class="DIN text-uppercase" href="">Privacy</a></li>
 							<li><a class="DIN text-uppercase" href="">TOS</a></li>

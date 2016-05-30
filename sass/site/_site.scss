@@ -5,18 +5,23 @@ html, body {
 	margin:0;
 	padding:0;
 	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
 	background: #1b212e;
 }
-
 header.site-header {
 	height: 60px;
 	overflow: hidden;
     padding: 0 28px;
     background: white;
+    width: 100%;
+	overflow-x: hidden;
 }
 
 #page, .content-area {
 	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
 }
 
 body.home #content {
@@ -24,7 +29,8 @@ body.home #content {
 }
 
 #content {
-
+	width: 100%;
+	overflow-x: hidden;
 }
 
 /*--------------------------------------------------------------

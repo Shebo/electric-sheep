@@ -9,6 +9,10 @@ body.page-template-page-about {
 			padding: 90px 0 75px;
 		    z-index: 1;
 
+		    @media (max-width: $screen-xs-max) {
+		    	padding: 130px 7% 115px;
+		    }
+
 			&:before {
 				content: "";
 				width: 100%;
@@ -36,6 +40,10 @@ body.page-template-page-about {
 				color: white;
 				max-width: 660px;
 				z-index: 1;
+
+				@media (max-width: $screen-xs-max) {
+			    	font-size: 2.8em;
+			    }
 			}
 
 			a {
@@ -47,6 +55,11 @@ body.page-template-page-about {
 				font-size: 1.4em;
 				color: white;
 				z-index: 1;
+
+				@media (max-width: $screen-xs-max) {
+			    	border: 2px solid rgba(255,255,255,0.6);
+			    	font-size: 3.6em;
+			    }
 			}
 		}
 
@@ -57,6 +70,10 @@ body.page-template-page-about {
 				margin-bottom: 75px;
 				font-size: 4em;
 				color: #161b23;
+
+				@media (max-width: $screen-xs-max) {
+					margin-bottom: 15px;
+				}
 			}
 
 			h3 {
@@ -64,15 +81,24 @@ body.page-template-page-about {
 				margin-bottom: 60px;
 				font-size: 2em;
 				color: #161b23;
+
+				@media (max-width: $screen-xs-max) {
+					font-size: 2.4em;
+					margin-bottom: 100px;
+				}
 			}
 
 			.content-contributors, .demand-partners {
-				width: 100%;
+			    width: 100%;
+    			overflow-x: hidden;
 
 				@media (min-width: $screen-sm-min) {
-					width: calc(100% - 100px);
+					width: calc(100% - 7%);
 				}
 
+				@media (max-width: $screen-xs-max) {
+					padding: 0 35px;
+				}
 
 				.slick-arrow {
 					background-image: url(../assets/arrow-black.png);
@@ -82,19 +108,58 @@ body.page-template-page-about {
 					border: none;
 					position: absolute;
 				    top: 50%;
-				    margin-top: -21px;
+				    margin-top: -11px;
+				    z-index: 2;
 
+				    @media (max-width: $screen-xs-max) {
+						background-image: url(../assets/arrow-black-big.png);
+						width: 18px;
+						height: 32px;
+						margin-top: -16px;
+					}
 
 					&.slick-prev {
-					    left: -50px;
+					    left: 0;
 					    transform: rotate(180deg);
 					}
 
 					&.slick-next {
-						right: -50px;
+						right: 0;
 					}
 				}
 
+				.slick-slide {
+
+					@media (min-width: $screen-sm-min) {
+						display: inline-block;
+					    vertical-align: middle;
+					    float: none;
+					}
+
+					&:nth-child(odd) {
+						img {
+							@media (min-width: $screen-sm-min) {
+								float: right;
+								margin-right: 8%;
+							}
+						}
+					}
+
+					&:nth-child(even) {
+						img {
+							@media (min-width: $screen-sm-min) {
+								float: left;
+								margin-left: 8%;
+							}
+						}
+					}
+				}
+			}
+
+			.demand-partners {
+				@media (max-width: $screen-xs-max) {
+					margin-top: 150px;
+				}
 			}
 
 			.partner, .contributor {
@@ -104,16 +169,25 @@ body.page-template-page-about {
 				margin-top: 12.5px;
 
 				img {
-					width: 80%;
+					width: 75%;
+					text-align: center;
+					margin: 0 auto;
+
+					@media (max-width: $screen-xs-max) {
+						width: 65%;
+					}
 				}
 			}
 		}
 
 		.members {
 			margin-top: 65px;
-			max-height: 850px;
 			width: 100%;
 			overflow-x: hidden;
+
+			@media (min-width: $screen-sm-min) {
+				max-height: 850px;
+			}
 
 			.member {
 				.inner-member {
@@ -149,15 +223,27 @@ body.page-template-page-about {
 						bottom: 0;
 						left: 0;
 
+						@media (max-width: $screen-xs-max) {
+							padding: 100px 90px;
+						}
+
 						h4 {
 							font-size: 2.7em;
 							color: white;
 							margin: 0;
+
+							@media (max-width: $screen-xs-max) {
+								font-size: 3.9em;
+							}
 						}
 
 						span {
 							font-size: 1.6em;
 							color: white;
+
+							@media (max-width: $screen-xs-max) {
+								font-size: 2.3em;
+							}
 						}
 
 						p {
@@ -166,6 +252,10 @@ body.page-template-page-about {
 							margin: 0;
 							margin-top: 20px;
 							margin-bottom: 15px;
+
+							@media (max-width: $screen-xs-max) {
+								font-size: 2.8em;
+							}
 						}
 					}
 				}
@@ -176,6 +266,10 @@ body.page-template-page-about {
 				padding-bottom: 191.44%;
 				height: 0;
 
+				@media (max-width: $screen-xs-max) {
+					padding-bottom: 148.12%;
+				}
+
 				.inner-member:before {
 					background-color: rgba(0,0,0,0.3);
 				}
@@ -185,27 +279,68 @@ body.page-template-page-about {
 				position: relative;
 				padding-bottom: 95.72%;
 				height: 0;
+
+				@media (max-width: $screen-xs-max) {
+					padding-bottom: 95.62%;
+				}
 			}
 		}
 
 		.news {
-			padding: 0 8.33333%;
 			margin-bottom: 50px;
 
-			> div {
-			    padding: 0 5%;
-			    border-right: 1px solid black;
-			    border-left: 1px solid black;
-			    margin-left: -1px;
+			@media (min-width: $screen-sm-min) {
+				padding: 0 8.33333%;
+			}
 
-			    &:first-of-type{
-			    	border-left: none;
-			    	margin-left: 2px;
-			    }
+			@media (max-width: $screen-xs-max) {
+				padding: 0 35px;
+			}
 
-			    &:last-of-type{
-			    	border-right: none;
-			    }
+			@media (min-width: $screen-sm-min) {
+				.news-inner > div {
+				    padding: 0 5%;
+				    border-right: 1px solid black;
+				    border-left: 1px solid black;
+				    margin-left: -1px;
+
+				    &:first-of-type{
+				    	border-left: none;
+				    	margin-left: 2px;
+				    }
+
+				    &:last-of-type{
+				    	border-right: none;
+				    }
+				}
+			}
+
+			.slick-arrow {
+				background-image: url(../assets/arrow-black.png);
+				width: 13px;
+				height: 22px;
+				background-color: transparent;
+				border: none;
+				position: absolute;
+			    top: 50%;
+			    margin-top: -11px;
+			    z-index: 2;
+
+			    @media (max-width: $screen-xs-max) {
+					background-image: url(../assets/arrow-black-big.png);
+					width: 18px;
+					height: 32px;
+					margin-top: -16px;
+				}
+
+				&.slick-prev {
+				    left: 0;
+				    transform: rotate(180deg);
+				}
+
+				&.slick-next {
+					right: 0;
+				}
 			}
 
 			h2 {
@@ -220,6 +355,10 @@ body.page-template-page-about {
 				margin: 0 auto;
 				font-size: 2.4em;
 				color: #161b23;
+
+				@media (max-width: $screen-xs-max) {
+					width: 65%;
+				}
 			}
 
 			p {
@@ -227,6 +366,10 @@ body.page-template-page-about {
 			    margin-top: 20px;
 				font-size: 1.75em;
 				color: #161b23;
+
+				@media (max-width: $screen-xs-max) {
+					width: 65%;
+				}
 			}
 
 			a {
