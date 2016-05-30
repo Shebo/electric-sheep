@@ -151,6 +151,7 @@
 				slidesToShow: 1,
 				focusOnSelect: true,
 				speed: 500,
+				rows: 1,
 
 				draggable: false,
 				touchMove: false,
@@ -162,30 +163,35 @@
 							breakpoint: 1900,
 							settings: {
 								centerPadding: '22.5%',
+								centerMode: true,
 							}
 						},
 						{
 							breakpoint: 1700,
 							settings: {
 								centerPadding: '20%',
+								centerMode: true,
 							}
 						},
 						{
 							breakpoint: 1600,
 							settings: {
 								centerPadding: '15%',
+								centerMode: true,
 							}
 						},
 						{
 							breakpoint: 1400,
 							settings: {
 								centerPadding: '12.5%',
+								centerMode: true,
 							}
 						},
 						{
 							breakpoint: 1200,
 							settings: {
 								centerPadding: '12%',
+								centerMode: true,
 							}
 						},
 						{
