@@ -15,6 +15,23 @@
 
 		'use strict';
 
+		jQuery(window).load(function() {
+			// Animate loader off screen
+			// alert('aaaaaaaaaa');
+			return;
+			setTimeout(function () {
+			    jQuery('.loader').removeClass('loading').addClass('finishing');
+			}, 2000);
+
+			setTimeout(function () {
+			    // jQuery('.loader').removeClass('finishing').addClass('done');
+			    jQuery(".loader img").one('animationiteration webkitAnimationIteration', function() {
+			        jQuery(this).parent().parent().removeClass('finishing').addClass("done");
+			    });
+			}, 4300);
+
+		});
+
 		bodySizeClass();
 		jQuery(window).on('resize', bodySizeClass);
 

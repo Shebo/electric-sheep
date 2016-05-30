@@ -54,3 +54,99 @@
 	  }
 	}
 }
+
+.loader-background {
+	position: absolute;
+	z-index: 99;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.loader {
+	position: absolute;
+    width: 100%;
+    top: 8px;
+
+    .inner-loader {
+		@extend %center-horizontal;
+		max-width: 99px;
+		width: 21.710526315789476%;
+		transition: all 2.5s ease-in;
+
+		img {
+			// -webkit-animation: pulsate 3s ease-in-out;
+			// opacity: 0.0;
+		    animation-iteration-count: infinite;
+		    animation-timing-function: linear;
+		    animation-duration: 1s;
+		}
+	}
+
+	&.loading {
+		.inner-loader {
+
+			img {
+				animation-name: spinnerRotate;
+			}
+		}
+	}
+
+	&.finishing {
+		.inner-loader {
+		    left: 0px;
+			transform: translate(0, 0);
+
+			@media (max-width: $screen-xs-max) {
+				left: 29px;
+			}
+
+			img {
+				animation-name: spinnerRotate;
+			}
+		}
+	}
+
+	&.done {
+		position: absolute;
+
+		.inner-loader {
+		    left: 0px;
+			transform: translate(0, 0);
+			transition: initial;
+		}
+	}
+}
+
+@keyframes spinnerRotate
+{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+
+@keyframes spinnerRotate1
+{
+    0%{
+    	transform:rotate(0deg);
+    }
+
+    99%{
+    	transform:rotate(360deg);
+    }
+
+    100%{
+    	position: absolute;
+    }
+}
+
+@keyframes pulsate1 {
+    0% {transform: scale(0.6, 0.6); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+
+@keyframes pulsate {
+    0% {transform: scale(0.6, 0.6); opacity: 0.0;}
+    50% {opacity: 1.0; transform: scale(1.2, 1.2);}
+    100% {transform: scale(0.6, 0.6); opacity: 0.0;}
+}

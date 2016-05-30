@@ -1,5 +1,10 @@
 <div class="site-main homepage-curtains-wrapper" data-toggle="open">
 	<div class="homepage-center hidden-xs">
+		<div class="loader loading">
+			<div class="inner-loader">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/loader.png" title="Loader" alt="Loader">
+			</div>
+		</div>
 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logo-big.png">
 		<p class="Maven-Pro text-center"><?php the_field('hp_text', 'option'); ?></p>
 	</div>
