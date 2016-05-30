@@ -56,64 +56,106 @@
 }
 
 .loader-background {
-	position: absolute;
-	z-index: 99;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
+	display: none;
 }
-.loader {
-	position: absolute;
-    width: 100%;
-    top: 8px;
 
-    .inner-loader {
-		@extend %center-horizontal;
-		max-width: 99px;
-		width: 21.710526315789476%;
-		transition: all 2.5s ease-in;
+body.home {
 
-		img {
-			// -webkit-animation: pulsate 3s ease-in-out;
-			// opacity: 0.0;
-		    animation-iteration-count: infinite;
-		    animation-timing-function: linear;
-		    animation-duration: 1s;
+	.loader-background {
+		display: block;
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: black;
+		opacity: 1;
+		visibility: visible;
+		transition: visibility 0s 2s, opacity 1.5s 0.5s ease-in-out;
+	}
+
+	.loader {
+		position: absolute;
+	    width: 100%;
+	    top: 8px;
+	    z-index: 3;
+
+		.inner-loader {
+			@extend %center-horizontal;
+			max-width: 99px;
+			width: 21.710526315789476%;
+			transition: all 1.5s ease-in-out;
+
+			img {
+				// -webkit-animation: pulsate 3s ease-in-out;
+				// opacity: 0.0;
+			    animation-iteration-count: infinite;
+			    animation-timing-function: linear;
+			    animation-duration: 1s;
+			}
+		}
+	}
+
+	.homepage-center {
+		> *:not(.loader){
+			visibility: hidden;
+			opacity: 0;
+			transition: visibility 0s, opacity 1.5s 0.5s ease-in-out;
 		}
 	}
 
 	&.loading {
-		.inner-loader {
-
-			img {
-				animation-name: spinnerRotate;
-			}
+		.loader img {
+			animation-name: spinnerRotate;
 		}
 	}
 
-	&.finishing {
-		.inner-loader {
-		    left: 0px;
-			transform: translate(0, 0);
-
-			@media (max-width: $screen-xs-max) {
-				left: 29px;
+	&.finish-loading {
+		.loader {
+			.inner-loader {
+			    left: 0px;
+				transform: translate(0, 0);
 			}
 
 			img {
 				animation-name: spinnerRotate;
+				animation-duration: 1.5s;
+			}
+		}
+
+		.loader-background {
+			visibility: hidden;
+			opacity: 0;
+		}
+
+		.homepage-center {
+			> *:not(.loader){
+				visibility: visible;
+				opacity: 1;
 			}
 		}
 	}
 
-	&.done {
-		position: absolute;
+	&.done-loading {
+		.loader {
 
-		.inner-loader {
-		    left: 0px;
-			transform: translate(0, 0);
-			transition: initial;
+			.inner-loader {
+			    left: 0px;
+				transform: translate(0, 0);
+			}
+		}
+
+		.loader-background {
+			visibility: hidden;
+			opacity: 0;
+		}
+
+		.homepage-center {
+			> *:not(.loader){
+				visibility: visible;
+				opacity: 1;
+			}
 		}
 	}
 }

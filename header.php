@@ -24,11 +24,12 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('loading'); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'electric-sheep' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
+		<div class="loader-background"></div>
 		<nav id="site-navigation" class="main-navigation" role="navigation" data-menu-toggle="close">
 			<button class="menu-burger" data-menu-toggle="close" title="Menu" alt="menu">
 				<span></span>

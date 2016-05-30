@@ -17,18 +17,23 @@
 
 		jQuery(window).load(function() {
 			// Animate loader off screen
-			// alert('aaaaaaaaaa');
-			return;
 			setTimeout(function () {
-			    jQuery('.loader').removeClass('loading').addClass('finishing');
-			}, 2000);
+			    jQuery('body').removeClass('loading').addClass('finish-loading');
 
-			setTimeout(function () {
+			    setTimeout(function () {
+
+				    jQuery(".loader img").one('animationiteration webkitAnimationIteration', function() {
+				        jQuery('body').removeClass('finish-loading').addClass("done-loading");
+				    });
+				}, 700);
+			}, 500);
+
+			/*setTimeout(function () {
 			    // jQuery('.loader').removeClass('finishing').addClass('done');
 			    jQuery(".loader img").one('animationiteration webkitAnimationIteration', function() {
 			        jQuery(this).parent().parent().removeClass('finishing').addClass("done");
 			    });
-			}, 4300);
+			}, 4300);*/
 
 		});
 

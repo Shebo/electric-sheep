@@ -68,7 +68,7 @@ header.site-header .site-branding .site-title, header.site-header .social-icons 
           transform: translateY(-50%);
 }
 
-.loader .inner-loader {
+body.home .loader .inner-loader {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -9109,10 +9109,15 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+html {
+  height: 100% !important;
+}
+
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: auto;
+  min-height: 100%;
   width: 100%;
   overflow-x: hidden;
   background: #1b212e;
@@ -9131,6 +9136,10 @@ header.site-header {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
+}
+
+body.home {
+  height: 100%;
 }
 
 body.home #content {
@@ -9620,7 +9629,7 @@ body.home main#main {
 }
 
 .homepage-curtains-wrapper .homepage-center {
-  z-index: 1;
+  z-index: 2;
   opacity: 1;
   visibility: visible;
   transition: visibility 0s, opacity 0.55s 0.3s ease-in-out;
@@ -9660,6 +9669,22 @@ body.home main#main {
   }
 }
 
+.homepage-curtains-wrapper .homepage-curtains .curtain-wrapper .video-js {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1000;
+}
+
+.homepage-curtains-wrapper .homepage-curtains .curtain-wrapper .video-js .vjs-poster {
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: -1000;
+}
+
 .homepage-curtains-wrapper .homepage-curtains .curtain-wrapper video {
   position: absolute;
   top: 50%;
@@ -9671,7 +9696,7 @@ body.home main#main {
   min-height: 100%;
   width: auto;
   height: auto;
-  z-index: -1000;
+  z-index: -999;
   overflow: hidden;
 }
 
@@ -11555,27 +11580,37 @@ body.page-template-page-about .about-us-wrapper .news a {
 }
 
 .loader-background {
+  display: none;
+}
+
+body.home .loader-background {
+  display: block;
   position: absolute;
-  z-index: 99;
+  z-index: 2;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  background: black;
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0s 2s, opacity 1.5s 0.5s ease-in-out;
 }
 
-.loader {
+body.home .loader {
   position: absolute;
   width: 100%;
   top: 8px;
+  z-index: 3;
 }
 
-.loader .inner-loader {
+body.home .loader .inner-loader {
   max-width: 99px;
   width: 21.710526315789476%;
-  transition: all 2.5s ease-in;
+  transition: all 1.5s ease-in-out;
 }
 
-.loader .inner-loader img {
+body.home .loader .inner-loader img {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
@@ -11584,39 +11619,56 @@ body.page-template-page-about .about-us-wrapper .news a {
           animation-duration: 1s;
 }
 
-.loader.loading .inner-loader img {
+body.home .homepage-center > *:not(.loader) {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 1.5s 0.5s ease-in-out;
+}
+
+body.home.loading .loader img {
   -webkit-animation-name: spinnerRotate;
           animation-name: spinnerRotate;
 }
 
-.loader.finishing .inner-loader {
+body.home.finish-loading .loader .inner-loader {
   left: 0px;
   -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
           transform: translate(0, 0);
 }
 
-@media (max-width: 639px) {
-  .loader.finishing .inner-loader {
-    left: 29px;
-  }
-}
-
-.loader.finishing .inner-loader img {
+body.home.finish-loading .loader img {
   -webkit-animation-name: spinnerRotate;
           animation-name: spinnerRotate;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
 }
 
-.loader.done {
-  position: absolute;
+body.home.finish-loading .loader-background {
+  visibility: hidden;
+  opacity: 0;
 }
 
-.loader.done .inner-loader {
+body.home.finish-loading .homepage-center > *:not(.loader) {
+  visibility: visible;
+  opacity: 1;
+}
+
+body.home.done-loading .loader .inner-loader {
   left: 0px;
   -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
           transform: translate(0, 0);
-  transition: initial;
+}
+
+body.home.done-loading .loader-background {
+  visibility: hidden;
+  opacity: 0;
+}
+
+body.home.done-loading .homepage-center > *:not(.loader) {
+  visibility: visible;
+  opacity: 1;
 }
 
 @-webkit-keyframes spinnerRotate {
