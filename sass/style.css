@@ -11342,12 +11342,6 @@ body.page-template-page-about .about-us-wrapper .members {
   overflow-x: hidden;
 }
 
-@media (min-width: 640px) {
-  body.page-template-page-about .about-us-wrapper .members {
-    max-height: 850px;
-  }
-}
-
 body.page-template-page-about .about-us-wrapper .members .member .inner-member {
   position: absolute;
   top: 0;
