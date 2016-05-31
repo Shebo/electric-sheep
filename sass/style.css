@@ -11350,7 +11350,7 @@ body.page-template-page-about .about-us-wrapper .members .member .inner-member {
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   z-index: 1;
 }
 
