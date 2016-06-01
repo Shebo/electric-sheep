@@ -125,8 +125,8 @@ body.category .category-carousel-wrapper {
         display: inline-block;
         width: auto !important;
         height: auto !important;
-        top: initial;
-        right: initial;
+        top: auto;
+        right: auto;
         bottom: 35px;
         left: 35px;
         color: white;
@@ -158,8 +158,8 @@ body.category .category-carousel-wrapper {
         -webkit-backface-visibility: hidden;
         height: auto !important;
         width: auto !important;
-        bottom: initial;
-        right: initial;
+        bottom: auto;
+        right: auto;
         top: 23px;
         left: 0;
         z-index: 3;
@@ -201,7 +201,7 @@ body.category .category-carousel-wrapper {
           overflow: hidden;
         }
 
-        video {
+        video, object, embed {
           width: 100%    !important;
           height: auto   !important;
         }
