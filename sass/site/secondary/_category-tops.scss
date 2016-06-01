@@ -84,8 +84,8 @@
           }
 
           .vjs-sublime-skin .vjs-big-play-button {
-            right: initial;
-            bottom: initial;
+            right: auto;
+            bottom: auto;
             margin: 0;
             top: 50%;
             left: 50%;
@@ -103,8 +103,8 @@
         display: inline-block;
         width: auto !important;
         height: auto !important;
-        top: initial;
-        right: initial;
+        top: auto;
+        right: auto;
         bottom: 15px;
         left: 17px;
         color: white;
@@ -136,7 +136,7 @@
           overflow: hidden;
         }
 
-        video {
+        video, object, embed {
           width: 100%    !important;
           height: auto   !important;
         }
@@ -148,8 +148,8 @@
         background: url(../assets/play.png) no-repeat;
         right: 20px;
         bottom: 20px;
-        top: initial;
-        left: initial;
+        top: auto;
+        left: auto;
         width: 35px;
         height: 36px;
 

@@ -9685,7 +9685,11 @@ body.home main#main {
   z-index: -1000;
 }
 
-.homepage-curtains-wrapper .homepage-curtains .curtain-wrapper video {
+.homepage-curtains-wrapper .homepage-curtains .curtain-wrapper .vjs-loading-spinner {
+  display: none !important;
+}
+
+.homepage-curtains-wrapper .homepage-curtains .curtain-wrapper video, .homepage-curtains-wrapper .homepage-curtains .curtain-wrapper object, .homepage-curtains-wrapper .homepage-curtains .curtain-wrapper embed {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -10075,8 +10079,8 @@ body.home .category-carousel-wrapper {
   display: inline-block;
   width: auto !important;
   height: auto !important;
-  top: initial;
-  right: initial;
+  top: auto;
+  right: auto;
   bottom: 35px;
   left: 35px;
   color: white;
@@ -10105,8 +10109,8 @@ body.home .category-carousel-wrapper {
   -webkit-backface-visibility: hidden;
   height: auto !important;
   width: auto !important;
-  bottom: initial;
-  right: initial;
+  bottom: auto;
+  right: auto;
   top: 23px;
   left: 0;
   z-index: 3;
@@ -10147,7 +10151,7 @@ body.home .category-carousel-wrapper {
   overflow: hidden;
 }
 
-.category-carousel-wrapper .category-carousel .category-video .category-video-inner video {
+.category-carousel-wrapper .category-carousel .category-video .category-video-inner video, .category-carousel-wrapper .category-carousel .category-video .category-video-inner object, .category-carousel-wrapper .category-carousel .category-video .category-video-inner embed {
   width: 100%    !important;
   height: auto   !important;
 }
@@ -10773,8 +10777,8 @@ body.home .category-carousel-wrapper {
     position: relative;
   }
   .category-tops .category-top .video:not(:first-of-type) .vjs-sublime-skin .vjs-big-play-button {
-    right: initial;
-    bottom: initial;
+    right: auto;
+    bottom: auto;
     margin: 0;
     top: 50%;
     left: 50%;
@@ -10790,8 +10794,8 @@ body.home .category-carousel-wrapper {
   display: inline-block;
   width: auto !important;
   height: auto !important;
-  top: initial;
-  right: initial;
+  top: auto;
+  right: auto;
   bottom: 15px;
   left: 17px;
   color: white;
@@ -10823,7 +10827,7 @@ body.home .category-carousel-wrapper {
   overflow: hidden;
 }
 
-.category-tops .category-top .video .category-video-inner video {
+.category-tops .category-top .video .category-video-inner video, .category-tops .category-top .video .category-video-inner object, .category-tops .category-top .video .category-video-inner embed {
   width: 100%    !important;
   height: auto   !important;
 }
@@ -10834,8 +10838,8 @@ body.home .category-carousel-wrapper {
   background: url(../assets/play.png) no-repeat;
   right: 20px;
   bottom: 20px;
-  top: initial;
-  left: initial;
+  top: auto;
+  left: auto;
   width: 35px;
   height: 36px;
 }
@@ -11565,7 +11569,7 @@ body.page-template-page-about .about-us-wrapper .news a {
   .category-carousel-wrapper .category-carousel .category-video .category-video-inner {
     height: 100%;
   }
-  .category-carousel-wrapper .category-carousel .category-video .category-video-inner video {
+  .category-carousel-wrapper .category-carousel .category-video .category-video-inner video, .category-carousel-wrapper .category-carousel .category-video .category-video-inner object, .category-carousel-wrapper .category-carousel .category-video .category-video-inner embed {
     top: 50%;
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
@@ -11577,92 +11581,82 @@ body.page-template-page-about .about-us-wrapper .news a {
   display: none;
 }
 
-body.home .loader-background {
-  display: block;
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: black;
-  opacity: 1;
-  visibility: visible;
-  transition: visibility 0s 2s, opacity 1.5s 0.5s ease-in-out;
-}
-
-body.home .loader {
-  position: absolute;
-  width: 100%;
-  top: 8px;
-  z-index: 3;
-}
-
-body.home .loader .inner-loader {
-  max-width: 99px;
-  width: 21.710526315789476%;
-  transition: all 1.5s ease-in-out;
-}
-
-body.home .loader .inner-loader img {
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-
-body.home .homepage-center > *:not(.loader) {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 1.5s 0.5s ease-in-out;
-}
-
-body.home.loading .loader img {
-  -webkit-animation-name: spinnerRotate;
-          animation-name: spinnerRotate;
-}
-
-body.home.finish-loading .loader .inner-loader {
-  left: 0px;
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
-}
-
-body.home.finish-loading .loader img {
-  -webkit-animation-name: spinnerRotate;
-          animation-name: spinnerRotate;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-}
-
-body.home.finish-loading .loader-background {
-  visibility: hidden;
-  opacity: 0;
-}
-
-body.home.finish-loading .homepage-center > *:not(.loader) {
-  visibility: visible;
-  opacity: 1;
-}
-
-body.home.done-loading .loader .inner-loader {
-  left: 0px;
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
-}
-
-body.home.done-loading .loader-background {
-  visibility: hidden;
-  opacity: 0;
-}
-
-body.home.done-loading .homepage-center > *:not(.loader) {
-  visibility: visible;
-  opacity: 1;
+@media (min-width: 640px) {
+  body.home .loader-background {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    opacity: 1;
+    visibility: visible;
+    transition: visibility 0s 2s, opacity 1.5s 0.5s ease-in-out;
+  }
+  body.home .loader {
+    position: absolute;
+    width: 100%;
+    top: 8px;
+    z-index: 3;
+  }
+  body.home .loader .inner-loader {
+    max-width: 99px;
+    width: 21.710526315789476%;
+    transition: all 1.5s ease-in-out;
+  }
+  body.home .loader .inner-loader img {
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+  }
+  body.home .homepage-center > *:not(.loader) {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 1.5s 0.5s ease-in-out;
+  }
+  body.home.loading .loader img {
+    -webkit-animation-name: spinnerRotate;
+            animation-name: spinnerRotate;
+  }
+  body.home.finish-loading .loader .inner-loader {
+    left: 0px;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  body.home.finish-loading .loader img {
+    -webkit-animation-name: spinnerRotate;
+            animation-name: spinnerRotate;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  body.home.finish-loading .loader-background {
+    visibility: hidden;
+    opacity: 0;
+  }
+  body.home.finish-loading .homepage-center > *:not(.loader) {
+    visibility: visible;
+    opacity: 1;
+  }
+  body.home.done-loading .loader .inner-loader {
+    left: 0px;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  body.home.done-loading .loader-background {
+    visibility: hidden;
+    opacity: 0;
+  }
+  body.home.done-loading .homepage-center > *:not(.loader) {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes spinnerRotate {

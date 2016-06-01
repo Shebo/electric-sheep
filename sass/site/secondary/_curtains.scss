@@ -62,6 +62,10 @@
         left: 0;
         z-index: -1000;
 
+        @supports (-ms-accelerator:true) {
+          // width: 1280px;
+        }
+
         .vjs-poster {
           display: block;
           width: 100%;
@@ -70,7 +74,11 @@
         }
       }
 
-      video {
+      .vjs-loading-spinner {
+        display: none !important;
+      }
+
+      video, object, embed {
         position: absolute;
         top: 50%;
         left: 50%;

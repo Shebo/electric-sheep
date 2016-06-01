@@ -20,20 +20,21 @@
 			setTimeout(function () {
 			    jQuery('body').removeClass('loading').addClass('finish-loading');
 
-			    setTimeout(function () {
+			    if(jQuery('body').hasClass('home')){
+		        	videojs("curtain-video-1").ready(initCurtainVideo);
+		        	videojs("curtain-video-2").ready(initCurtainVideo);
+		        	videojs("curtain-video-3").ready(initCurtainVideo);
+		        	videojs("curtain-video-4").ready(initCurtainVideo);
+		        }
 
+			    setTimeout(function () {
 				    jQuery(".loader img").one('animationiteration webkitAnimationIteration', function() {
 				        jQuery('body').removeClass('finish-loading').addClass("done-loading");
 				    });
 				}, 700);
 			}, 500);
 
-			/*setTimeout(function () {
-			    // jQuery('.loader').removeClass('finishing').addClass('done');
-			    jQuery(".loader img").one('animationiteration webkitAnimationIteration', function() {
-			        jQuery(this).parent().parent().removeClass('finishing').addClass("done");
-			    });
-			}, 4300);*/
+
 
 		});
 
@@ -302,4 +303,9 @@ function getQueryVariable(variable){
        if(pair[0] == variable){return pair[1];}
    }
    return(false);
+}
+
+function initCurtainVideo(){
+	this.volume(0);
+	this.play();
 }

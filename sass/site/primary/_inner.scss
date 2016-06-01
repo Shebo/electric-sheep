@@ -44,7 +44,7 @@
 	      .category-video-inner {
 	        height: 100%;
 
-	        video {
+	        video, object, embed {
 	          // height: 100% !important;
 	          top: 50%;
 	          transform: translateY(-50%);
@@ -60,105 +60,107 @@
 }
 
 body.home {
-
-	.loader-background {
-		display: block;
-		position: absolute;
-		z-index: 2;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		background: black;
-		opacity: 1;
-		visibility: visible;
-		transition: visibility 0s 2s, opacity 1.5s 0.5s ease-in-out;
-	}
-
-	.loader {
-		position: absolute;
-	    width: 100%;
-	    top: 8px;
-	    z-index: 3;
-
-		.inner-loader {
-			@extend %center-horizontal;
-			max-width: 99px;
-			width: 21.710526315789476%;
-			transition: all 1.5s ease-in-out;
-
-			img {
-				// -webkit-animation: pulsate 3s ease-in-out;
-				// opacity: 0.0;
-			    animation-iteration-count: infinite;
-			    animation-timing-function: linear;
-			    animation-duration: 1s;
-			}
+	@media (min-width: $screen-sm-min) {
+		.loader-background {
+			display: block;
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: black;
+			opacity: 1;
+			visibility: visible;
+			transition: visibility 0s 2s, opacity 1.5s 0.5s ease-in-out;
 		}
-	}
 
-	.homepage-center {
-		> *:not(.loader){
-			visibility: hidden;
-			opacity: 0;
-			transition: visibility 0s, opacity 1.5s 0.5s ease-in-out;
-		}
-	}
-
-	&.loading {
-		.loader img {
-			animation-name: spinnerRotate;
-		}
-	}
-
-	&.finish-loading {
 		.loader {
-			.inner-loader {
-			    left: 0px;
-				transform: translate(0, 0);
-			}
+			position: absolute;
+		    width: 100%;
+		    top: 8px;
+		    z-index: 3;
 
-			img {
+			.inner-loader {
+				@extend %center-horizontal;
+				max-width: 99px;
+				width: 21.710526315789476%;
+				transition: all 1.5s ease-in-out;
+
+				img {
+					// -webkit-animation: pulsate 3s ease-in-out;
+					// opacity: 0.0;
+				    animation-iteration-count: infinite;
+				    animation-timing-function: linear;
+				    animation-duration: 1s;
+				}
+			}
+		}
+
+		.homepage-center {
+			> *:not(.loader){
+				visibility: hidden;
+				opacity: 0;
+				transition: visibility 0s, opacity 1.5s 0.5s ease-in-out;
+			}
+		}
+
+		&.loading {
+			.loader img {
 				animation-name: spinnerRotate;
-				animation-duration: 1.5s;
 			}
 		}
 
-		.loader-background {
-			visibility: hidden;
-			opacity: 0;
-		}
+		&.finish-loading {
+			.loader {
+				.inner-loader {
+				    left: 0px;
+					transform: translate(0, 0);
+				}
 
-		.homepage-center {
-			> *:not(.loader){
-				visibility: visible;
-				opacity: 1;
+				img {
+					animation-name: spinnerRotate;
+					animation-duration: 1.5s;
+				}
+			}
+
+			.loader-background {
+				visibility: hidden;
+				opacity: 0;
+			}
+
+			.homepage-center {
+				> *:not(.loader){
+					visibility: visible;
+					opacity: 1;
+				}
 			}
 		}
-	}
 
-	&.done-loading {
-		.loader {
+		&.done-loading {
+			.loader {
 
-			.inner-loader {
-			    left: 0px;
-				transform: translate(0, 0);
+				.inner-loader {
+				    left: 0px;
+					transform: translate(0, 0);
+				}
 			}
-		}
 
-		.loader-background {
-			visibility: hidden;
-			opacity: 0;
-		}
+			.loader-background {
+				visibility: hidden;
+				opacity: 0;
+			}
 
-		.homepage-center {
-			> *:not(.loader){
-				visibility: visible;
-				opacity: 1;
+			.homepage-center {
+				> *:not(.loader){
+					visibility: visible;
+					opacity: 1;
+				}
 			}
 		}
 	}
 }
+
 
 @keyframes spinnerRotate
 {
