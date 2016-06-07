@@ -29,7 +29,7 @@ $thegroup = acf_get_fields($tops[0]->post_name);
 			$video_title = get_the_title($postID);
 			$video_img = wp_get_attachment_image_src( get_post_thumbnail_id($postID), 'full');
 			$video_url = get_post_meta($postID,'video_url',true);
-
+			echo '123' . $postID;
 			$category_id = get_cat_ID( $cat_name ) ;
 			?>
 

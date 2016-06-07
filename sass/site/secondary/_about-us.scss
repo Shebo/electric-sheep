@@ -3,6 +3,22 @@ body.page-template-page-about {
 	.about-us-wrapper {
 		background: white;
 
+		.pagestyle {
+			background: white;
+			max-width: 980px;
+			margin: auto;
+			width: 100%;
+			margin-top: 30px;
+			padding: 30px;
+
+			p {
+				margin: 0 auto;
+				margin-top: 20px;
+				font-size: 1.75em;
+				color: #161b23;
+			}
+		}
+
 		.image-header {
 			margin: 0 auto;
 		    background-size: cover;

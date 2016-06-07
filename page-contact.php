@@ -47,7 +47,7 @@ get_header(); ?>
 				</div>
 				<div class="footer clearfix">
 					<div class="email">
-						<a class="DIN text-uppercase" href="mailto:esheep@gmail.com">esheep@gmail.com</a>
+						<a class="DIN text-uppercase" href="mailto:info@esheep.tv">info@esheep.tv</a>
 					</div>
 					<div class="social-icons visible-xs">
 						<ul class="clearfix">

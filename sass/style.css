@@ -9616,6 +9616,7 @@ body.home main#main {
   width: 100%;
   height: 100%;
   z-index: 5;
+  background-color: black;
   transition: height 0.5s ease-in-out;
 }
 
@@ -9683,6 +9684,7 @@ body.home main#main {
   width: 100%;
   height: 100%;
   z-index: -1000;
+  background-color: black;
 }
 
 .homepage-curtains-wrapper .homepage-curtains .curtain-wrapper .vjs-loading-spinner {
@@ -9700,8 +9702,20 @@ body.home main#main {
   min-height: 100%;
   width: auto;
   height: auto;
-  z-index: -999;
+  z-index: -1001;
   overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .homepage-curtains-wrapper .homepage-curtains .curtain-wrapper video, .homepage-curtains-wrapper .homepage-curtains .curtain-wrapper object, .homepage-curtains-wrapper .homepage-curtains .curtain-wrapper embed {
+    z-index: -999;
+  }
+}
+
+@media (max-width: 639px) {
+  .homepage-curtains-wrapper .homepage-curtains .curtain-wrapper video, .homepage-curtains-wrapper .homepage-curtains .curtain-wrapper object, .homepage-curtains-wrapper .homepage-curtains .curtain-wrapper embed {
+    display: none;
+  }
 }
 
 .homepage-curtains-wrapper .homepage-curtains .curtain-wrapper .curtain-overlay {
@@ -11148,6 +11162,22 @@ body.page-template-page-contact main#main .contact-us-wrapper .footer .mini-menu
 --------------------------------------------------------------*/
 body.page-template-page-about .about-us-wrapper {
   background: white;
+}
+
+body.page-template-page-about .about-us-wrapper .pagestyle {
+  background: white;
+  max-width: 980px;
+  margin: auto;
+  width: 100%;
+  margin-top: 30px;
+  padding: 30px;
+}
+
+body.page-template-page-about .about-us-wrapper .pagestyle p {
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 1.75em;
+  color: #161b23;
 }
 
 body.page-template-page-about .about-us-wrapper .image-header {

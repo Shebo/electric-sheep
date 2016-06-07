@@ -21,7 +21,7 @@ get_header(); ?>
 			?>
 			<div class="about-us-wrapper container-fluid">
 				<div class="row">
-					<div class="image-header text-center col-sm-12" style="background-image: url(http://www.abstract-living.com/wp-content/uploads/2015/05/meeting-strangers.jpg);">
+					<div class="image-header text-center col-sm-12" style="background-image: url(<?php the_field('about_us_top_image', 'option'); ?>);">
 						<h1 class="Maven-Pro text-uppercase text-center">About Us</h1>
 						<div class="Maven-Pro text-center">
 							<p><?php the_field('about_us_text', 'option'); ?></p>
@@ -33,68 +33,18 @@ get_header(); ?>
 						<div class="col-sm-5 col-sm-push-1">
 							<div class="content-contributors">
 								<h3 class="Maven-Pro text-uppercase text-center">content contributors</h3>
-
-
-								<?php //if( have_rows('content_contributors', 'option') ): ?>
-
-								    <?php //while( have_rows('content_contributors', 'option') ): the_row(); ?>
-
-								        <!-- <div class="contributor pull-left"> -->
-											<!-- <a href="<?php //the_sub_field('partner_logo_url'); ?>" target="_blank"><img src="<?php //the_sub_field('partner_logo'); ?>?format=300w"></a> -->
-										<!-- </div> -->
-
-								    <?php //endwhile; ?>
-
-								<?php //endif; ?>
 								<div class="contributors-carousel">
-									<div class="contributor">
-										<img src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
-									</div>
-									<div class="contributor">
-										<img class="" src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
-									</div>
-									<div class="contributor">
-										<img src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
-									</div>
-									<div class="contributor">
-										<img class="" src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
-									</div>
-									<div class="contributor">
-										<img src="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/images/logo-design-principles/timeless-logos.jpg">
-									</div>
-									<div class="contributor">
-										<img class="" src="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/images/logo-design-principles/timeless-logos.jpg">
-									</div>
-									<div class="contributor">
-										<img src="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/images/logo-design-principles/timeless-logos.jpg">
-									</div>
-									<div class="contributor">
-										<img class="" src="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/images/logo-design-principles/timeless-logos.jpg">
-									</div>
-									<div class="contributor">
-										<img src="http://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333">
-									</div>
-									<div class="contributor">
-										<img class="" src="http://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333">
-									</div>
-									<div class="contributor">
-										<img src="http://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333">
-									</div>
-									<div class="contributor">
-										<img class="" src="http://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333">
-									</div>
-									<div class="contributor">
-										<img src="http://www.reviewstl.com/wp-content/uploads/2014/07/Marvel-Logo-Small.jpg">
-									</div>
-									<div class="contributor">
-										<img class="" src="http://www.reviewstl.com/wp-content/uploads/2014/07/Marvel-Logo-Small.jpg">
-									</div>
-									<div class="contributor">
-										<img src="http://www.reviewstl.com/wp-content/uploads/2014/07/Marvel-Logo-Small.jpg">
-									</div>
-									<div class="contributor">
-										<img class="" src="http://www.reviewstl.com/wp-content/uploads/2014/07/Marvel-Logo-Small.jpg">
-									</div>
+									<?php if( have_rows('content_contributors', 'option') ): ?>
+
+									    <?php while( have_rows('content_contributors', 'option') ): the_row(); ?>
+
+									        <div class="contributor">
+												<img src="<?php the_sub_field('partner_logo'); ?>?format=300w">
+											</div>
+
+									    <?php endwhile; ?>
+
+									<?php endif; ?>
 								</div>
 
 							</div>
@@ -103,54 +53,18 @@ get_header(); ?>
 							<div class="demand-partners pull-right">
 								<h3 class="Maven-Pro text-uppercase text-center">demand partners</h3>
 								<div class="partners-carousel">
-									<div class="partner">
-										<img src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
-									</div>
-									<div class="partner">
-										<img class="" src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
-									</div>
-									<div class="partner">
-										<img src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
-									</div>
-									<div class="partner">
-										<img class="" src="http://static1.squarespace.com/static/54b46852e4b0994bbbd1a225/54d3bf7be4b0ef0f3e47f45c/54e60d25e4b0614713bf2e76/1426790266915/Cnn-logo.png?format=300w">
-									</div>
-									<div class="partner">
-										<img src="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/images/logo-design-principles/timeless-logos.jpg">
-									</div>
-									<div class="partner">
-										<img class="" src="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/images/logo-design-principles/timeless-logos.jpg">
-									</div>
-									<div class="partner">
-										<img src="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/images/logo-design-principles/timeless-logos.jpg">
-									</div>
-									<div class="partner">
-										<img class="" src="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/images/logo-design-principles/timeless-logos.jpg">
-									</div>
-									<div class="partner">
-										<img src="http://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333">
-									</div>
-									<div class="partner">
-										<img class="" src="http://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333">
-									</div>
-									<div class="partner">
-										<img src="http://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333">
-									</div>
-									<div class="partner">
-										<img class="" src="http://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333">
-									</div>
-									<div class="partner">
-										<img src="http://www.reviewstl.com/wp-content/uploads/2014/07/Marvel-Logo-Small.jpg">
-									</div>
-									<div class="partner">
-										<img class="" src="http://www.reviewstl.com/wp-content/uploads/2014/07/Marvel-Logo-Small.jpg">
-									</div>
-									<div class="partner">
-										<img src="http://www.reviewstl.com/wp-content/uploads/2014/07/Marvel-Logo-Small.jpg">
-									</div>
-									<div class="partner">
-										<img class="" src="http://www.reviewstl.com/wp-content/uploads/2014/07/Marvel-Logo-Small.jpg">
-									</div>
+									
+									<?php if( have_rows('demand_partners', 'option') ): ?>
+
+									    <?php while( have_rows('demand_partners', 'option') ): the_row(); ?>
+
+									        <div class="partner">
+												<img src="<?php the_sub_field('partner_logo'); ?>?format=300w">
+											</div>
+
+									    <?php endwhile; ?>
+
+									<?php endif; ?>
 								</div>
 							</div>
 						</div>
@@ -210,26 +124,37 @@ get_header(); ?>
 
 						</div>
 					</div>
+					<?php if(get_field('show_news', 'option') == 'yes'){ ?>
 					<div class="news no-gutter clearfix">
 						<h2 class="col-sm-12 Maven-Pro text-uppercase text-center">News & Press</h2>
 						<div class="news-inner">
+							<?php
+								$args = array(
+				                    'posts_per_page' => 3,
+				                    'post_type' => 'news'
+				                    
+				                    );
+
+								$updates = new WP_Query($args);
+			                    if($updates->have_posts() ) : ?>
+			                        <?php while( $updates->have_posts() ) : 
+			                            $updates->the_post(); 
+			                            global $post_id,$post;
+							?>
+
 							<div class="news-singular text-center col-sm-4">
-								<h4 class="Maven-Pro text-uppercase text-center">our team won!</h4>
-								<p class="Maven-Pro text-center">We’re discovering, curating, promoting, and distributing a diverse selection of programming.</p>
-								<a class="Maven-Pro text-uppercase text-center" href="">Learn More</a>
+								<h4 class="Maven-Pro text-uppercase text-center"><?php the_title();?></h4>
+								<p class="Maven-Pro text-center"><?php the_excerpt();?></p>
+								<a class="Maven-Pro text-uppercase text-center" href="<?php the_permalink();?>">Learn More</a>
 							</div>
-							<div class="news-singular text-center col-sm-4">
-								<h4 class="Maven-Pro text-uppercase text-center">our team won!</h4>
-								<p class="Maven-Pro text-center">We’re discovering, curating, promoting, and distributing a diverse selection of programming.</p>
-								<a class="Maven-Pro text-uppercase text-center" href="">Learn More</a>
-							</div>
-							<div class="news-singular text-center col-sm-4">
-								<h4 class="Maven-Pro text-uppercase text-center">our team won!</h4>
-								<p class="Maven-Pro text-center">We’re discovering, curating, promoting, and distributing a diverse selection of programming.</p>
-								<a class="Maven-Pro text-uppercase text-center" href="">Learn More</a>
-							</div>
+
+								<?php endwhile;?>
+                    		<?php endif; ?> 
+
+
 						</div>
 					</div>
+					<?php } ?>
 				</div>
 			</div>
 

@@ -11,6 +11,9 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<div class="about-us-wrapper container-fluid">
+				<div class="row">
+					<div class="pagestyle clearfix">
 
 		<?php
 		while ( have_posts() ) : the_post();
@@ -27,6 +30,9 @@ get_header(); ?>
 		endwhile; // End of the loop.
 		?>
 
+		</div>
+				</div>
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
