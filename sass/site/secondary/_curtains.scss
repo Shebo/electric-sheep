@@ -18,7 +18,7 @@
   .homepage-center {
     @extend %center;
 
-    z-index: 2;
+    z-index: 12;
 
     opacity: 1;
     visibility: visible;
@@ -287,6 +287,7 @@
         .shadow {
           height: 3px;
           opacity: 1;
+          box-shadow: 0px 0 0px;
 
           @include transition(all 0.5s ease-in-out);
         }
@@ -308,6 +309,7 @@
           .shadow {
             height: $height__curtains_closed;
             opacity: 0.7;
+            box-shadow: 0px 0 0px;
 
             @include transition(all 0.5s ease-in-out);
           }

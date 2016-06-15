@@ -64,7 +64,7 @@ body.home {
 		.loader-background {
 			display: block;
 			position: absolute;
-			z-index: 2;
+			z-index: 12;
 			top: 0;
 			bottom: 0;
 			left: 0;
@@ -79,7 +79,7 @@ body.home {
 			position: absolute;
 		    width: 100%;
 		    top: 9px;
-		    z-index: 3;
+		    z-index: 13;
 
 			.inner-loader {
 				@extend %center-horizontal;
