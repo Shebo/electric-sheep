@@ -78,13 +78,13 @@ body.home {
 		.loader {
 			position: absolute;
 		    width: 100%;
-		    top: 8px;
+		    top: 9px;
 		    z-index: 3;
 
 			.inner-loader {
 				@extend %center-horizontal;
 				max-width: 99px;
-				width: 21.710526315789476%;
+				width: 22.811059907834103%;
 				transition: all 1.5s ease-in-out;
 
 				img {

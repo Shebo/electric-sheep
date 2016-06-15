@@ -20,7 +20,7 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
 			<div class="contact-us-wrapper">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/white-logo.png">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logo-white.png">
 				<h1 class="DIN text-uppercase">Contact Us</h1>
 				<div class="social-icons hidden-xs">
 					<ul class="clearfix">

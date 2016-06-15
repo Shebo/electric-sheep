@@ -1,0 +1,12 @@
+# BEGIN Expire headers
+<ifModule mod_expires.c>
+   ExpiresActive On
+   ExpiresDefault "access plus 5 seconds"
+
+  # cache.appcache needs re-requests in FF 3.6 (thanks Remy ~Introducing HTML5)
+  ExpiresByType text/cache-manifest       "access plus 0 seconds"
+
+  ExpiresByType application/x-shockwave-flash "access plus 2592000 seconds"
+  ExpiresByType video/mp4 "access plus 2592000 seconds"
+</ifModule>
+# END Expire headers

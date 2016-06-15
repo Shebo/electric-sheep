@@ -27,7 +27,7 @@
 				</div>
 			</div>
 			<video id="curtain-video-1" class="video-js vjs-sublime-skin" preload="true" muted data-setup='{"poster":"<?php the_field('slide_1_gif', 'option'); ?>", "loop": true, "autoplay": true}'>
-			  <source src="<?php the_field('slide_1_video', 'option'); ?>" type="video/mp4">
+			  <source src="<?php echo get_field('slide_1_video', 'option'); ?>" type="video/mp4">
 			</video>
 		</div>
 		<div class="curtain-wrapper" data-category="fashion">
@@ -46,7 +46,7 @@
 				</div>
 			</div>
 			<video id="curtain-video-2" class="video-js vjs-sublime-skin" preload="true" muted data-setup='{"poster":"<?php the_field('slide_2_gif', 'option'); ?>", "loop": true, "autoplay": true}'>
-			  <source src="<?php the_field('slide_2_video', 'option'); ?>" type="video/mp4">
+			  <source src="<?php echo get_field('slide_2_video', 'option'); ?>" type="video/mp4">
 			</video>
 		</div>
 		<div class="curtain-wrapper" data-category="travel">
@@ -65,7 +65,7 @@
 				</div>
 			</div>
 			<video id="curtain-video-3" class="video-js vjs-sublime-skin" preload="true" muted data-setup='{"poster":"<?php the_field('slide_3_gif', 'option'); ?>", "loop": true, "autoplay": true}'>
-			  <source src="<?php the_field('slide_3_video', 'option'); ?>" type="video/mp4">
+			  <source src="<?php echo get_field('slide_3_video', 'option'); ?>" type="video/mp4">
 			</video>
 		</div>
 		<div class="curtain-wrapper" data-category="pets">
@@ -84,7 +84,7 @@
 				</div>
 			</div>
 			<video id="curtain-video-4" class="video-js vjs-sublime-skin" preload="true" muted data-setup='{"poster":"<?php the_field('slide_4_gif', 'option'); ?>", "loop": true, "autoplay": true}'>
-			  <source src="<?php the_field('slide_4_video', 'option'); ?>" type="video/mp4">
+			  <source src="<?php echo get_field('slide_4_video', 'option'); ?>" type="video/mp4">
 			</video>
 		</div>
 	</div>

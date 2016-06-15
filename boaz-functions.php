@@ -4,6 +4,13 @@
 /**
  * Enqueue scripts and styles.
  */
+
+function get_encoded_video_String( $file ) {
+    $file_parts = explode('.', $file);
+    $type = array_pop((array_slice($file_parts, -1)));
+    return 'data:video/' . $type . ';base64,' . base64_encode(file_get_contents($file));
+}
+
 function enqueue_scripts() {
 
 	wp_enqueue_style( 'videojs-style', 'http://vjs.zencdn.net/5.9.2/video-js.css' );

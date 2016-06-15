@@ -259,7 +259,7 @@ function news_register() {
     'menu_icon' => '',
     'menu_position' => 4,
     'menu_position' => null,
-    'supports' => array('title','thumbnail','editor')
+    'supports' => array('title','thumbnail','editor','excerpt')
     
     
 							

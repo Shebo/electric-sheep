@@ -46,22 +46,22 @@
 							<a href="<?php echo bloginfo('url'); ?>/about-us">About Us</a>
 						</li>
 						<li>
-							<a href="<?php echo bloginfo('url'); ?>/cotact">Contact</a>
+							<a href="<?php echo bloginfo('url'); ?>/contact">Contact</a>
 						</li>
 					</ul>
 					<div class="social-icons">
 						<ul class="clearfix">
 							<li class="google-plus">
-								<a href="#" title="Google Plus" alt="Google Plus"></a>
+								<a href="<?php the_field('facebook_url', 'option'); ?>" title="Google Plus" alt="Google Plus"></a>
 							</li>
 							<li class="facebook">
-								<a href="#" title="Facebook" alt="Facebook"></a>
+								<a href="<?php the_field('google_url', 'option'); ?>" title="Facebook" alt="Facebook"></a>
 							</li>
 							<li class="twitter">
-								<a href="#" title="Twitter" alt="Twitter"></a>
+								<a href="<?php the_field('twitter_url', 'option'); ?>" title="Twitter" alt="Twitter"></a>
 							</li>
 							<li class="linkedin">
-								<a href="#" title="Linkedin" alt="Linkedin"></a>
+								<a href="<?php the_field('linkedin_url', 'option'); ?>" title="Linkedin" alt="Linkedin"></a>
 							</li>
 						</ul>
 					</div>
@@ -85,16 +85,16 @@
 		<div class="social-icons pull-right hidden-xs">
 			<ul class="clearfix">
 				<li class="google-plus">
-					<a href="#" title="Google Plus" alt="Google Plus"></a>
+					<a href="<?php the_field('facebook_url', 'option'); ?>" title="Google Plus" alt="Google Plus"></a>
 				</li>
 				<li class="facebook">
-					<a href="#" title="Facebook" alt="Facebook"></a>
+					<a href="<?php the_field('google_url', 'option'); ?>" title="Facebook" alt="Facebook"></a>
 				</li>
 				<li class="twitter">
-					<a href="#" title="Twitter" alt="Twitter"></a>
+					<a href="<?php the_field('twitter_url', 'option'); ?>" title="Twitter" alt="Twitter"></a>
 				</li>
 				<li class="linkedin">
-					<a href="#" title="Linkedin" alt="Linkedin"></a>
+					<a href="<?php the_field('linkedin_url', 'option'); ?>" title="Linkedin" alt="Linkedin"></a>
 				</li>
 			</ul>
 		</div>

@@ -116,6 +116,10 @@
           bottom: 0;
           left: 0;
 
+          opacity: 0.8;
+          box-shadow: 0px -10px 50px 30px;
+          height: 16px;
+
           @include transition(
             height 0.5s 0.3s ease-in-out,
             box-shadow 0.5s 0.3s ease-in-out,
@@ -365,7 +369,7 @@
 
   h3 span {
     background: $icon__pets;
-    width: 24px;
+    width: 18px;
     @media (max-width: $screen-xs-max) {
       background: $icon_big__pets;
       width: 40px;

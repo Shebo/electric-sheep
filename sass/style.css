@@ -9731,6 +9731,9 @@ body.home main#main {
   position: absolute;
   bottom: 0;
   left: 0;
+  opacity: 0.8;
+  box-shadow: 0px -10px 50px 30px;
+  height: 16px;
   transition: height 0.5s 0.3s ease-in-out, box-shadow 0.5s 0.3s ease-in-out, opacity 0.5s 0.6s ease-in-out;
 }
 
@@ -9939,8 +9942,8 @@ body.home main#main {
 }
 
 .homepage-curtains .curtain-wrapper[data-category="pets"] h3 span {
-  background: url(../assets/fish-icon.png);
-  width: 24px;
+  background: url(../assets/bone-icon.png);
+  width: 18px;
 }
 
 @media (max-width: 639px) {
@@ -10112,6 +10115,11 @@ body.home .category-carousel-wrapper {
   width: 230px;
   margin-top: 15px;
   display: block;
+}
+
+.category-carousel-wrapper .category-carousel .category-video .metadata h3 span {
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .category-carousel-wrapper .category-carousel .category-video .metadata span {
@@ -10685,7 +10693,7 @@ body.home .category-carousel-wrapper {
 }
 
 .categories-nav li.menu-category-pets a {
-  background-image: url(../assets/fish-icon.png);
+  background-image: url(../assets/bone-icon.png);
 }
 
 @media (max-width: 639px) {
@@ -10730,7 +10738,6 @@ body.home .category-carousel-wrapper {
 }
 
 .category-tops .category-top h4 {
-  color: #337db8;
   font-size: 2.2em;
   margin: 0;
   margin-bottom: 30px;
@@ -10881,6 +10888,22 @@ body.home .category-carousel-wrapper {
   bottom: 0;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+body.category-sports .category-top h4 {
+  color: #337db8;
+}
+
+body.category-fashion .category-top h4 {
+  color: #644491;
+}
+
+body.category-travel .category-top h4 {
+  color: #003fa0;
+}
+
+body.category-pets .category-top h4 {
+  color: #158a51;
 }
 
 /*--------------------------------------------------------------
@@ -11628,12 +11651,12 @@ body.page-template-page-about .about-us-wrapper .news a {
   body.home .loader {
     position: absolute;
     width: 100%;
-    top: 8px;
+    top: 9px;
     z-index: 3;
   }
   body.home .loader .inner-loader {
     max-width: 99px;
-    width: 21.710526315789476%;
+    width: 22.811059907834103%;
     transition: all 1.5s ease-in-out;
   }
   body.home .loader .inner-loader img {

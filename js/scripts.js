@@ -9,30 +9,25 @@
 
 }(jQuery));
 
+var loadedCurtains = 0;
+
 (function ($, root, undefined) {
 
 	$(function () {
 
 		'use strict';
 
+		if(jQuery('body').hasClass('home')){
+
+        	videojs("curtain-video-1").ready(initCurtainVideo).on('loadeddata', curtainLoaded);
+			videojs("curtain-video-2").ready(initCurtainVideo).on('loadeddata', curtainLoaded);
+			videojs("curtain-video-3").ready(initCurtainVideo).on('loadeddata', curtainLoaded);
+			videojs("curtain-video-4").ready(initCurtainVideo).on('loadeddata', curtainLoaded);
+        }
+
 		jQuery(window).load(function() {
 			// Animate loader off screen
-			setTimeout(function () {
-			    jQuery('body').removeClass('loading').addClass('finish-loading');
 
-			    if(jQuery('body').hasClass('home')){
-		        	videojs("curtain-video-1").ready(initCurtainVideo);
-		        	videojs("curtain-video-2").ready(initCurtainVideo);
-		        	videojs("curtain-video-3").ready(initCurtainVideo);
-		        	videojs("curtain-video-4").ready(initCurtainVideo);
-		        }
-
-			    setTimeout(function () {
-				    jQuery(".loader img").one('animationiteration webkitAnimationIteration', function() {
-				        jQuery('body').removeClass('finish-loading').addClass("done-loading");
-				    });
-				}, 700);
-			}, 500);
 
 
 
@@ -153,7 +148,7 @@
 				centerMode: true,
 				centerPadding: '25%',
 				infinite: false,
-				initialSlide: 1,
+				initialSlide: 0,
 				slidesToShow: 1,
 				focusOnSelect: true,
 				speed: 500,
@@ -308,4 +303,22 @@ function getQueryVariable(variable){
 function initCurtainVideo(){
 	this.volume(0);
 	this.play();
+}
+
+function curtainLoaded(){
+	loadedCurtains++;
+	if(loadedCurtains < 4){
+		return;
+	}
+
+	setTimeout(function () {
+	    jQuery('body').removeClass('loading').addClass('finish-loading');
+
+	    setTimeout(function () {
+		    jQuery(".loader img").one('animationiteration webkitAnimationIteration', function() {
+		        jQuery('body').removeClass('finish-loading').addClass("done-loading");
+		    });
+		}, 700);
+	}, 500);
+
 }

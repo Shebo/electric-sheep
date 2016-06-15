@@ -15,7 +15,6 @@
     }
 
     h4 {
-      color: #337db8;
       font-size: 2.2em;
       margin: 0;
       margin-bottom: 30px;
@@ -178,4 +177,18 @@
       }
     }
   }
+}
+
+
+body.category-sports .category-top h4 {
+  color: $color__sports;
+}
+body.category-fashion .category-top h4 {
+  color: $color__fashion;
+}
+body.category-travel .category-top h4 {
+  color: $color__travel;
+}
+body.category-pets .category-top h4 {
+  color: $color__pets;
 }
