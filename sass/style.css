@@ -10064,9 +10064,14 @@ body.home .category-carousel-wrapper {
           transform: rotate(180deg);
 }
 
+.category-carousel-wrapper .category-carousel .slick-slide > div {
+  height: 100%;
+}
+
 .category-carousel-wrapper .category-carousel .category-video {
   overflow: hidden;
   -webkit-backface-visibility: hidden;
+  height: 100%;
 }
 
 @media (min-width: 640px) {
@@ -10177,8 +10182,8 @@ body.home .category-carousel-wrapper {
 }
 
 .category-carousel-wrapper .category-carousel .category-video .category-video-inner video, .category-carousel-wrapper .category-carousel .category-video .category-video-inner object, .category-carousel-wrapper .category-carousel .category-video .category-video-inner embed {
-  width: 100%    !important;
-  height: auto   !important;
+  width: 100%   !important;
+  height: 100%   !important;
 }
 
 .category-carousel-wrapper .category-carousel .category-video .vjs-sublime-skin .vjs-big-play-button {
@@ -11612,25 +11617,27 @@ body.page-template-page-about .about-us-wrapper .news a {
   background: #161b23;
 }
 
-@media screen and (max-height: 750px) {
-  .category-carousel-wrapper .slick-track {
-    height: 100%;
-  }
-  .category-carousel-wrapper .slick-list {
-    height: 100%;
-  }
-  .category-carousel-wrapper .category-carousel {
-    height: calc(100% - 130px);
-  }
-  .category-carousel-wrapper .category-carousel .category-video .category-video-inner {
-    height: 100%;
-  }
-  .category-carousel-wrapper .category-carousel .category-video .category-video-inner video, .category-carousel-wrapper .category-carousel .category-video .category-video-inner object, .category-carousel-wrapper .category-carousel .category-video .category-video-inner embed {
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-  }
+.category-carousel-wrapper .slick-track {
+  height: 100%;
+}
+
+.category-carousel-wrapper .slick-list {
+  height: 100%;
+}
+
+.category-carousel-wrapper .category-carousel {
+  height: calc(100% - 130px);
+}
+
+.category-carousel-wrapper .category-carousel .category-video .category-video-inner {
+  height: 100%;
+}
+
+.category-carousel-wrapper .category-carousel .category-video .category-video-inner video, .category-carousel-wrapper .category-carousel .category-video .category-video-inner object, .category-carousel-wrapper .category-carousel .category-video .category-video-inner embed {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .loader-background {
