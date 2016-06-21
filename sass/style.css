@@ -9638,9 +9638,10 @@ body.home main#main {
 }
 
 .homepage-curtains-wrapper .homepage-center p {
-  font-size: 2em;
+  font-size: 2.6em;
   color: white;
   margin-top: 25px;
+  text-align: center;
 }
 
 .homepage-curtains-wrapper .homepage-curtains {
@@ -10071,7 +10072,6 @@ body.home .category-carousel-wrapper {
 .category-carousel-wrapper .category-carousel .category-video {
   overflow: hidden;
   -webkit-backface-visibility: hidden;
-  height: 100%;
 }
 
 @media (min-width: 640px) {
@@ -10183,7 +10183,7 @@ body.home .category-carousel-wrapper {
 
 .category-carousel-wrapper .category-carousel .category-video .category-video-inner video, .category-carousel-wrapper .category-carousel .category-video .category-video-inner object, .category-carousel-wrapper .category-carousel .category-video .category-video-inner embed {
   width: 100%   !important;
-  height: 100%   !important;
+  height: auto   !important;
 }
 
 .category-carousel-wrapper .category-carousel .category-video .vjs-sublime-skin .vjs-big-play-button {
@@ -10734,7 +10734,7 @@ body.home .category-carousel-wrapper {
 }
 
 .category-tops .category-top {
-  margin-top: 120px;
+  margin-top: 70px;
   margin-bottom: 20px;
 }
 
@@ -10746,7 +10746,7 @@ body.home .category-carousel-wrapper {
 }
 
 .category-tops .category-top h4 {
-  font-size: 2.2em;
+  font-size: 3em;
   margin: 0;
   margin-bottom: 30px;
 }
@@ -11195,22 +11195,6 @@ body.page-template-page-about .about-us-wrapper {
   background: white;
 }
 
-body.page-template-page-about .about-us-wrapper .pagestyle {
-  background: white;
-  max-width: 980px;
-  margin: auto;
-  width: 100%;
-  margin-top: 30px;
-  padding: 30px;
-}
-
-body.page-template-page-about .about-us-wrapper .pagestyle p {
-  margin: 0 auto;
-  margin-top: 20px;
-  font-size: 1.75em;
-  color: #161b23;
-}
-
 body.page-template-page-about .about-us-wrapper .image-header {
   margin: 0 auto;
   background-size: cover;
@@ -11617,27 +11601,44 @@ body.page-template-page-about .about-us-wrapper .news a {
   background: #161b23;
 }
 
-.category-carousel-wrapper .slick-track {
-  height: 100%;
+.pagestyle {
+  background: white;
+  max-width: 980px;
+  margin: auto;
+  width: 100%;
+  margin-top: 30px;
+  padding: 30px;
 }
 
-.category-carousel-wrapper .slick-list {
-  height: 100%;
+.pagestyle p {
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 1.75em;
+  color: #161b23;
 }
 
-.category-carousel-wrapper .category-carousel {
-  height: calc(100% - 130px);
-}
-
-.category-carousel-wrapper .category-carousel .category-video .category-video-inner {
-  height: 100%;
-}
-
-.category-carousel-wrapper .category-carousel .category-video .category-video-inner video, .category-carousel-wrapper .category-carousel .category-video .category-video-inner object, .category-carousel-wrapper .category-carousel .category-video .category-video-inner embed {
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+@media screen and (max-height: 750px) {
+  .category-carousel-wrapper .slick-track {
+    height: 100%;
+  }
+  .category-carousel-wrapper .slick-list {
+    height: 100%;
+  }
+  .category-carousel-wrapper .category-carousel {
+    height: calc(100% - 130px);
+  }
+  .category-carousel-wrapper .category-carousel .category-video {
+    height: 100%;
+  }
+  .category-carousel-wrapper .category-carousel .category-video .category-video-inner {
+    height: 100%;
+  }
+  .category-carousel-wrapper .category-carousel .category-video .category-video-inner video, .category-carousel-wrapper .category-carousel .category-video .category-video-inner object, .category-carousel-wrapper .category-carousel .category-video .category-video-inner embed {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
 }
 
 .loader-background {

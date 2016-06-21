@@ -36,6 +36,9 @@ var loadedCurtains = 0;
 		bodySizeClass();
 		jQuery(window).on('resize', bodySizeClass);
 
+		setCategoryCarouselHeight();
+		jQuery(window).on('resize', setCategoryCarouselHeight);
+
 		bodyScrollClass();
 		jQuery(window).scroll(bodyScrollClass);
 
@@ -321,4 +324,13 @@ function curtainLoaded(){
 		}, 700);
 	}, 500);
 
+}
+
+function setCategoryCarouselHeight(){
+	if(!jQuery('body').hasClass('category')){
+		return;
+	}
+
+	var carouselHeight = (jQuery(window).height() > 750 || jQuery(window).width() < 640) ? 'inherit' : jQuery(window).height()-53-60-75-(27+26+30);
+	jQuery('.category-carousel').height(carouselHeight);
 }

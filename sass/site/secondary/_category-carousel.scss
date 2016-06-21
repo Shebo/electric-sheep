@@ -92,7 +92,6 @@ body.category .category-carousel-wrapper {
     .category-video {
       overflow: hidden;
       -webkit-backface-visibility: hidden;
-      height: 100%;
 
       @media (min-width: $screen-sm-min) {
         margin: 0 20px;
@@ -213,7 +212,7 @@ body.category .category-carousel-wrapper {
 
         video, object, embed {
           width: 100%   !important;
-          height: 100%   !important;
+          height: auto   !important;
         }
       }
 

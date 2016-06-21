@@ -25,7 +25,7 @@
 
 
 
-//@media screen and ( max-height: 750px ){
+@media screen and ( max-height: 750px ){
 	.category-carousel-wrapper {
 
 	  .slick-track {
@@ -40,6 +40,7 @@
 	    height: calc(100% - 130px);
 
 	    .category-video {
+    	    height: 100%;
 
 	      .category-video-inner {
 	        height: 100%;
@@ -53,7 +54,7 @@
 	    }
 	  }
 	}
-//}
+}
 
 .loader-background {
 	display: none;
